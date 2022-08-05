@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+}
+.wrap .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrap .inner .logo {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+}
+.wrap .inner .logo img {
+  width: 50px;
+  height: 50px;
+}
+.wrap .inner header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: pink;
+  z-index: 3;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .inner header .menu {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .inner header .menu li {
+  margin-right: 50px;
+}
+.wrap .inner header .menu_bar {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+.alcohol_movie {
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  background-color: orange;
+}
+.alcohol__list {
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  background-color: skyblue;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.alcohol__list li {
+  width: 200px;
+  height: 350px;
+  border: 1px solid black;
+}
+.alcohol__list li .alcohol_img {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+/*# sourceMappingURL=menu1_tradition.css.map */

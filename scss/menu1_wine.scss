@@ -1,0 +1,41 @@
+@import 'reset';
+@import 'menu1_common';
+
+.alcohol_movie {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orange;
+
+  div {
+  }
+}
+
+.alcohols {
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: skyblue;
+
+  .alcohol__list {
+    li {
+      .alcohol_img {
+      }
+
+      .text {
+        .title {
+        }
+
+        .price {
+        }
+
+        .description {
+        }
+      }
+    }
+  }
+}

@@ -30,6 +30,7 @@ prev.addEventListener("click", function () {
 
 	for (let el of sulExplainList) {
 		el.classList.remove("on");
+		// sulExplainList[0].classList.add("on");
 	}
 	sulExplainList[active].classList.add("on");
 });
@@ -62,17 +63,21 @@ const hideUpArrow = hideUp.querySelector("i");
 
 let clickNum = 0;
 hideUp.addEventListener("click", function () {
+	sulExplainList[active].classList.add("on");
 	if (clickNum % 2 == 0) {
-		wrap.style.top = "0";
-		wrap.style.opacity = "1";
-
+		// wrap.style.top = "0";
+		// wrap.style.opacity = "1";
+		wrap.classList.remove("menuOn");
 		hideUpArrow.style.transform = "rotate(180deg)";
 		clickNum++;
 	} else {
-		wrap.style.top = "300px";
-		wrap.style.opacity = "0";
-
+		// wrap.style.top = "300px";
+		// wrap.style.opacity = "0";
+		wrap.classList.add("menuOn");
 		hideUpArrow.style.transform = "rotate(360deg)";
 		clickNum++;
+		for (let el of sulExplainList) {
+			el.classList.remove("on");
+		}
 	}
 });

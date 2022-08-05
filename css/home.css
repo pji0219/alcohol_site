@@ -96,6 +96,9 @@ body header .register > li {
 body header .register > li > a {
   color: #fff;
 }
+body header .register > li > a:hover {
+  text-decoration: underline;
+}
 body figure {
   position: absolute;
   top: 0;
@@ -107,15 +110,18 @@ body figure {
   /*login 변수 선언*/
 }
 body figure video {
+  width: 100%;
+  height: 110%;
   transition: 1.2s;
+  object-fit: cover;
 }
 body figure .wrap {
   width: 100%;
   height: 100%;
   transition: 0.5s;
   position: absolute;
-  top: 300px;
-  opacity: 0;
+  top: 0;
+  opacity: 1;
   /*SECTION-menu*/
   /*SECTION*/
   /*NAV-buttons*/
@@ -125,14 +131,20 @@ body figure .wrap.on {
   pointer-events: none;
   cursor: default;
 }
+body figure .wrap.menuOn {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+  top: 300px;
+}
 body figure .wrap .rotate_menu {
-  width: 10vw;
-  height: 10vw;
+  width: 12vw;
+  height: 12vw;
   position: absolute;
-  left: 51%;
+  left: 50%;
   top: 100%;
-  margin-left: -5vw;
-  margin-top: -5vw;
+  margin-left: -6vw;
+  margin-top: -6vw;
   transition: 2s;
 }
 body figure .wrap .rotate_menu article {
@@ -151,24 +163,12 @@ body figure .wrap .rotate_menu article .inner {
   transition: 2s;
   transform: scale(0.8);
 }
-body figure .wrap .rotate_menu article .inner .text {
-  position: absolute;
-  color: white;
-  top: 0;
+body figure .wrap .rotate_menu article .inner > a {
+  display: inline-block;
+  width: inherit;
 }
 body figure .wrap .rotate_menu article .inner > a > img {
-  width: 100px;
-}
-body figure .wrap .rotate_menu article:nth-child(4) .inner > a > img {
-  width: 30px;
-}
-@font-face {
-  body figure .wrap {
-    font-family: "S-CoreDream-3Light";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+  width: inherit;
 }
 body figure .wrap .linear_menu {
   position: absolute;
@@ -229,8 +229,8 @@ body figure .wrap nav::after, body figure .wrap nav::before {
   content: "";
   display: block;
   width: 70%;
-  height: 1px;
-  background-color: #fff;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.628);
   position: absolute;
 }
 body figure .wrap nav.btnPrev {
@@ -266,6 +266,9 @@ body figure .wrap nav.btnPrev .btnPrev--opacity::before {
 body figure .wrap nav.btnPrev:hover .btnPrev--opacity::after, body figure .wrap nav.btnPrev:hover .btnPrev--opacity::before {
   opacity: 1;
   left: -10px;
+}
+body figure .wrap nav.btnNext {
+  transform: translate(60px, 0);
 }
 body figure .wrap nav.btnNext::after {
   transform-origin: right center;
@@ -308,6 +311,9 @@ body figure .hide_up {
   left: 0;
   right: 0;
 }
+body figure .hide_up i {
+  transition: 0.5s;
+}
 body figure .hide_up.on {
   pointer-events: none;
   cursor: default;
@@ -346,13 +352,12 @@ body figure .login {
   left: 0;
   background-color: #fff;
   z-index: 5;
-  border: 2px solid rgba(74, 48, 48, 0.667);
-  border-radius: 50px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
   transition: 1.2s;
 }
 body figure .login .login--close {
   font-size: 30px;
-  color: salmon;
+  color: rgba(142, 95, 80, 0.995);
   position: absolute;
   top: 5px;
   right: 25px;
@@ -364,7 +369,7 @@ body figure .login .login__box {
 }
 body figure .login .login__box > i {
   position: absolute;
-  color: rgba(74, 48, 48, 0.667);
+  color: rgba(142, 95, 80, 0.995);
   z-index: 1;
 }
 body figure .login .login__box > i:nth-of-type(1) {
@@ -395,7 +400,7 @@ body figure .login > img {
   width: 300px;
   height: auto;
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -409,8 +414,7 @@ body figure .login .login__btn {
   top: 380px;
   width: 250px;
   height: 50px;
-  background-color: salmon;
-  border: 2px solid rgb(243, 228, 228);
+  background-color: rgba(142, 95, 80, 0.995);
   border-radius: 10px;
   font-size: 20px;
   line-height: 50px;

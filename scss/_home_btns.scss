@@ -16,8 +16,8 @@ nav {
 		content: "";
 		display: block;
 		width: 70%;
-		height: 1px;
-		background-color: #fff;
+		height: 2px;
+		background-color: rgba(255, 255, 255, 0.628);
 		position: absolute;
 	}
 	&.btnPrev {
@@ -64,7 +64,7 @@ nav {
 		}
 	}
 	&.btnNext {
-		// transform: translate(0px, 0);
+		transform: translate(60px, 0);
 		// background-color: #f5deb3;
 
 		&::after {

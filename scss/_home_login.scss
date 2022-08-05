@@ -1,6 +1,6 @@
 /*login 변수 선언*/
-$loginColor: rgba(74, 48, 48, 0.667);
-$loginColor2: salmon;
+$loginColor: rgba(142, 95, 80, 0.995);
+
 $loginBtn: rgb(243, 228, 228);
 .login {
 	width: 400px;
@@ -13,19 +13,12 @@ $loginBtn: rgb(243, 228, 228);
 	left: 0;
 	background-color: #fff;
 	z-index: 5;
-	border: 2px solid $loginColor;
-	border-radius: 50px;
-
-	// transform-style: preserve-3d;
-	// transform: translateZ(-300px) perspective(700px);
-
+	box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
 	transition: 1.2s;
-	// transform: matrix(1, 0, 0, 1, 0, 0);
-	// visibility: hidden;
 
 	.login--close {
 		font-size: 30px;
-		color: $loginColor2;
+		color: $loginColor;
 		position: absolute;
 		top: 5px;
 		right: 25px;
@@ -74,7 +67,7 @@ $loginBtn: rgb(243, 228, 228);
 		width: 300px;
 		height: auto;
 		position: absolute;
-		top: 50px;
+		top: 60px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -89,8 +82,7 @@ $loginBtn: rgb(243, 228, 228);
 		top: 380px;
 		width: 250px;
 		height: 50px;
-		background-color: $loginColor2;
-		border: 2px solid $loginBtn;
+		background-color: $loginColor;
 		border-radius: 10px;
 		font-size: 20px;
 		line-height: 50px;
@@ -111,7 +103,7 @@ $loginBtn: rgb(243, 228, 228);
 		position: relative;
 		top: 450px;
 
-		justify-content: center; //왜 안먹지???
+		justify-content: center;
 
 		a {
 			color: #666;

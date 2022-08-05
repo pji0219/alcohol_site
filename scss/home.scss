@@ -90,6 +90,9 @@ body {
 				padding-left: 5px;
 				> a {
 					color: $registerColor;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -102,7 +105,11 @@ body {
 		height: 100vh;
 		overflow: hidden;
 		video {
+			width: 100%;
+			height: 110%;
+
 			transition: 1.2s;
+			object-fit: cover;
 		}
 
 		.wrap {
@@ -110,12 +117,18 @@ body {
 			height: 100%;
 			transition: 0.5s;
 			position: absolute;
-			top: 300px; // display: none;
-			opacity: 0;
+			top: 0; // display: none;
+			opacity: 1;
 			&.on {
 				filter: grayscale(100%);
 				pointer-events: none;
 				cursor: default;
+			}
+			&.menuOn {
+				pointer-events: none;
+				cursor: default;
+				opacity: 0;
+				top: 300px;
 			}
 
 			/*SECTION-menu*/
@@ -134,13 +147,14 @@ body {
 			position: absolute;
 			bottom: 10px;
 
-			// animation: blingbling linear 0.2s infinite;
 			cursor: pointer;
 			text-align: center;
-
 			margin: 0 auto;
 			left: 0;
 			right: 0;
+			i {
+				transition: 0.5s;
+			}
 			&.on {
 				pointer-events: none;
 				cursor: default;

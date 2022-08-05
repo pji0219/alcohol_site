@@ -1,0 +1,112 @@
+nav {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0;
+	cursor: pointer;
+	color: #fff;
+
+	&::after,
+	&::before {
+		content: "";
+		display: block;
+		width: 70%;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+	}
+	&.btnPrev {
+		transform: translate(-90px, 0);
+		// background-color: aqua;
+		&::after {
+			transform-origin: left center;
+			transform: rotate(40deg);
+		}
+		&::before {
+			transform-origin: left center;
+			transform: rotate(-40deg);
+		}
+		.btnPrev--opacity {
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				left: 10px;
+				background-color: #888;
+				width: 60%;
+				height: 1px;
+				transition: 0.5s;
+				opacity: 0;
+			}
+			&::after {
+				transform-origin: left center;
+				transform: rotate(40deg);
+			}
+			&::before {
+				transform-origin: left center;
+				transform: rotate(-40deg);
+			}
+		}
+	}
+	&.btnPrev:hover {
+		.btnPrev--opacity {
+			&::after,
+			&::before {
+				opacity: 1;
+				left: -10px;
+			}
+		}
+	}
+	&.btnNext {
+		// transform: translate(0px, 0);
+		// background-color: #f5deb3;
+
+		&::after {
+			transform-origin: right center;
+			transform: rotate(40deg);
+		}
+		&::before {
+			transform-origin: right center;
+			transform: rotate(-40deg);
+		}
+		.btnNext--opacity {
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				left: -5px;
+				display: block;
+				background-color: #888;
+				width: 60%;
+				height: 1px;
+				transition: 0.5s;
+				opacity: 0;
+			}
+
+			&::after {
+				transform-origin: right center;
+				transform: rotate(40deg);
+			}
+			&::before {
+				transform-origin: right center;
+				transform: rotate(-40deg);
+			}
+		}
+	}
+
+	&.btnNext:hover {
+		.btnNext--opacity {
+			&::after,
+			&::before {
+				opacity: 1;
+				left: 14px;
+			}
+		}
+	}
+}

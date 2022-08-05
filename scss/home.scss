@@ -1,0 +1,190 @@
+@import "reset";
+/*common*/
+// 변수 설정
+$registerColor: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*font-family: 'Bebas Neue', cursive;*/
+
+@font-face {
+	font-family: "ChusaLove";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chosunilbo_myungjo";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "CookieRun-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ulsanjunggu";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+.hide {
+	opacity: 0;
+	/*
+	display: none은 transition이 안먹고 opacity:0 은 속성값이 남아있어서
+	잘못 눌릴 위험이 있기때문에 visibility hidden 으로 처리
+	*/
+	transform: scale(0.4) translateX(700%);
+}
+body {
+	font-family: "ulsanjunggu";
+	// font-weight: bold;
+	// background-color: navy;
+
+	header {
+		position: relative;
+		z-index: 1;
+		.logo {
+			&.on {
+				// filter: grayscale(100%);
+				//question 그레이 스케일 주는데 왜 로고가 이동하지?
+				pointer-events: none;
+			}
+			> img {
+				width: 180px;
+
+				position: absolute;
+				top: 20px;
+				left: 4%;
+			}
+		}
+
+		.searchNsns {
+			display: flex;
+			position: absolute;
+			right: 10%;
+			top: 40px;
+
+			> li {
+				color: $registerColor;
+				padding-left: 10px;
+				.search {
+					font-size: 20px;
+				}
+				img {
+					width: 20px;
+				}
+			}
+		}
+
+		.register {
+			font-size: 11px;
+			display: flex;
+			position: absolute;
+			right: 4%;
+			top: 10px;
+			> li {
+				color: $registerColor;
+				padding-left: 5px;
+				> a {
+					color: $registerColor;
+				}
+			}
+		}
+	}
+
+	figure {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		video {
+			transition: 1.2s;
+		}
+
+		.wrap {
+			width: 100%;
+			height: 100%;
+			transition: 0.5s;
+			position: absolute;
+			top: 300px; // display: none;
+			opacity: 0;
+			&.on {
+				filter: grayscale(100%);
+				pointer-events: none;
+				cursor: default;
+			}
+
+			/*SECTION-menu*/
+			@import "home_menu";
+
+			/*SECTION*/
+			@import "home_menu_expl";
+
+			/*NAV-buttons*/
+			@import "home_btns";
+		}
+
+		/*SECTION-menu up*/
+		.hide_up {
+			width: 30px;
+			position: absolute;
+			bottom: 10px;
+
+			// animation: blingbling linear 0.2s infinite;
+			cursor: pointer;
+			text-align: center;
+
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			&.on {
+				pointer-events: none;
+				cursor: default;
+				color: gray;
+				i {
+					animation: none;
+				}
+				span {
+					animation: none;
+				}
+			}
+
+			i {
+				animation: blingbling linear 0.2s infinite;
+			}
+			span {
+				font-size: 7px;
+				animation: blingbling linear 0.2s infinite;
+			}
+
+			&:hover {
+				color: pink;
+				i {
+					animation: none;
+				}
+				span {
+					animation: none;
+				}
+			}
+		}
+		// transform-style: preserve-3d;
+
+		/*SECTION - login*/
+		@import "home_login";
+	}
+}
+
+/*Animation*/
+
+@keyframes blingbling {
+	0% {
+		color: white;
+	}
+	100% {
+		color: rgba(255, 105, 180, 0.434);
+	}
+}

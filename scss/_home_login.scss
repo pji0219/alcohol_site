@@ -1,0 +1,125 @@
+/*login 변수 선언*/
+$loginColor: rgba(74, 48, 48, 0.667);
+$loginColor2: salmon;
+$loginBtn: rgb(243, 228, 228);
+.login {
+	width: 400px;
+	height: 500px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 5;
+	border: 2px solid $loginColor;
+	border-radius: 50px;
+
+	// transform-style: preserve-3d;
+	// transform: translateZ(-300px) perspective(700px);
+
+	transition: 1.2s;
+	// transform: matrix(1, 0, 0, 1, 0, 0);
+	// visibility: hidden;
+
+	.login--close {
+		font-size: 30px;
+		color: $loginColor2;
+		position: absolute;
+		top: 5px;
+		right: 25px;
+	}
+
+	.login__box {
+		position: absolute;
+		top: 130px;
+		left: 20%;
+
+		> i {
+			position: absolute;
+			color: $loginColor;
+			z-index: 1;
+			&:nth-of-type(1) {
+				font-size: 20px;
+				top: 141px;
+				left: 20px;
+			}
+			&:nth-of-type(2) {
+				font-size: 17px;
+				top: 191px;
+				left: 20px;
+			}
+		}
+
+		input {
+			display: inline-block;
+			height: 30px;
+			position: absolute;
+			left: 10px;
+			padding: 20px;
+			padding-left: 30px;
+		}
+
+		& > input:nth-of-type(1) {
+			top: 130px;
+		}
+		& > input:nth-of-type(2) {
+			top: 180px;
+		}
+	}
+
+	//로고 바뀌면 부분 수정해야함
+	> img {
+		width: 300px;
+		height: auto;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.login__btn {
+		display: block;
+		position: absolute;
+		margin: 0 auto;
+		right: 0;
+		left: 0;
+		top: 380px;
+		width: 250px;
+		height: 50px;
+		background-color: $loginColor2;
+		border: 2px solid $loginBtn;
+		border-radius: 10px;
+		font-size: 20px;
+		line-height: 50px;
+		color: $loginBtn;
+		text-align: center;
+		letter-spacing: 5px;
+
+		&:active {
+			background-color: orangered;
+		}
+	}
+
+	.login__register {
+		font-size: 13px;
+		color: #666;
+		display: flex;
+		// position absolute 주면 justify content가 안먹어서 relative로 주고 위치 변경함
+		position: relative;
+		top: 450px;
+
+		justify-content: center; //왜 안먹지???
+
+		a {
+			color: #666;
+			padding: 0 10px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

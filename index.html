@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>메인페이지 입니다요</title>
+		<!-- HOME CSS -->
+		<link rel="stylesheet" href="./css/home.css" />
+		<!-- HOME JAVA SCRIPT -->
+		<script defer src="./js/home.js"></script>
+		<script defer src="./js/home_login.js"></script>
+		<!-- FONT AWSOME -->
+		<script src="https://kit.fontawesome.com/837ff3adc1.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<!-- logo -->
+			<a href="./index.html" class="logo"><img src="./src/img/logo.png" alt="로고 이미지" /></a>
+
+			<!-- sns 창과 검색버튼 -->
+			<ul class="searchNsns">
+				<!-- 검색 버튼 a태그 안걸고 css로 cursor pointer걸기 -->
+				<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>
+				<!--sns -->
+				<li>
+					<a href="#"><img src="./src/img/facebook.png" alt="페이스북 로고 사진" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="./src/img/insta.png" alt="인스타 로고 사진" /></a>
+				</li>
+			</ul>
+
+			<!-- login -->
+			<ul class="register">
+				<li><a href="./qna.html" class="register__qna">Q&A</a></li>
+				<li>|</li>
+				<li><a href="#login" class="register__login">LOG IN</a></li>
+				<li>|</li>
+				<li><a href="./register.html" class="register__singIn">SIGN IN</a></li>
+			</ul>
+		</header>
+		<figure>
+			<!-- video 넣기 -->
+			<video src="./src/video/home_video1.mp4" autoplay muted loop></video>
+
+			<!-- 메뉴 구성 -->
+			<div class="wrap">
+				<section class="rotate_menu">
+					<article class="on">
+						<div class="inner">
+							<div class="text">맥주</div>
+							<a href="#"><img src="./src/img/birth_redMonkey.png" alt="" /></a>
+						</div>
+					</article>
+
+					<article>
+						<div class="inner">
+							<div class="text">와인</div>
+							<a href="#"><img src="./src/img/birth_스타로프라멘.png" alt="" /></a>
+						</div>
+					</article>
+
+					<article>
+						<div class="inner">
+							<div class="text">전통주</div>
+							<a href="#"><img src="./src/img/birth_원소주.png" alt="" /></a>
+						</div>
+					</article>
+
+					<article>
+						<div class="inner">
+							<div class="text">우리들의 추천</div>
+							<a href="#"><img src="./src/img/christ_brownbrother.png" alt="" /></a>
+						</div>
+					</article>
+				</section>
+
+				<section class="linear_menu">
+					<ul class="menu_list">
+						<li><a href="#">맥주</a></li>
+						<li><a href="#">와인</a></li>
+						<li><a href="#">전통주</a></li>
+						<li><a href="#">우리들의 추천</a></li>
+					</ul>
+				</section>
+
+				<sectioin class="explain">
+					<ul>
+						<li>
+							<h2>맥주</h2>
+							<p>어쩌구저쩌구 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi vero id repellendus blanditiis? Odit.</p>
+						</li>
+						<li>
+							<h2>와인</h2>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis, ullam repellat nemo rerum minus.</p>
+						</li>
+						<li>
+							<h2>전통주</h2>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur consectetur placeat iste, minus labore qui?</p>
+						</li>
+						<li>
+							<h2>우리들의 추천</h2>
+							<p>Pull up to the mirror, staring at my face Gotta chop-chop all the extra weight I've been carrying for 1460 days Gotta, gotta, gotta clean my slate</p>
+						</li>
+					</ul>
+				</sectioin>
+
+				<nav class="btnPrev">
+					<div class="btnPrev--opacity"></div>
+				</nav>
+
+				<nav class="btnNext">
+					<div class="btnNext--opacity"></div>
+				</nav>
+			</div>
+
+			<div class="hide_up">
+				<span>menu</span>
+				<br />
+				<i class="fa-solid fa-angles-up"></i>
+			</div>
+
+			<section class="login hide">
+				<a href="#" class="login--close"><i class="fa-solid fa-xmark"></i></a>
+				<img src="./src/img/flower_pattern.jpg" alt="페이지 로고 사진" />
+				<div class="login__box">
+					<i class="fa-solid fa-image-portrait"></i>
+					<input type="text" placeholder="&nbsp;&nbsp;로그인" /><br />
+					<i class="fa-solid fa-key"></i>
+					<input type="password" placeholder="&nbsp;&nbsp;비밀번호" />
+				</div>
+				<a href="#" class="login__btn kr" onclick="noInfo();">로그인</a>
+				<ul class="login__register kr">
+					<li><a href="./register.html">회원가입</a></li>
+					<li>/</li>
+					<li><a href="#find_password" onclick="findPW();">비밀번호 찾기</a></li>
+				</ul>
+			</section>
+		</figure>
+	</body>
+</html>

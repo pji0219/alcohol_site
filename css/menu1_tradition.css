@@ -24,15 +24,13 @@ a {
 }
 .wrap .inner .logo {
   position: absolute;
-  top: 35px;
-  left: 0;
+  top: 25px;
+  left: 30px;
   z-index: 4;
-  width: 50px;
-  height: 50px;
 }
 .wrap .inner .logo img {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
 }
 .wrap .inner header {
   position: relative;
@@ -53,6 +51,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   padding-left: 10%;
+  margin-left: 70px;
   font-size: 20px;
 }
 .wrap .inner header .menu li {
@@ -65,22 +64,26 @@ a {
 }
 
 .alcohol_movie {
-  width: 35%;
+  width: 40%;
   height: 100%;
   position: fixed;
   background-color: green;
   left: 0;
   top: 0;
 }
+.alcohol_movie video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
 .alcohols {
-  width: 65%;
+  width: 60%;
   height: 100%;
   position: absolute;
-  /* display: flex;
-  justify-content: center; */
   top: 0;
   right: 0;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   margin: 0 auto;
 }
 
@@ -92,24 +95,20 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
-  /*  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 350px);
-  gap: 30px;
-  margin-left: 30px; */
 }
 .alcohol__list li {
   width: 200px;
   height: 350px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 40px;
   text-align: center;
   position: relative;
 }
 .alcohol__list li .alcohol_img {
-  width: 110px;
+  width: 140px;
+  height: 225px;
   margin-top: 20px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);

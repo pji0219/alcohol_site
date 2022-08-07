@@ -22,11 +22,12 @@
 
 			h2 {
 				font-size: 35px;
-				color: goldenrod;
+				color: $menuColor;
 				text-shadow: 1px 1px 3px rgba(255, 255, 47, 0.308);
+				margin-bottom: 8px;
 			}
 			p {
-				color: orangered;
+				color: rgba(117, 106, 93, 0.893);
 			}
 		}
 	}

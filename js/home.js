@@ -81,3 +81,42 @@ hideUp.addEventListener("click", function () {
 		}
 	}
 });
+
+const figure = document.querySelector("figure");
+
+window.addEventListener("wheel", function (e) {
+	console.log("wheel 되는 중");
+	const video = figure.querySelectorAll("video");
+	const videoLength = video.length;
+	let page = 0;
+	let lastPage = videoLength - 1;
+	if (e.deltaY > 0) {
+		//아래로 내리는 동작
+		for (let el = 0; el < videoLength; el++) {
+			if (video[page].classList.contains("viewOn")) {
+				// content[page].classList.remove("viewOn");
+				console.log(video[page + 1]);
+
+				if (page !== lastPage) {
+					video[page + 1].classList.add("viewOn");
+				}
+			}
+		}
+		page++;
+	} else if (e.deltaY < 0) {
+		//위로 올리기
+		for (let el = 0; el < videoLength; el++) {
+			if (video[page].classList.contains("viewOn")) {
+				// if (video[page] === 0) return;
+				video[page].classList.remove("viewOn");
+				console.log("page:" + page);
+				consloe.log(video[page - 1]);
+
+				if (page !== 0) {
+					video[page - 1].classList.add("viewOn");
+				}
+			}
+		}
+		page--;
+	}
+});

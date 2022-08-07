@@ -41,6 +41,13 @@ a {
   font-weight: normal;
   font-style: normal;
 }
+/*
+font-family: 'MaruBuriExtraLight';
+font-family: 'MaruBuriLight';
+font-family: 'MaruBuri';
+font-family: 'MaruBuriBold';
+font-family: 'MaruBuriSemiBold';
+*/
 .hide {
   opacity: 0;
   /*
@@ -51,7 +58,7 @@ a {
 }
 
 body {
-  font-family: "ulsanjunggu";
+  font-family: "MaruBuriBold";
 }
 body header {
   position: relative;
@@ -105,15 +112,25 @@ body figure {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
   /*SECTION-menu up*/
   /*SECTION - login*/
   /*login 변수 선언*/
 }
 body figure video {
   width: 100%;
-  height: 110%;
+  height: 100%;
   transition: 1.2s;
   object-fit: cover;
+  opacity: 0;
+  position: absolute;
+}
+body figure video.makgoli {
+  height: 110%;
+}
+body figure video.viewOn {
+  opacity: 0.8;
+  top: 0;
 }
 body figure .wrap {
   width: 100%;
@@ -162,13 +179,13 @@ body figure .wrap .rotate_menu article .inner {
   opacity: 0;
   transition: 2s;
   transform: scale(0.8);
+  text-align: center;
 }
 body figure .wrap .rotate_menu article .inner > a {
   display: inline-block;
-  width: inherit;
 }
 body figure .wrap .rotate_menu article .inner > a > img {
-  width: inherit;
+  height: 200px;
 }
 body figure .wrap .linear_menu {
   position: absolute;
@@ -181,10 +198,30 @@ body figure .wrap .linear_menu .menu_list {
   justify-content: center;
 }
 body figure .wrap .linear_menu .menu_list li {
+  position: absolute;
   padding: 20px;
 }
+body figure .wrap .linear_menu .menu_list li:nth-child(1) {
+  top: 0;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(2) {
+  top: 10vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(3) {
+  top: 20vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(4) {
+  top: 30vh;
+  color: red;
+}
 body figure .wrap .linear_menu .menu_list li a {
-  color: rgba(248, 217, 61, 0.751);
+  color: rgba(247, 234, 234, 0.808);
+  transition: 0.4s;
+  opacity: 0.8;
+}
+body figure .wrap .linear_menu .menu_list li a:hover {
+  font-size: 34px;
+  opacity: 1;
 }
 body figure .wrap .explain {
   width: 100%;
@@ -206,11 +243,12 @@ body figure .wrap .explain > ul > li.on {
 }
 body figure .wrap .explain > ul > li h2 {
   font-size: 35px;
-  color: goldenrod;
+  color: rgba(247, 234, 234, 0.808);
   text-shadow: 1px 1px 3px rgba(255, 255, 47, 0.308);
+  margin-bottom: 8px;
 }
 body figure .wrap .explain > ul > li p {
-  color: orangered;
+  color: rgba(117, 106, 93, 0.893);
 }
 body figure .wrap nav {
   width: 30px;

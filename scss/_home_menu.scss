@@ -1,3 +1,4 @@
+$menuColor: rgba(247, 234, 234, 0.808);
 .rotate_menu {
 	width: 12vw;
 	height: 12vw;
@@ -28,6 +29,8 @@
 			opacity: 0;
 			transition: 2s;
 			transform: scale(0.8);
+			// background-color: aqua;
+			text-align: center;
 
 			// .text {
 			// 	position: absolute;
@@ -36,10 +39,12 @@
 			// }
 			> a {
 				display: inline-block;
-				width: inherit;
+				// width: inherit;
+				// background-color: yellowgreen;
 
 				> img {
-					width: inherit;
+					height: 200px;
+					// background-color: yellow;
 				}
 			}
 		}
@@ -62,10 +67,35 @@
 		justify-content: center;
 		li {
 			// margin: 2%;
+
+			position: absolute;
+			// position: relative;
 			padding: 20px;
+			// transform-origin: left center;
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 10vh;
+			}
+			&:nth-child(3) {
+				top: 20vh;
+			}
+			&:nth-child(4) {
+				top: 30vh;
+				color: red;
+			}
 
 			a {
-				color: rgba(248, 217, 61, 0.751);
+				color: $menuColor;
+
+				transition: 0.4s;
+				opacity: 0.8;
+
+				&:hover {
+					font-size: 34px;
+					opacity: 1;
+				}
 			}
 		}
 	}

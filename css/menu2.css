@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap,
+html {
+  width: 100%;
+}
+.wrap .container,
+html .container {
+  position: relative;
+  width: 100%;
+  /* HEADER */
+  /*     XMAS-SECTION  */
+  /*     PROPOSE-SECTION  */
+  /*     BIRTH-SECTION  */
+}
+.wrap .container .logo,
+html .container .logo {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 35px;
+  left: 30px;
+  z-index: 4;
+}
+.wrap .container .logo img,
+html .container .logo img {
+  width: 100px;
+  height: 50px;
+}
+.wrap .container header,
+html .container header {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: pink;
+  z-index: 3;
+  transition: 1s;
+}
+.wrap .container header .menu,
+html .container header .menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.wrap .container header .menu li,
+html .container header .menu li {
+  padding-right: 50px;
+  padding-top: 50px;
+}
+.wrap .container header .menu > .menu_bar,
+html .container header .menu > .menu_bar {
+  position: absolute;
+  right: 0;
+}
+.wrap .container .xmas,
+html .container .xmas {
+  width: 100%;
+  height: 450px;
+}
+.wrap .container .xmas > article,
+html .container .xmas > article {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.wrap .container .xmas > article .xmas_left,
+html .container .xmas > article .xmas_left {
+  position: absolute;
+  width: 45%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(44, 105, 109, 0.402);
+}
+.wrap .container .xmas > article .xmas_left video,
+html .container .xmas > article .xmas_left video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .container .xmas > article .xmas_right,
+html .container .xmas > article .xmas_right {
+  position: absolute;
+  width: 55%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.wrap .container .xmas > article .xmas_right .xmas_info,
+html .container .xmas > article .xmas_right .xmas_info {
+  width: 100%;
+  height: 100%;
+}
+.wrap .container .xmas > article .xmas_right .textBox,
+html .container .xmas > article .xmas_right .textBox {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  z-index: 1;
+}
+.wrap .container .xmas > article .xmas_right .textBox h1,
+html .container .xmas > article .xmas_right .textBox h1 {
+  display: inline-block;
+  font: 600 16px/1;
+  color: white;
+  letter-spacing: 1px;
+}
+.wrap .container .propose,
+html .container .propose {
+  width: 100%;
+  height: 300px;
+}
+.wrap .container .propose > article,
+html .container .propose > article {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.wrap .container .propose > article .propose_left,
+html .container .propose > article .propose_left {
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.wrap .container .propose > article .propose_left .propose_info,
+html .container .propose > article .propose_left .propose_info {
+  width: 100%;
+  height: 100%;
+}
+.wrap .container .propose > article .propose_right,
+html .container .propose > article .propose_right {
+  position: absolute;
+  width: 45%;
+  height: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: darkkhaki;
+}
+.wrap .container .birth article,
+html .container .birth article {
+  position: relative;
+  height: 400px;
+}
+.wrap .container .birth article .birth_left,
+html .container .birth article .birth_left {
+  position: absolute;
+  width: 35%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(44, 105, 109, 0.402);
+}
+.wrap .container .birth article .birth_right,
+html .container .birth article .birth_right {
+  position: absolute;
+  width: 65%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.wrap .container .birth article .birth_right .birth_info,
+html .container .birth article .birth_right .birth_info {
+  width: 100%;
+  height: 100%;
+}
+.wrap .container footer,
+html .container footer {
+  width: 100%;
+}
+.wrap .container footer article,
+html .container footer article {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgb(58, 12, 79);
+}
+
+/*# sourceMappingURL=menu2.css.map */

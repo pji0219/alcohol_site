@@ -9,15 +9,13 @@
 
     .logo {
       position: absolute;
-      top: 35px;
-      left: 0;
+      top: 25px;
+      left: 30px;
       z-index: 4;
-      width: 50px;
-      height: 50px;
 
       img {
-        width: 50px;
-        height: 50px;
+        width: 150px;
+        height: 60px;
       }
     }
 
@@ -26,7 +24,9 @@
       top: 0;
       width: 100%;
       height: 120px;
-      background-color: pink;
+
+      transform: translate(0, -100px);
+
       z-index: 3;
       transition: 1s;
       display: flex;
@@ -35,9 +35,13 @@
 
       .menu {
         height: 120px;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        padding-left: 10%;
+        margin-left: 70px;
+        font-size: 20px;
 
         li {
           margin-right: 50px;

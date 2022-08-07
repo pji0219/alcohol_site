@@ -21,6 +21,8 @@ a {
   width: 100%;
   height: 100%;
   position: relative;
+  /* LOGO */
+  /* HEADER */
 }
 .wrap .inner .logo {
   position: absolute;
@@ -66,7 +68,8 @@ a {
   cursor: pointer;
 }
 
-.alcohol_movie {
+/* VIDEO */
+.alcohol_video {
   width: 40%;
   height: 100%;
   position: fixed;
@@ -74,12 +77,13 @@ a {
   left: 0;
   top: 0;
 }
-.alcohol_movie video {
+.alcohol_video video {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
+/* ALCOHOL LIST */
 .alcohols {
   width: 60%;
   height: 100%;

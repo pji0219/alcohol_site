@@ -1,4 +1,10 @@
 @import "reset";
+@font-face {
+  font-family: '양진체';
+  src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .wrap,
 html {
@@ -17,8 +23,8 @@ html {
       z-index: 4;
 
       img {
-        width: 100px;
-        height: 50px;
+        width: 130px;
+        height: 60px;
       }
     }
     /* HEADER */
@@ -83,18 +89,23 @@ html {
           }
           .textBox {
             position: absolute;
-            right: 0px;
+            top: 70px;
+            right: 75px;
             width: 300px;
             z-index: 1;
             h1 {
-              display: inline-block;
+              display: block;
+              font-family: '양진체';
               font: 600 16px/1;
               color: white;
               letter-spacing: 1px;
             }
             span {
+              font-family: '양진체';
+              font-size: 16px;
             }
             p {
+              font-family: '양진체';
             }
           }
         }
@@ -103,7 +114,7 @@ html {
     /*     PROPOSE-SECTION  */
     .propose {
       width: 100%;
-      height: 300px;
+      height: 400px;
 
       > article {
         position: relative;

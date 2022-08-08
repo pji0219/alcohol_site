@@ -2,18 +2,26 @@
 @import 'menu1_common';
 
 /* VIDEO */
+// section
 .alcohol_video {
   width: 40%;
   height: 100%;
   position: fixed;
-  background-color: green;
+  background-color: black;
   left: 0;
   top: 0;
 
+  .full_video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
   video {
     width: 100%;
     height: 100%;
     object-fit: fill;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -25,6 +33,7 @@
   top: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 2;
 
   .alcohol__list {
     padding-top: 70px;
@@ -42,10 +51,11 @@
       margin: 40px;
       text-align: center;
       position: relative;
+
       cursor: pointer;
+      transition: 2s;
 
       .alcohol_img {
-        width: 140px;
         height: 225px;
         margin-top: 20px;
         position: absolute;
@@ -55,19 +65,19 @@
       }
 
       .add_cart {
-        display: none;
+        opacity: 0;
         width: 120px;
         height: 35px;
         position: absolute;
-        bottom: 50%;
-        transform: translate(-50%, 0);
-        /* border: 1px solid; */
+        top: 60%;
+
+        transform: translate(-50%, -55%);
         border-radius: 3px;
         background: none;
         color: #333;
 
         border: none;
-        transition: all 0.3s ease;
+        transition: all 1s ease;
         overflow: hidden;
         border-radius: 5px;
         padding: 10px 25px;
@@ -79,13 +89,6 @@
           7px 7px 20px 0px rgba(0, 0, 0, 0.1),
           4px 4px 5px 0px rgba(0, 0, 0, 0.1);
         outline: none;
-
-        /*  &:hover {
-          border: none;
-          background-color: #333;
-          color: #fff;
-          cursor: pointer;
-        } */
 
         &:after {
           position: absolute;
@@ -122,6 +125,22 @@
       &:hover {
         .add_cart {
           display: inline;
+          opacity: 1;
+          top: 45%;
+        }
+      }
+
+      .like_btn {
+        display: none;
+        position: absolute;
+        top: 27px;
+        right: 10px;
+        font-size: 18px;
+      }
+
+      &:hover {
+        .like_btn {
+          display: block;
         }
       }
 
@@ -129,14 +148,32 @@
         width: 100%;
         position: absolute;
         top: 250px;
-        text-align: start;
+        text-align: center;
         color: #333;
 
         .title {
+          display: inline-block;
           margin-top: 10px;
           margin-bottom: 10px;
+          font-size: 18px;
+          white-space: nowrap;
+        }
+
+        .price {
+          display: block;
         }
       }
     }
   }
+
+  /* .alcohol__description {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 5;
+  } */
 }

@@ -82,39 +82,45 @@ hideUp.addEventListener("click", function () {
 	}
 });
 
+//스크롤
 const figure = document.querySelector("figure");
-
+let page = 0;
 window.addEventListener("wheel", function (e) {
-	console.log("wheel 되는 중");
-	const video = figure.querySelectorAll("video");
-	const videoLength = video.length;
-	let page = 0;
-	let lastPage = videoLength - 1;
+	const bgContent = figure.querySelectorAll(".bg");
+	const bgContentLength = bgContent.length;
+
+	let lastPage = bgContentLength - 1;
 	if (e.deltaY > 0) {
 		//아래로 내리는 동작
-		for (let el = 0; el < videoLength; el++) {
-			if (video[page].classList.contains("viewOn")) {
-				// content[page].classList.remove("viewOn");
-				console.log(video[page + 1]);
-
-				if (page !== lastPage) {
-					video[page + 1].classList.add("viewOn");
-				}
+		console.log("아래로wheel 되는 중");
+		for (let el = 0; el < bgContentLength; el++) {
+			if (bgContent[page].classList.contains("viewOn") && page !== lastPage) {
+				bgContent[page].classList.remove("viewOn");
+				console.log(bgContent[page + 1]);
+				bgContent[page].classList.add("viewOutToUp");
+				bgContent[page + 1].classList.add("viewOn");
+				console.log(page);
+			} else {
+				console.log(page);
 			}
 		}
-		page++;
+		++page;
 	} else if (e.deltaY < 0) {
 		//위로 올리기
-		for (let el = 0; el < videoLength; el++) {
-			if (video[page].classList.contains("viewOn")) {
+		console.log("위로wheel 되는 중");
+		for (let el = 0; el < bgContentLength; el++) {
+			console.log(page);
+			if (bgContent[page].classList.contains("viewOn") && page !== 0) {
 				// if (video[page] === 0) return;
-				video[page].classList.remove("viewOn");
+				bgContent[page].classList.remove("viewOn");
 				console.log("page:" + page);
-				consloe.log(video[page - 1]);
+				console.log(bgContent[page - 1]);
 
-				if (page !== 0) {
-					video[page - 1].classList.add("viewOn");
-				}
+				// bgContent[page].classList.add("viewOutToDown");
+				bgContent[page].classList.remove("viewOutToUp");
+				bgContent[page - 1].classList.add("viewOn");
+			} else {
+				console.log("예외처리 어떻게 하지ㅜ?");
 			}
 		}
 		page--;

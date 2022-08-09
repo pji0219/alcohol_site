@@ -1,77 +1,179 @@
 @import 'reset';
 @import 'menu1_common';
 
-.alcohol_movie {
+/* VIDEO */
+// section
+.alcohol_video {
   width: 40%;
   height: 100%;
   position: fixed;
-  background-color: green;
+  background-color: black;
   left: 0;
   top: 0;
 
+  .full_video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
   video {
     width: 100%;
     height: 100%;
     object-fit: fill;
+    position: absolute;
+    top: 0;
   }
 }
 
+/* ALCOHOL LIST */
 .alcohols {
   width: 60%;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  /* background-color: skyblue; */
   margin: 0 auto;
-}
+  z-index: 2;
 
-.alcohol__list {
-  padding-top: 70px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  .alcohol__list {
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 
-  flex-wrap: wrap;
-  list-style: none;
+    flex-wrap: wrap;
+    list-style: none;
 
-  li {
-    width: 200px;
-    height: 350px;
-    /* border: 1px solid black; */
-    margin: 40px;
-    text-align: center;
-    position: relative;
-
-    .alcohol_img {
-      width: 140px;
-      height: 225px;
-      margin-top: 20px;
-      /* background-color: aquamarine; */
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      background-size: cover;
-    }
-
-    .text {
-      width: 100%;
-      position: absolute;
-      top: 250px;
+    li {
+      width: 200px;
+      height: 350px;
+      margin: 40px;
       text-align: center;
-      .title {
-        margin-top: 10px;
-        margin-bottom: 10px;
+      position: relative;
+
+      cursor: pointer;
+      transition: 2s;
+
+      .alcohol_img {
+        height: 225px;
+        margin-top: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-size: cover;
       }
 
-      .price {
+      .add_cart {
+        opacity: 0;
+        width: 120px;
+        height: 35px;
+        position: absolute;
+        top: 60%;
+
+        transform: translate(-50%, -55%);
+        border-radius: 3px;
+        background: none;
+        color: #333;
+
+        border: none;
+        transition: all 1s ease;
+        overflow: hidden;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+
+        &:after {
+          position: absolute;
+          content: ' ';
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #1fd1f9;
+          background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          background: transparent;
+          box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+            inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+          color: #fff;
+        }
+
+        &:hover:after {
+          -webkit-transform: scale(2) rotate(180deg);
+          transform: scale(2) rotate(180deg);
+          box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+            inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+        }
       }
 
-      .description {
+      &:hover {
+        .add_cart {
+          display: inline;
+          opacity: 1;
+          top: 45%;
+        }
+      }
+
+      .like_btn {
+        display: none;
+        position: absolute;
+        top: 27px;
+        right: 10px;
+        font-size: 18px;
+      }
+
+      &:hover {
+        .like_btn {
+          display: block;
+        }
+      }
+
+      .text {
+        width: 100%;
+        position: absolute;
+        top: 250px;
         text-align: center;
-        margin-top: 10px;
+        color: #333;
+
+        .title {
+          display: inline-block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 18px;
+          white-space: nowrap;
+        }
+
+        .price {
+          display: block;
+        }
       }
     }
   }
+
+  /* .alcohol__description {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 5;
+  } */
 }

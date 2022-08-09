@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전통주</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/menu1_tradition.css" />
+
+    <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/82579c42bb.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- GREEN SAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JS -->
     <script defer src="./js/menu1.js"></script>
   </head>
   <body>
@@ -34,140 +53,184 @@
           </div> -->
         </header>
 
-        <!-- TRADITION ALCHOL IMAGE -->
-        <section class="alcohol_movie">
-          <video src="./src/video/mak_movie2.mp4" loop muted autoplay></video>
-        </section>
-
+        <!-- ALCOHOL LIST -->
         <section class="alcohols">
           <ul class="alcohol__list">
             <li>
               <img src="./src/img/mak1.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
+              <div class="like_btn">
+                <i class="fa-regular fa-heart"></i>
+              </div>
               <div class="text">
                 <h3 class="title">1000억 유산균 막걸리</h3>
-                <span class="price">3500원</span>
+                <span class="price">3,500원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak2.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">2017년 햅쌀로 빚은 첫술</h3>
+                <span class="price">4,200원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak3.jpg" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">1932 새싹땅콩+햅쌀/흑미</h3>
+                <span class="price">4,900원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak4.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">고향인삼막걸리</h3>
+                <span class="price">3,200원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak5.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">고향생막걸리</h3>
+                <span class="price">3,600원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak6.jpg" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">가평 잣 생막걸리</h3>
+                <span class="price">4,100원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak7.jpg" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">가야 프리미엄 막걸리</h3>
+                <span class="price">5,000원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak8.jpg" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">G12 골디락스</h3>
+                <span class="price">3,800원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak9.jpg" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">DOK막걸리</h3>
+                <span class="price">4,800원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak10.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">벗이랑 조릿대</h3>
+                <span class="price">12,200원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak11.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">냥이탁주9</h3>
+                <span class="price">9,500원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak12.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">종천 생막걸리</h3>
+                <span class="price">2,500원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak13.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">벗이랑 버찌</h3>
+                <span class="price">12,200원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak14.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">벗이랑 강황</h3>
+                <span class="price">12,200원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak15.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">냥이탁주 fresh</h3>
+                <span class="price">6,000원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak16.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">나이스 버디</h3>
+                <span class="price">10,000원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak17.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">문삼이공 막걸리</h3>
+                <span class="price">16,000원</span>
               </div>
             </li>
             <li>
               <img src="./src/img/mak18.png" class="alcohol_img" alt="막걸리" />
+              <button class="add_cart">ADD CART</button>
               <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
+                <h3 class="title">수리산 막걸리</h3>
+                <span class="price">9,900원</span>
               </div>
             </li>
           </ul>
+          <!-- <div class="alcohol__description">설명</div>
+          <div class="alcohol__description">설명1</div>
+          <div class="alcohol__description">설명2</div>
+          <div class="alcohol__description">설명3</div> -->
+        </section>
+        <!-- ALCOHOL VIDEO -->
+        <section class="alcohol_video">
+          <video
+            src="./src/video/mak_video3.mp4"
+            loop
+            autoplay
+            muted
+            class="full_video"
+          >
+            테스트
+          </video>
+
+          <!-- <video
+            src="./src/video/mak_movie2.mp4"
+            class="bg"
+            loop
+            muted
+            autoplay
+          ></video> -->
+
+          <!-- <div class="bg white">테스트</div>
+          <div class="bg blue">테스트</div> -->
         </section>
       </div>
     </div>

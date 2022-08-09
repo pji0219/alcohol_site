@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,12 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .wrap,
 html {
   width: 100%;
@@ -37,8 +44,8 @@ html .container .logo {
 }
 .wrap .container .logo img,
 html .container .logo img {
-  width: 100px;
-  height: 50px;
+  width: 130px;
+  height: 60px;
 }
 .wrap .container header,
 html .container header {
@@ -109,21 +116,32 @@ html .container .xmas > article .xmas_right .xmas_info {
 .wrap .container .xmas > article .xmas_right .textBox,
 html .container .xmas > article .xmas_right .textBox {
   position: absolute;
-  right: 0px;
+  top: 70px;
+  right: 75px;
   width: 300px;
   z-index: 1;
 }
 .wrap .container .xmas > article .xmas_right .textBox h1,
 html .container .xmas > article .xmas_right .textBox h1 {
-  display: inline-block;
+  display: block;
+  font-family: "양진체";
   font: 600 16px/1;
   color: white;
   letter-spacing: 1px;
 }
+.wrap .container .xmas > article .xmas_right .textBox span,
+html .container .xmas > article .xmas_right .textBox span {
+  font-family: "양진체";
+  font-size: 16px;
+}
+.wrap .container .xmas > article .xmas_right .textBox p,
+html .container .xmas > article .xmas_right .textBox p {
+  font-family: "양진체";
+}
 .wrap .container .propose,
 html .container .propose {
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 .wrap .container .propose > article,
 html .container .propose > article {

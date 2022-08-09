@@ -14,9 +14,25 @@ a {
   text-decoration: none;
 }
 
+/* menu2.html 적용 font */
+/* h1 */
 @font-face {
   font-family: "양진체";
   src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -28,51 +44,103 @@ html {
 html .container {
   position: relative;
   width: 100%;
-  /* HEADER */
+  /*     HEADER 
+      header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 120px;
+        background-color: pink;
+        z-index: 3;
+        transition: 1s;
+
+        .menu {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          li {
+            padding-right: 50px;
+            padding-top: 50px;
+          }
+
+          > .menu_bar {
+            position: absolute;
+            right: 0;
+          }
+        }
+      } */
   /*     XMAS-SECTION  */
   /*     PROPOSE-SECTION  */
   /*     BIRTH-SECTION  */
 }
 .wrap .container .logo,
 html .container .logo {
-  position: absolute;
-  width: 100px;
-  height: 50px;
-  top: 35px;
+  position: fixed;
+  top: 25px;
   left: 30px;
   z-index: 4;
 }
 .wrap .container .logo img,
 html .container .logo img {
-  width: 130px;
+  width: 150px;
   height: 60px;
+}
+.wrap .container .badges,
+html .container .badges {
+  position: fixed;
+  width: 90px;
+  top: 150px;
+  right: 40px;
+  z-index: 1;
+}
+.wrap .container .badges img,
+html .container .badges img {
+  width: 100%;
+  border-radius: 5px;
 }
 .wrap .container header,
 html .container header {
-  display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 120px;
-  background-color: pink;
-  z-index: 3;
-  transition: 1s;
+  /*       background-image: url("../src/img/wood.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: top 0.2s ease-in-out;
+  z-index: 1;
 }
 .wrap .container header .menu,
 html .container header .menu {
-  margin: 0 auto;
+  height: 120px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10%;
+  margin-left: 70px;
+  font-size: 20px;
+  font-family: "Cafe24SsurroundAir";
+  z-index: 1;
 }
 .wrap .container header .menu li,
 html .container header .menu li {
-  padding-right: 50px;
-  padding-top: 50px;
+  margin-right: 50px;
 }
-.wrap .container header .menu > .menu_bar,
-html .container header .menu > .menu_bar {
+.wrap .container header .menu li a:visited,
+html .container header .menu li a:visited {
+  color: rgb(255, 255, 255);
+}
+.wrap .container header .menu_bar,
+html .container header .menu_bar {
   position: absolute;
-  right: 0;
+  right: 30px;
+  cursor: pointer;
+}
+.wrap .container .nav-up,
+html .container .nav-up {
+  top: -120px;
 }
 .wrap .container .xmas,
 html .container .xmas {
@@ -84,6 +152,12 @@ html .container .xmas > article {
   position: relative;
   height: 100%;
   width: 100%;
+  /* .xmas_back{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    width: 400px;
+  }  */
 }
 .wrap .container .xmas > article .xmas_left,
 html .container .xmas > article .xmas_left {
@@ -92,13 +166,13 @@ html .container .xmas > article .xmas_left {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(44, 105, 109, 0.402);
 }
 .wrap .container .xmas > article .xmas_left video,
 html .container .xmas > article .xmas_left video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 50;
 }
 .wrap .container .xmas > article .xmas_right,
 html .container .xmas > article .xmas_right {
@@ -112,36 +186,80 @@ html .container .xmas > article .xmas_right {
 html .container .xmas > article .xmas_right .xmas_info {
   width: 100%;
   height: 100%;
+  opacity: 0.8;
+  z-index: 99;
 }
 .wrap .container .xmas > article .xmas_right .textBox,
 html .container .xmas > article .xmas_right .textBox {
   position: absolute;
   top: 70px;
-  right: 75px;
-  width: 300px;
+  right: 110px;
+  width: 390px;
   z-index: 1;
-}
-.wrap .container .xmas > article .xmas_right .textBox h1,
-html .container .xmas > article .xmas_right .textBox h1 {
-  display: block;
-  font-family: "양진체";
-  font: 600 16px/1;
-  color: white;
-  letter-spacing: 1px;
 }
 .wrap .container .xmas > article .xmas_right .textBox span,
 html .container .xmas > article .xmas_right .textBox span {
-  font-family: "양진체";
+  color: rgb(0, 0, 0);
+  font-family: "LeferiPoint-WhiteObliqueA";
   font-size: 16px;
+}
+.wrap .container .xmas > article .xmas_right .textBox h1,
+html .container .xmas > article .xmas_right .textBox h1 {
+  margin-top: 5px;
+  display: block;
+  font-family: "양진체";
+  font: 600 16px/1;
+  letter-spacing: 1px;
+  color: rgba(31, 107, 31, 0.868);
+}
+.wrap .container .xmas > article .xmas_right .textBox h2,
+html .container .xmas > article .xmas_right .textBox h2 {
+  font-family: "양진체";
+  color: rgba(169, 63, 63, 0.984);
+  margin-bottom: 30px;
+}
+.wrap .container .xmas > article .xmas_right .textBox h3,
+html .container .xmas > article .xmas_right .textBox h3 {
+  font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
+}
+.wrap .container .xmas > article .xmas_right .textBox h3:hover,
+html .container .xmas > article .xmas_right .textBox h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(241, 153, 65, 0.724);
+}
+.wrap .container .xmas > article .xmas_right .textBox .right_h3_text,
+html .container .xmas > article .xmas_right .textBox .right_h3_text {
+  margin-left: 230px;
+}
+.wrap .container .xmas > article .xmas_right .textBox .right_h3_text:hover,
+html .container .xmas > article .xmas_right .textBox .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(241, 153, 65, 0.724);
+}
+.wrap .container .xmas > article .xmas_right .textBox .right_p_text,
+html .container .xmas > article .xmas_right .textBox .right_p_text {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+.wrap .container .xmas > article .xmas_right .textBox .right_p_text2,
+html .container .xmas > article .xmas_right .textBox .right_p_text2 {
+  margin-left: 275px;
 }
 .wrap .container .xmas > article .xmas_right .textBox p,
 html .container .xmas > article .xmas_right .textBox p {
-  font-family: "양진체";
+  font: 600 16px/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
 }
 .wrap .container .propose,
 html .container .propose {
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
 .wrap .container .propose > article,
 html .container .propose > article {
@@ -162,6 +280,75 @@ html .container .propose > article .propose_left {
 html .container .propose > article .propose_left .propose_info {
   width: 100%;
   height: 100%;
+  opacity: 0.9;
+  z-index: 99;
+}
+.wrap .container .propose > article .propose_left .textBox2,
+html .container .propose > article .propose_left .textBox2 {
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  width: 390px;
+  z-index: 1;
+}
+.wrap .container .propose > article .propose_left .textBox2 span,
+html .container .propose > article .propose_left .textBox2 span {
+  color: white;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 16px;
+}
+.wrap .container .propose > article .propose_left .textBox2 h1,
+html .container .propose > article .propose_left .textBox2 h1 {
+  margin-top: 5px;
+  display: block;
+  font-family: "양진체";
+  font: 600 16px/1;
+  letter-spacing: 1px;
+  color: rgba(41, 119, 152, 0.868);
+}
+.wrap .container .propose > article .propose_left .textBox2 h2,
+html .container .propose > article .propose_left .textBox2 h2 {
+  font-family: "양진체";
+  color: rgba(235, 32, 126, 0.984);
+  margin-bottom: 30px;
+}
+.wrap .container .propose > article .propose_left .textBox2 h3,
+html .container .propose > article .propose_left .textBox2 h3 {
+  font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
+}
+.wrap .container .propose > article .propose_left .textBox2 h3:hover,
+html .container .propose > article .propose_left .textBox2 h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.wrap .container .propose > article .propose_left .textBox2 .right_h3_text,
+html .container .propose > article .propose_left .textBox2 .right_h3_text {
+  margin-left: 230px;
+}
+.wrap .container .propose > article .propose_left .textBox2 .right_h3_text:hover,
+html .container .propose > article .propose_left .textBox2 .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.wrap .container .propose > article .propose_left .textBox2 .right_p_text,
+html .container .propose > article .propose_left .textBox2 .right_p_text {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+.wrap .container .propose > article .propose_left .textBox2 .right_p_text2,
+html .container .propose > article .propose_left .textBox2 .right_p_text2 {
+  margin-left: 275px;
+}
+.wrap .container .propose > article .propose_left .textBox2 p,
+html .container .propose > article .propose_left .textBox2 p {
+  font: 600 16px/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
 }
 .wrap .container .propose > article .propose_right,
 html .container .propose > article .propose_right {
@@ -171,12 +358,18 @@ html .container .propose > article .propose_right {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: darkkhaki;
+}
+.wrap .container .propose > article .propose_right video,
+html .container .propose > article .propose_right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 .wrap .container .birth article,
 html .container .birth article {
   position: relative;
-  height: 400px;
+  height: 450px;
 }
 .wrap .container .birth article .birth_left,
 html .container .birth article .birth_left {
@@ -199,6 +392,74 @@ html .container .birth article .birth_right {
 html .container .birth article .birth_right .birth_info {
   width: 100%;
   height: 100%;
+  z-index: 99;
+}
+.wrap .container .birth article .birth_right .textBox2,
+html .container .birth article .birth_right .textBox2 {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  width: 390px;
+  z-index: 1;
+}
+.wrap .container .birth article .birth_right .textBox2 span,
+html .container .birth article .birth_right .textBox2 span {
+  color: white;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 16px;
+}
+.wrap .container .birth article .birth_right .textBox2 h1,
+html .container .birth article .birth_right .textBox2 h1 {
+  margin-top: 5px;
+  display: block;
+  font-family: "양진체";
+  font: 600 16px/1;
+  letter-spacing: 1px;
+  color: rgba(41, 119, 152, 0.868);
+}
+.wrap .container .birth article .birth_right .textBox2 h2,
+html .container .birth article .birth_right .textBox2 h2 {
+  font-family: "양진체";
+  color: rgba(235, 32, 126, 0.984);
+  margin-bottom: 30px;
+}
+.wrap .container .birth article .birth_right .textBox2 h3,
+html .container .birth article .birth_right .textBox2 h3 {
+  font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
+}
+.wrap .container .birth article .birth_right .textBox2 h3:hover,
+html .container .birth article .birth_right .textBox2 h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.wrap .container .birth article .birth_right .textBox2 .right_h3_text,
+html .container .birth article .birth_right .textBox2 .right_h3_text {
+  margin-left: 230px;
+}
+.wrap .container .birth article .birth_right .textBox2 .right_h3_text:hover,
+html .container .birth article .birth_right .textBox2 .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.wrap .container .birth article .birth_right .textBox2 .right_p_text,
+html .container .birth article .birth_right .textBox2 .right_p_text {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+.wrap .container .birth article .birth_right .textBox2 .right_p_text2,
+html .container .birth article .birth_right .textBox2 .right_p_text2 {
+  margin-left: 275px;
+}
+.wrap .container .birth article .birth_right .textBox2 p,
+html .container .birth article .birth_right .textBox2 p {
+  font: 600 16px/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
 }
 .wrap .container footer,
 html .container footer {
@@ -210,6 +471,29 @@ html .container footer article {
   width: 100%;
   height: 400px;
   background-color: rgb(58, 12, 79);
+}
+.wrap .container #goto-top,
+html .container #goto-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .container #goto-top .material-icons > i,
+html .container #goto-top .material-icons > i {
+  font-size: 15px;
+  color: white;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=menu2.css.map */

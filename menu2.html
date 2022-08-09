@@ -7,7 +7,6 @@
     <title>우리들의 추천</title>
     <!-- MENU2.CSS -->
     <link rel="stylesheet" href="./css/menu2.css" />
-
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/82579c42bb.js"
@@ -16,15 +15,26 @@
     <!-- JS -->
     <script defer src="./js/menu2.js"></script>
 
+    <!-- jQuery document -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js" integrity="sha512-kSI9CgGh60rJbNVeMJvfNX0UTKAq8LEOea/yKJQbFpIroxT7bf9/zUFXbnfsQP5F6xlOOHtCfBPgsE1ceiHnRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <body>
     <div class="wrap">
       <div class="container">
         <a href="./index.html" class="logo">
           <img src="./src/img/logo3.png" alt="logo" />
+          
         </a>
-        <header>
+        <div class="badges">
+          <div class="badge"><a href="#"><img src="./src/img/badges_1.jpg" alt="오프라인 매장"></a></div>
+          <div class="badge"><a href="#"><img src="./src/img/badges_2.jpg" alt="주류 관련 뉴스"></a></div>
+          
+        </div>
+        <header class="nav-down">
           <ul class="menu">
             <li><a href="#">맥주</a></li>
             <li><a href="#">와인</a></li>
@@ -34,29 +44,37 @@
           <a href="#" class="menu_bar">
             <i class="fa-solid fa-bars"></i>
           </a>
-        </header>
 
+        </header>
+        
         <!--         XMAS, PROPOSE, BIRTH SECTION         -->
         <section class="xmas">
           <article>
+<!--             <img src ="src/img/xmas_img2.png" alt = "연말파티 중간 트리 이미지" class = "xmas_back"> -->
             <div class="xmas_left">
               <video
-                src="./src/video/xmas_video.mp4"
-                loop="loop"
+              src="./src/video/xmas_video.mp4"
+              loop="loop"
                 muted="muted"
                 autoplay="autoplay"
               ></video>
             </div>
             <div class="xmas_right">
               <img
-                src="./src/img/xmas_img.JPG"
-                alt="연말파티(크리스마스) 추천 주류 소개 글"
-                class="xmas_info"
-              />
+              src="./src/img/xmas_img.PNG" alt="연말파티(크리스마스) 추천 주류 소개 글"
+              class="xmas_info">
               <div class="textBox">
-                <h1>연말 홈파티에 즐길 수 있는 주류</h1>
-                <span>당신을 취향저격할 연말 홈파티 주류 소개</span>
-                <p>주류들 소개</p>
+                <span>주막 추천 12월의 술</span>
+                <h1>함께하는 소중한 시간</h1>
+                <h2>연말 홈파티</h2>
+                <a href = "#"><h3>1. 비냐 빅(VINAVIK A)</h3> </a>
+                <p>칠레 전통 와인 best1</p>
+                <a href = "#"><h3 class = "right_h3_text">2. 걍 즐겨</h3></a>
+                <p class = "right_p_text">석류,히비스커스 기반의 탁주</p>
+                <a href = "#"><h3>3. Brown brothers</h3></a>
+                <p>모스카토 로제 스파클링 와인</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 추사 블루베리 </h3></a>
+                <p class = "right_p_text2">전통주 와인</p>
               </div>
             </div>
           </article>
@@ -66,12 +84,33 @@
           <article>
             <div class="propose_left">
               <img
-                src="./src/img/propose_left.JPG"
+                src="./src/img/propose_img.PNG"
                 alt="프로포즈 추천 주류 소개 글"
                 class="propose_info"
               />
+
+              <div class="textBox2">
+                <span>주막 추천 프로포즈에 걸맞는 술</span><hr>
+                <h1>오직 둘이서만</h1>
+                <h2>빛나는 행복한 시간</h2>
+                <a href = "#"><h3>1. 비냐 빅(VINAVIK A)</h3> </a>
+                <p>칠레 전통 와인 best1</p>
+                <a href = "#"><h3 class = "right_h3_text">2. 걍 즐겨</h3></a>
+                <p class = "right_p_text">석류,히비스커스 기반의 탁주</p>
+                <a href = "#"><h3>3. Brown brothers</h3></a>
+                <p>모스카토 로제 스파클링 와인</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 추사 블루베리 </h3></a>
+                <p class = "right_p_text2">전통주 와인</p>
+              </div>
             </div>
-            <div class="propose_right"></div>
+            <div class="propose_right">
+              <video
+              src="./src/video/propose_video2.mp4"
+              loop="loop"
+                muted="muted"
+                autoplay="autoplay"
+              ></video>
+            </div>
           </article>
         </section>
 
@@ -80,10 +119,23 @@
             <div class="birth_left"></div>
             <div class="birth_right">
               <img
-                src="./src/img/birth_img.JPG"
+                src="./src/img/birth_img3.PNG"
                 alt="생일 추천 주류 소개 글"
                 class="birth_info"
               />
+              <div class="textBox2">
+                <span>주막 추천 프로포즈에 걸맞는 술</span><hr>
+                <h1>오직 둘이서만</h1>
+                <h2>빛나는 행복한 시간</h2>
+                <a href = "#"><h3>1. 비냐 빅(VINAVIK A)</h3> </a>
+                <p>칠레 전통 와인 best1</p>
+                <a href = "#"><h3 class = "right_h3_text">2. 걍 즐겨</h3></a>
+                <p class = "right_p_text">석류,히비스커스 기반의 탁주</p>
+                <a href = "#"><h3>3. Brown brothers</h3></a>
+                <p>모스카토 로제 스파클링 와인</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 추사 블루베리 </h3></a>
+                <p class = "right_p_text2">전통주 와인</p>
+              </div>
             </div>
           </article>
         </section>
@@ -91,6 +143,9 @@
         <footer>
           <article></article>
         </footer>
+        <div id="goto-top">
+          <div class="material-icons"><i class="fa-solid fa-arrow-up"></i></div>
+        </div>
       </div>
     </div>
   </body>

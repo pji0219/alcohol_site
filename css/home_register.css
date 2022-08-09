@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: 948px;
+  width: 100%;
+}
+main .inner {
+  height: 100%;
+  width: 850px;
+  background-color: whitesmoke;
+  margin: 0 auto;
+  position: relative;
+}
+main .inner h1 {
+  text-align: center;
+  position: relative;
+  top: 300px;
+  color: burlywood;
+}
+main .inner .logo {
+  position: absolute;
+  top: 100px;
+  width: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+main .inner .input_box {
+  margin-top: 40px;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-40%);
+}
+main .inner .input_box .test {
+  border: 0;
+  border-bottom: 2px solid burlywood;
+  height: 50px;
+  width: 200px;
+  background-color: rgba(210, 210, 210, 0.18);
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px;
+}
+main .inner .input_box .test:focus {
+  outline-color: transparent;
+  border-bottom: 2px solid rgb(164, 132, 90);
+}
+main .inner .input_box .hide_message {
+  position: relative;
+  /* &.hide {
+  	display: none;
+  } */
+}
+main .inner .input_box .hide_message > div {
+  box-sizing: content-box;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px;
+  background-color: rgba(255, 228, 196, 0.616);
+  border-radius: 10px;
+  margin-left: 30px;
+  position: absolute;
+  color: white;
+  font-size: 5px/40px bold "arial";
+}
+main .inner .input_box .hide_message .id_issame {
+  top: 0;
+}
+main .inner .input_box .hide_message .id_isno {
+  top: 0;
+}
+main .inner .input_box .same__btn {
+  width: 60px;
+  height: 30px;
+  border: none;
+  background-color: burlywood;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+main .inner .input_box .same__btn:active {
+  background-color: rgb(164, 132, 90);
+}
+main .inner .sns_box {
+  position: relative;
+  top: 800px;
+  display: flex;
+  justify-content: center;
+}
+main .inner .sns_box img {
+  height: 50px;
+}
+main .inner .sns_box span {
+  vertical-align: bottom;
+  line-height: 50px;
+}
+main .inner .sns_box .sns_box__common {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 16px;
+}
+main .inner .sns_box .sns_box__common.kakao_box {
+  background-color: red;
+}
+main .inner .sns_box .sns_box__common.naver_box {
+  background-color: pink;
+}
+
+/*# sourceMappingURL=home_register.css.map */

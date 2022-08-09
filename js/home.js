@@ -117,8 +117,9 @@ window.addEventListener("wheel", function (e) {
 				console.log(bgContent[page - 1]);
 
 				// bgContent[page].classList.add("viewOutToDown");
-				bgContent[page].classList.remove("viewOutToUp");
+				bgContent[page - 1].classList.remove("viewOutToUp");
 				bgContent[page - 1].classList.add("viewOn");
+				console.log(bgContent[page - 1]);
 			} else {
 				console.log("예외처리 어떻게 하지ㅜ?");
 			}

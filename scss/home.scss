@@ -31,7 +31,6 @@ $registerColor: #fff;
 	font-weight: normal;
 	font-style: normal;
 }
-
 /*
 font-family: 'MaruBuriExtraLight';
 font-family: 'MaruBuriLight';
@@ -41,17 +40,10 @@ font-family: 'MaruBuriSemiBold';
 */
 .hide {
 	opacity: 0;
-	/*
-	display: none은 transition이 안먹고 opacity:0 은 속성값이 남아있어서
-	잘못 눌릴 위험이 있기때문에 visibility hidden 으로 처리
-	*/
 	transform: scale(0.4) translateX(700%);
 }
 body {
 	font-family: "MaruBuriBold";
-	// font-weight: bold;
-	// background-color: navy;
-
 	header {
 		position: relative;
 		z-index: 1;

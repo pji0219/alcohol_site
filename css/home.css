@@ -1,0 +1,509 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*common*/
+/*font-family: 'Bebas Neue', cursive;*/
+@font-face {
+  font-family: "ChusaLove";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CookieRun-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ulsanjunggu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+font-family: 'MaruBuriExtraLight';
+font-family: 'MaruBuriLight';
+font-family: 'MaruBuri';
+font-family: 'MaruBuriBold';
+font-family: 'MaruBuriSemiBold';
+*/
+.hide {
+  opacity: 0;
+  /*
+  display: none은 transition이 안먹고 opacity:0 은 속성값이 남아있어서
+  잘못 눌릴 위험이 있기때문에 visibility hidden 으로 처리
+  */
+  transform: scale(0.4) translateX(700%);
+}
+
+body {
+  font-family: "MaruBuriBold";
+}
+body header {
+  position: relative;
+  z-index: 1;
+}
+body header .logo.on {
+  pointer-events: none;
+}
+body header .logo > img {
+  width: 180px;
+  position: absolute;
+  top: 20px;
+  left: 4%;
+}
+body header .searchNsns {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  top: 40px;
+}
+body header .searchNsns > li {
+  color: #fff;
+  padding-left: 10px;
+}
+body header .searchNsns > li .search {
+  font-size: 20px;
+}
+body header .searchNsns > li img {
+  width: 20px;
+}
+body header .register {
+  font-size: 11px;
+  display: flex;
+  position: absolute;
+  right: 4%;
+  top: 10px;
+}
+body header .register > li {
+  color: #fff;
+  padding-left: 5px;
+}
+body header .register > li > a {
+  color: #fff;
+}
+body header .register > li > a:hover {
+  text-decoration: underline;
+}
+body figure {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  /*SECTION-menu up*/
+  /*SECTION - login*/
+  /*login 변수 선언*/
+}
+body figure .bg {
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  transition: 1.2s;
+  position: absolute;
+}
+body figure .bg video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 1.2s;
+  object-fit: cover;
+}
+body figure .bg video.makgoli {
+  height: 110%;
+}
+body figure .bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body figure .bg.viewOn {
+  opacity: 1;
+  top: 0;
+}
+body figure .bg.viewOutToUp {
+  top: -110%;
+}
+body figure .bg.viewOutToDown {
+  top: 0%;
+}
+body figure .wrap {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  /*SECTION-menu*/
+  /*SECTION*/
+  /*NAV-buttons*/
+}
+body figure .wrap.on {
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+body figure .wrap.menuOn {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+  top: 300px;
+}
+body figure .wrap .rotate_menu {
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-left: -6vw;
+  margin-top: -6vw;
+  transition: 2s;
+}
+body figure .wrap .rotate_menu article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body figure .wrap .rotate_menu article.on .inner {
+  opacity: 1;
+  transform: scale(1.3);
+}
+body figure .wrap .rotate_menu article .inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 2s;
+  transform: scale(0.8);
+  text-align: center;
+}
+body figure .wrap .rotate_menu article .inner > a {
+  display: inline-block;
+}
+body figure .wrap .rotate_menu article .inner > a > img {
+  height: 200px;
+}
+body figure .wrap .linear_menu {
+  position: absolute;
+  top: 30%;
+  width: 39%;
+  font-size: 30px;
+  left: 5%;
+}
+body figure .wrap .linear_menu .menu_list {
+  justify-content: center;
+}
+body figure .wrap .linear_menu .menu_list li {
+  position: absolute;
+  padding: 20px;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(1) {
+  top: 0;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(2) {
+  top: 10vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(3) {
+  top: 20vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(4) {
+  top: 30vh;
+  color: red;
+}
+body figure .wrap .linear_menu .menu_list li a {
+  color: rgba(247, 234, 234, 0.808);
+  transition: 0.4s;
+  opacity: 0.8;
+}
+body figure .wrap .linear_menu .menu_list li a:hover {
+  font-size: 34px;
+  opacity: 1;
+}
+body figure .wrap .explain {
+  width: 100%;
+}
+body figure .wrap .explain > ul {
+  width: 100%;
+}
+body figure .wrap .explain > ul > li {
+  width: 25%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s;
+  bottom: 30%;
+  right: 5%;
+}
+body figure .wrap .explain > ul > li.on {
+  right: 15%;
+  opacity: 1;
+}
+body figure .wrap .explain > ul > li h2 {
+  font-size: 35px;
+  color: rgba(247, 234, 234, 0.808);
+  text-shadow: 1px 1px 3px rgba(255, 255, 47, 0.308);
+  margin-bottom: 8px;
+}
+body figure .wrap .explain > ul > li p {
+  color: rgba(117, 106, 93, 0.893);
+}
+body figure .wrap nav {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0;
+  cursor: pointer;
+  color: #fff;
+}
+body figure .wrap nav::after, body figure .wrap nav::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.628);
+  position: absolute;
+}
+body figure .wrap nav.btnPrev {
+  transform: translate(-90px, 0);
+}
+body figure .wrap nav.btnPrev::after {
+  transform-origin: left center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnPrev::before {
+  transform-origin: left center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::after, body figure .wrap nav.btnPrev .btnPrev--opacity::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 10px;
+  background-color: #888;
+  width: 60%;
+  height: 1px;
+  transition: 0.5s;
+  opacity: 0;
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::after {
+  transform-origin: left center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::before {
+  transform-origin: left center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnPrev:hover .btnPrev--opacity::after, body figure .wrap nav.btnPrev:hover .btnPrev--opacity::before {
+  opacity: 1;
+  left: -10px;
+}
+body figure .wrap nav.btnNext {
+  transform: translate(60px, 0);
+}
+body figure .wrap nav.btnNext::after {
+  transform-origin: right center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnNext::before {
+  transform-origin: right center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnNext .btnNext--opacity::after, body figure .wrap nav.btnNext .btnNext--opacity::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  display: block;
+  background-color: #888;
+  width: 60%;
+  height: 1px;
+  transition: 0.5s;
+  opacity: 0;
+}
+body figure .wrap nav.btnNext .btnNext--opacity::after {
+  transform-origin: right center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnNext .btnNext--opacity::before {
+  transform-origin: right center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnNext:hover .btnNext--opacity::after, body figure .wrap nav.btnNext:hover .btnNext--opacity::before {
+  opacity: 1;
+  left: 14px;
+}
+body figure .hide_up {
+  width: 30px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+body figure .hide_up i {
+  transition: 0.5s;
+}
+body figure .hide_up.on {
+  pointer-events: none;
+  cursor: default;
+  color: gray;
+}
+body figure .hide_up.on i {
+  animation: none;
+}
+body figure .hide_up.on span {
+  animation: none;
+}
+body figure .hide_up i {
+  animation: blingbling linear 0.2s infinite;
+}
+body figure .hide_up span {
+  font-size: 7px;
+  animation: blingbling linear 0.2s infinite;
+}
+body figure .hide_up:hover {
+  color: pink;
+}
+body figure .hide_up:hover i {
+  animation: none;
+}
+body figure .hide_up:hover span {
+  animation: none;
+}
+body figure .login {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  transition: 1.2s;
+}
+body figure .login .login--close {
+  font-size: 30px;
+  color: rgba(142, 95, 80, 0.995);
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+body figure .login .login__box {
+  position: absolute;
+  top: 130px;
+  left: 20%;
+}
+body figure .login .login__box > i {
+  position: absolute;
+  color: rgba(142, 95, 80, 0.995);
+  z-index: 1;
+}
+body figure .login .login__box > i:nth-of-type(1) {
+  font-size: 20px;
+  top: 141px;
+  left: 20px;
+}
+body figure .login .login__box > i:nth-of-type(2) {
+  font-size: 17px;
+  top: 191px;
+  left: 20px;
+}
+body figure .login .login__box input {
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  padding: 20px;
+  padding-left: 30px;
+}
+body figure .login .login__box > input:nth-of-type(1) {
+  top: 130px;
+}
+body figure .login .login__box > input:nth-of-type(2) {
+  top: 180px;
+}
+body figure .login > img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+body figure .login .login__btn {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 380px;
+  width: 250px;
+  height: 50px;
+  background-color: rgba(142, 95, 80, 0.995);
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 50px;
+  color: rgb(243, 228, 228);
+  text-align: center;
+  letter-spacing: 5px;
+}
+body figure .login .login__btn:active {
+  background-color: orangered;
+}
+body figure .login .login__register {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  position: relative;
+  top: 450px;
+  justify-content: center;
+}
+body figure .login .login__register a {
+  color: #666;
+  padding: 0 10px;
+}
+body figure .login .login__register a:hover {
+  text-decoration: underline;
+}
+
+/*Animation*/
+@keyframes blingbling {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 105, 180, 0.434);
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

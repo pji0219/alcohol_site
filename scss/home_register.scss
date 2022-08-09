@@ -2,16 +2,53 @@
 * {
 	// background-color: gray;
 }
+/* hide_message COMMON */
+.hide_message {
+	&.hide {
+		display: none;
+	}
+
+	position: relative;
+
+	/* 여기부터는 디자인 */
+	box-sizing: content-box;
+	// display: inline-block;
+	width: 320px;
+	height: 40px;
+	line-height: 40px;
+	padding: 5px;
+	background-color: rgba(255, 228, 196, 0.616);
+	border-radius: 10px;
+	margin-left: 30px;
+	color: white;
+	font-size: 5px/40px bold "arial";
+
+	&.id_issame {
+		background-color: aquamarine;
+
+		top: 0px;
+	}
+	&.id_isno {
+		top: 0px;
+	}
+	&.id_form {
+		top: 0px;
+	}
+	&.pw_issame {
+	}
+}
+
 $regiColor: burlywood;
+$innerBgColor: whitesmoke;
 
 main {
-	height: 948px;
+	height: 1200px;
 	width: 100%;
-
+	overflow-x: hidden;
 	.inner {
 		height: 100%;
 		width: 850px;
-		background-color: whitesmoke;
+		background-color: $innerBgColor;
 		margin: 0 auto;
 		position: relative;
 
@@ -34,49 +71,26 @@ main {
 		.input_box {
 			margin-top: 40px;
 			position: absolute;
+
+			width: 80%;
 			top: 300px;
-			left: 50%;
+			left: 27%;
 			// background-color: orange;
-			transform: translate(-40%);
+			// opacity: 0.5;
+			// transform: translate(-45%);
 			.test {
 				border: 0;
 				border-bottom: 2px solid $regiColor;
 				height: 50px;
-				width: 200px;
+				width: 350px;
 				background-color: rgba(210, 210, 210, 0.18);
 				font-size: 16px;
 				padding: 10px;
 				margin: 20px;
 				&:focus {
-					outline-color: transparent;
+					outline-color: $innerBgColor;
 					border-bottom: 2px solid rgb(164, 132, 90);
 				}
-			}
-			.hide_message {
-				position: relative;
-				> div {
-					box-sizing: content-box;
-					display: inline-block;
-					height: 40px;
-					line-height: 40px;
-					padding: 5px;
-					background-color: rgba(255, 228, 196, 0.616);
-					border-radius: 10px;
-					margin-left: 30px;
-					position: absolute;
-					color: white;
-					font-size: 5px/40px bold "arial";
-				}
-				.id_issame {
-					top: 0;
-				}
-				.id_isno {
-					top: 0;
-				}
-
-				/* &.hide {
-					display: none;
-				} */
 			}
 
 			.same__btn {
@@ -93,19 +107,38 @@ main {
 				}
 			}
 		}
+		.register__btn {
+			width: 350px;
+			height: 50px;
+			background-color: darkcyan;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			letter-spacing: 5px;
+			position: absolute;
+			top: 860px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			cursor: pointer;
+			&:active {
+				background-color: mediumaquamarine;
+			}
+		}
 
 		.sns_box {
 			position: relative;
 
-			top: 800px;
+			top: 935px;
 			display: flex;
 			justify-content: center;
 			img {
-				height: 50px;
+				height: 30px;
 			}
 			span {
 				vertical-align: bottom;
-				line-height: 50px;
+				line-height: 30px;
 			}
 
 			.sns_box__common {
@@ -116,14 +149,14 @@ main {
 				border-radius: 10px;
 				margin: 0 20px;
 				padding: 5px;
-				font-size: 16px;
+				font-size: 10px;
 				&.kakao_box {
 					// top: 500px;
-					background-color: red;
+					// background-color: red;
 				}
 				&.naver_box {
 					// top: 700px;
-					background-color: pink;
+					// background-color: pink;
 				}
 			}
 		}

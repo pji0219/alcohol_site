@@ -23,30 +23,31 @@
 					<input type="text" placeholder="핸드폰 번호" class="test" />
 					<br />
 
-					<input type="text" placeholder="아이디 입력" class="test" />
+					<input type="text" placeholder="아이디 입력 (이메일)" class="test" />
 
 					<input type="button" value="중복확인" class="same__btn" />
 					<br />
-					<div class="hide_message">
-						<div class="hide id_issame">중복된 아이디 입니다!</div>
-						<br />
-						<div class="hide id_isno">아이디를 입력해주세요!</div>
-					</div>
 
-					<br />
+					<div class="hide id_issame hide_message">중복된 아이디 입니다!</div>
+					<div class="hide id_isno hide_message">아이디를 입력해주세요!</div>
+					<div class="hide id_form hide_message">아이디 형식이 올바르지 않습니다!</div>
+
 					<input type="password" placeholder="비밀번호 입력" class="test" />
 					<br />
 					<input type="password" placeholder="비밀번호 확인" class="test" />
+
+					<div class="hide hide_message pw_issame">비밀번호가 일치하지 않습니다!</div>
 				</div>
+				<div class="register__btn">회원가입</div>
 
 				<div class="sns_box">
-					<div class="sns_box__common kakao_box">
+					<div class="sns_box__common kakao_box" onclick="noReady();">
 						<img src="./src/img/kakao.png" alt="카카오 logo" />
-						<span> 카카오 아이디로 회원가입하기</span>
+						<span> &nbsp;카카오 아이디로 회원가입하기</span>
 					</div>
-					<div class="sns_box__common naver_box">
-						<img src="./src/img/kakao.png" alt="카카오 logo" />
-						<span> 네이버 아이디로 회원가입하기</span>
+					<div class="sns_box__common naver_box" onclick="noReady();">
+						<img src="./src/img/naver.png" alt="카카오 logo" />
+						<span> &nbsp;네이버 아이디로 회원가입하기</span>
 					</div>
 				</div>
 			</figure>

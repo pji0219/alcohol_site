@@ -143,23 +143,19 @@ body {
 			}
 
 			&.viewOn {
-				opacity: 1;
 				top: 0;
 			}
 
 			//  view 에서 위로 나갈때to up이용
 			//아래로 내리는 동작
 			&.viewOutToUp {
-				// opacity: 0;
 				top: -110%;
 			}
 
 			// view에서 아래로 나갈 떼 to Down 이용
 			//위로 올리는 동작
 			&.viewOutToDown {
-				// opacity: 0;
 				top: 0%;
-				// z-index: 1;
 			}
 		}
 

@@ -23,6 +23,8 @@ a {
   height: 100%;
   position: relative;
   /* LOGO */
+  /* CART */
+  /* like */
   /* HEADER */
   /* ALCOHOL LIST */
   /* VIDEO */
@@ -46,6 +48,16 @@ a {
 .wrap .inner .logo img {
   width: 150px;
   height: 60px;
+}
+.wrap .inner .cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.wrap .inner .like {
+  position: fixed;
+  top: 20px;
+  right: 50px;
 }
 .wrap .inner header {
   position: fixed;

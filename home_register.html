@@ -10,6 +10,12 @@
 		<link rel="stylesheet" href="./css/home_register.css" />
 		<!-- js -->
 		<script defer src="./js/home_register.js"></script>
+
+		<!-- sweet alert cdn -->
+		<script src="sweetalert2.min.js"></script>
+		<link rel="stylesheet" href="sweetalert2.min.css" />
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	</head>
 	<body>
 		<main>
@@ -38,7 +44,7 @@
 
 					<div class="hide hide_message pw_issame">비밀번호가 일치하지 않습니다!</div>
 				</div>
-				<div class="register__btn">회원가입</div>
+				<div class="register__btn" onclick="noRegister()">회원가입</div>
 
 				<div class="sns_box">
 					<div class="sns_box__common kakao_box" onclick="noReady();">

@@ -82,8 +82,33 @@ hideUp.addEventListener("click", function () {
 	}
 });
 
-//스크롤
-/* const figure = document.querySelector("figure");
+//GSAP
+gsap.registerPlugin(ScrollTrigger);
+gsap.defaults({ ease: "none", duration: 2 });
+
+const tl = gsap.timeline();
+
+// 전체 애니메이션을 스크롤에 기반해서 움직이게 해야하므로 ScrollTrigger 의 create 메서드로 트리거 생성
+ScrollTrigger.create({
+	animation: tl,
+	trigger: "figure",
+	start: "top top",
+	end: "+=4000", //scroll이 4000px 동안 일어남
+	markers: true,
+	scrub: true,
+	pin: true,
+});
+
+tl.from(".bg.bg1", { yPercent: -100, delay: 2 })
+	.to(".bg.bg0", { yPercent: 100, delay: 0 }, "<")
+	.from(".bg.bg2", { yPercent: -100, delay: 2 })
+	.to(".bg.bg1", { yPercent: 100, delay: 0 }, "<")
+	.from(".bg.bg3", { yPercent: -100, delay: 2 })
+	.to(".bg.bg2", { yPercent: 100, delay: 0 }, "<");
+
+/* 
+//wheel 이용-첫번째 페이지와 마지막 페이지에서의 예외처리와 휠 한 칸씩만 되는 문제를 해결하지 못함..
+const figure = document.querySelector("figure");
 let page = 0;
 window.addEventListener("wheel", function (e) {
 	const bgContent = figure.querySelectorAll(".bg");
@@ -128,22 +153,3 @@ window.addEventListener("wheel", function (e) {
 	}
 });
  */
-
-// tetz쌤의 피드백
-gsap.registerPlugin(ScrollTrigger);
-gsap.defaults({ ease: "none", duration: 2 });
-//gsap 디폴트값을 transition 2초로 설정해준걸까?
-
-const tl = gsap.timeline();
-
-ScrollTrigger.create({
-	animation: tl,
-	trigger: "figure",
-	start: "top top",
-	end: "+=2000",
-	markers: true,
-	scrub: true,
-	pin: true,
-});
-
-tl.from("bg.bg0", { xPercent: 0 }).from("bg.bg1", { xPercent: -100, delay: 2 }).from(".bg.bg2", { xPercent: -100, delay: 2 }).from(".bg.bg3", { yPercent: -100, delay: 1 });

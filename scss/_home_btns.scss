@@ -22,7 +22,6 @@ nav {
 	}
 	&.btnPrev {
 		transform: translate(-90px, 0);
-		// background-color: aqua;
 		&::after {
 			transform-origin: left center;
 			transform: rotate(40deg);
@@ -65,7 +64,6 @@ nav {
 	}
 	&.btnNext {
 		transform: translate(60px, 0);
-		// background-color: #f5deb3;
 
 		&::after {
 			transform-origin: right center;

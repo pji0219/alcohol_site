@@ -108,6 +108,7 @@ body figure {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
   /*SECTION-menu up*/
   /*SECTION - login*/
   /*login 변수 선언*/
@@ -115,32 +116,31 @@ body figure {
 body figure .bg {
   width: 100%;
   height: 100%;
+  background-color: #000;
   top: 0;
   transition: 1.2s;
   position: absolute;
-  background-color: #000;
-  overflow: hidden;
 }
 body figure .bg video {
   position: absolute;
-  top: 0;
   width: 100%;
   height: 100%;
   transition: 1.2s;
   object-fit: cover;
 }
+body figure .bg video.makgoli {
+  height: 110%;
+}
 body figure .bg img {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 body figure .bg.viewOn {
   top: 0;
 }
 body figure .bg.viewOutToUp {
   top: -110%;
-  overflow: hidden;
 }
 body figure .bg.viewOutToDown {
   top: 0%;

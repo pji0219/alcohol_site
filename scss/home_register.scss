@@ -12,7 +12,6 @@
 
 	/* 여기부터는 디자인 */
 	box-sizing: content-box;
-	// display: inline-block;
 	width: 320px;
 	height: 40px;
 	line-height: 40px;
@@ -75,9 +74,6 @@ main {
 			width: 80%;
 			top: 300px;
 			left: 27%;
-			// background-color: orange;
-			// opacity: 0.5;
-			// transform: translate(-45%);
 			.test {
 				border: 0;
 				border-bottom: 2px solid $regiColor;
@@ -150,19 +146,12 @@ main {
 				margin: 0 20px;
 				padding: 5px;
 				font-size: 10px;
-				&.kakao_box {
-					// top: 500px;
-					// background-color: red;
-				}
-				&.naver_box {
-					// top: 700px;
-					// background-color: pink;
-				}
 			}
 		}
 	}
 }
 
+// for alert Library
 .swal-button {
 	background-color: #ffb2d9;
 	font-size: 15px;

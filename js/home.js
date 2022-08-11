@@ -83,7 +83,7 @@ hideUp.addEventListener("click", function () {
 });
 
 //스크롤
-const figure = document.querySelector("figure");
+/* const figure = document.querySelector("figure");
 let page = 0;
 window.addEventListener("wheel", function (e) {
 	const bgContent = figure.querySelectorAll(".bg");
@@ -127,3 +127,23 @@ window.addEventListener("wheel", function (e) {
 		page--;
 	}
 });
+ */
+
+// tetz쌤의 피드백
+gsap.registerPlugin(ScrollTrigger);
+gsap.defaults({ ease: "none", duration: 2 });
+//gsap 디폴트값을 transition 2초로 설정해준걸까?
+
+const tl = gsap.timeline();
+
+ScrollTrigger.create({
+	animation: tl,
+	trigger: "figure",
+	start: "top top",
+	end: "+=2000",
+	markers: true,
+	scrub: true,
+	pin: true,
+});
+
+tl.from("bg.bg0", { xPercent: 0 }).from("bg.bg1", { xPercent: -100, delay: 2 }).from(".bg.bg2", { xPercent: -100, delay: 2 }).from(".bg.bg3", { yPercent: -100, delay: 1 });

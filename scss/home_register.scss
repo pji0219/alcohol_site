@@ -52,7 +52,7 @@ main {
 		margin: 0 auto;
 		position: relative;
 
-		h1 {
+		> h1 {
 			text-align: center;
 			position: relative;
 			top: 300px;
@@ -161,4 +161,10 @@ main {
 			}
 		}
 	}
+}
+
+.swal-button {
+	background-color: #ffb2d9;
+	font-size: 15px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }

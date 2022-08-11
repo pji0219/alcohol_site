@@ -9,7 +9,7 @@ const pw = document.querySelector(".pw"); //pw input
 const pwCheck = document.querySelector(".pw_check"); //pw 확인 input
 const sameCheck = document.querySelector(".same__btn"); //id 중복확인 버튼
 
-let specialChar = [",", "*", ",", "!", "#", "$", "?", "\\", "|", "(", ")", "`", "~", "%", "^", "&"];
+// let specialChar = [",", "*", ",", "!", "#", "$", "?", "\\", "|", "(", ")", "`", "~", "%", "^", "&"];
 sameCheck.addEventListener("click", function () {
 	if (id.value === "") {
 		console.log("빈칸으로 클릭되는 중");
@@ -18,6 +18,7 @@ sameCheck.addEventListener("click", function () {
 		setTimeout(function () {
 			idIsNo.classList.add("hide");
 		}, 3000);
+		id.value === "";
 	} else if (!(id.value.includes("@") && id.value.includes("."))) {
 		console.log("ff 눌린채로 클릭되는 중");
 		//문자열 @와 .가 포함되어 있지 않다면, idForm 의 hide클래스 삭제
@@ -26,6 +27,7 @@ sameCheck.addEventListener("click", function () {
 		setTimeout(function () {
 			idForm.classList.add("hide");
 		}, 3000);
+		id.value === "";
 	} else {
 		//정상적으로 메일형식을 쳤다면 idIsSame 의 hide클래스 삭제
 		idIsSame.classList.remove("hide");
@@ -33,6 +35,7 @@ sameCheck.addEventListener("click", function () {
 		setTimeout(function () {
 			idIsSame.classList.add("hide");
 		}, 3000);
+		id.value === "";
 	}
 });
 
@@ -46,3 +49,11 @@ pwCheck.addEventListener("click", function () {
 		pwIsntSame.classList.add("hide");
 	}
 });
+
+function noRegister() {
+	swal("!!", "아이디를 입력해주세요");
+}
+
+function noReady() {
+	swal("주막", "서비스 준비중입니다");
+}

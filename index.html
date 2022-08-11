@@ -4,7 +4,24 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<title>주막, 이 세상 모든 술</title>
+		<!-- CDN -->
+		<!-- gsap cdn -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- gsap scroll -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+			integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
 		<!-- HOME CSS -->
 		<link rel="stylesheet" href="./css/home.css" />
 		<!-- HOME JAVA SCRIPT -->
@@ -49,19 +66,29 @@
 		<figure>
 			<!-- video 넣기 -->
 			<!-- 구조참고해서 화면전환 효과 넣기 -->
-			<div class="bg viewOn makgoli"">
-				<video src="./src/video/video2.mp4"  autoplay muted loop></video>
+			<div class="bg bg0">
+				<video src="./src/video/video2.mp4" autoplay muted loop></video>
+				<!-- <article class="bg__content">
+					<h1>주막의 막걸리를 만나보세요</h1>
+				</article> -->
 			</div>
-			<div class="bg">
-				<video src="./src/video/home_video3.mp4"  autoplay muted loop></video>
+			<div class="bg bg1">
+				<img src="./src/img/home_bg-beer01.jpg" alt="다시넣을 이미지?" />
 			</div>
-			<div class="bg">
+			<div class="bg bg2">
 				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
 			</div>
-			<div class="bg">
+			<div class="bg bg3">
 				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
 			</div>
 
+			<ul class="order_num">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
 			<!-- 메뉴 구성 ㅣ 처음 에는 숨겨져 있도록-->
 			<div class="wrap menuOn">
 				<!-- 돌아가는 원형메뉴 -->
@@ -159,7 +186,6 @@
 					<li><a href="#find_password" onclick="findPW();">비밀번호 찾기</a></li>
 				</ul>
 			</section>
-			
 		</figure>
 	</body>
 </html>

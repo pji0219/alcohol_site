@@ -1,7 +1,5 @@
 @import "reset";
-* {
-	// background-color: gray;
-}
+
 /* hide_message COMMON */
 .hide_message {
 	&.hide {
@@ -32,8 +30,6 @@
 	}
 	&.id_form {
 		top: 0px;
-	}
-	&.pw_issame {
 	}
 }
 

@@ -23,21 +23,10 @@ a {
   height: 100%;
   position: relative;
   /* LOGO */
-  /* CART */
-  /* like */
   /* HEADER */
+  /* CART */
   /* ALCOHOL LIST */
   /* VIDEO */
-  /* .alcohol__description {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 60%;
-        height: 100%;
-        background-color: white;
-        opacity: 0.5;
-        z-index: 5;
-      } */
 }
 .wrap .inner .logo {
   position: fixed;
@@ -48,16 +37,6 @@ a {
 .wrap .inner .logo img {
   width: 150px;
   height: 60px;
-}
-.wrap .inner .cart {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-.wrap .inner .like {
-  position: fixed;
-  top: 20px;
-  right: 50px;
 }
 .wrap .inner header {
   position: fixed;
@@ -92,6 +71,25 @@ a {
   right: 30px;
   cursor: pointer;
 }
+.wrap .inner .cart {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 70px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 6;
+}
+.wrap .inner .heart {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  z-index: 6;
+}
 .wrap .inner .alcohols {
   width: 60%;
   height: 100%;
@@ -100,6 +98,7 @@ a {
   right: 0;
   margin: 0 auto;
   z-index: 2;
+  padding-bottom: 60px;
 }
 .wrap .inner .alcohols .alcohol__list {
   padding-top: 70px;
@@ -110,16 +109,24 @@ a {
   flex-wrap: wrap;
   list-style: none;
 }
-.wrap .inner .alcohols .alcohol__list li {
+.wrap .inner .alcohols .alcohol__list .item {
+  width: 200px;
+  height: 350px;
+  margin: 40px;
+  perspective: 300px;
+}
+.wrap .inner .alcohols .alcohol__list .item .front {
   width: 200px;
   height: 350px;
   margin: 40px;
   text-align: center;
-  position: relative;
-  cursor: pointer;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
   transition: 2s;
+  cursor: pointer;
 }
-.wrap .inner .alcohols .alcohol__list li .alcohol_img {
+.wrap .inner .alcohols .alcohol__list .item .front .alcohol_img {
   height: 225px;
   margin-top: 20px;
   position: absolute;
@@ -127,7 +134,7 @@ a {
   transform: translate(-50%, 0);
   background-size: cover;
 }
-.wrap .inner .alcohols .alcohol__list li .add_cart {
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart {
   opacity: 0;
   width: 120px;
   height: 35px;
@@ -149,7 +156,7 @@ a {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-.wrap .inner .alcohols .alcohol__list li .add_cart:after {
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:after {
   position: absolute;
   content: " ";
   z-index: -1;
@@ -161,60 +168,93 @@ a {
   background-image: linear-gradient(315deg, #1fd1f9 0%, #d221fe 74%);
   transition: all 0.3s ease;
 }
-.wrap .inner .alcohols .alcohol__list li .add_cart:hover {
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:hover {
   background: transparent;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
   color: #fff;
 }
-.wrap .inner .alcohols .alcohol__list li .add_cart:hover:after {
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:hover:after {
   -webkit-transform: scale(2) rotate(180deg);
   transform: scale(2) rotate(180deg);
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
-.wrap .inner .alcohols .alcohol__list li:hover .add_cart {
+.wrap .inner .alcohols .alcohol__list .item .front:hover .add_cart {
   display: inline;
   opacity: 1;
   top: 45%;
 }
-.wrap .inner .alcohols .alcohol__list li .like_btn {
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn {
   display: none;
   position: absolute;
   top: 27px;
   right: 10px;
   font-size: 18px;
 }
-.wrap .inner .alcohols .alcohol__list li .like_btn .fill_heart {
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .fill_heart {
   color: red;
   cursor: pointer;
 }
-.wrap .inner .alcohols .alcohol__list li .like_btn .fill_heart.hide {
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .fill_heart.hide {
   display: none;
 }
-.wrap .inner .alcohols .alcohol__list li .like_btn .empty_heart {
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .empty_heart {
   cursor: pointer;
 }
-.wrap .inner .alcohols .alcohol__list li .like_btn .empty_heart.hide {
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .empty_heart.hide {
   display: none;
 }
-.wrap .inner .alcohols .alcohol__list li:hover .like_btn {
+.wrap .inner .alcohols .alcohol__list .item .front:hover .like_btn {
   display: block;
 }
-.wrap .inner .alcohols .alcohol__list li .text {
+.wrap .inner .alcohols .alcohol__list .item .front .text {
   width: 100%;
   position: absolute;
   top: 250px;
   text-align: center;
   color: #333;
 }
-.wrap .inner .alcohols .alcohol__list li .text .title {
+.wrap .inner .alcohols .alcohol__list .item .front .text .title {
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 18px;
   white-space: nowrap;
 }
-.wrap .inner .alcohols .alcohol__list li .text .price {
+.wrap .inner .alcohols .alcohol__list .item .front .text .price {
   display: block;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .text .detail {
+  text-decoration: underline;
+}
+.wrap .inner .alcohols .alcohol__list .item .back {
+  width: 200px;
+  height: 350px;
+  margin: 40px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  transition: 2s;
+  background-image: url("../src/img/mak_card.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .description {
+  width: 150px;
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  font-size: 17px;
+  line-height: 2;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .cancel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .cancel:hover {
+  color: red;
 }
 .wrap .inner .alcohol_video {
   width: 40%;

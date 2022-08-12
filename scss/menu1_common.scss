@@ -23,20 +23,6 @@
       }
     }
 
-    /* CART */
-    .cart {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-    }
-
-    /* like */
-    .like {
-      position: fixed;
-      top: 20px;
-      right: 50px;
-    }
-
     /* HEADER */
     header {
       position: fixed;
@@ -80,6 +66,28 @@
       }
     }
 
+    /* CART */
+    .cart {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 70px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 6;
+    }
+
+    .heart {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: red;
+      cursor: pointer;
+      z-index: 6;
+    }
+
     /* ALCOHOL LIST */
     .alcohols {
       width: 60%;
@@ -89,6 +97,7 @@
       right: 0;
       margin: 0 auto;
       z-index: 2;
+      padding-bottom: 60px;
 
       .alcohol__list {
         padding-top: 70px;
@@ -100,143 +109,189 @@
         flex-wrap: wrap;
         list-style: none;
 
-        li {
+        .item {
           width: 200px;
           height: 350px;
           margin: 40px;
-          text-align: center;
-          position: relative;
+          perspective: 300px;
 
-          cursor: pointer;
-          transition: 2s;
-
-          .alcohol_img {
-            height: 225px;
-            margin-top: 20px;
+          .front {
+            width: 200px;
+            height: 350px;
+            margin: 40px;
+            text-align: center;
             position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            background-size: cover;
-          }
-
-          .add_cart {
-            opacity: 0;
-            width: 120px;
-            height: 35px;
-            position: absolute;
-            top: 60%;
-
-            transform: translate(-50%, -55%);
-            border-radius: 3px;
-            background: none;
-            color: #333;
-
-            border: none;
-            transition: all 1s ease;
-            overflow: hidden;
-            border-radius: 5px;
-            padding: 10px 25px;
-            font-weight: 500;
-            background: transparent;
+            backface-visibility: hidden;
+            transform: rotateY(0deg);
+            transition: 2s;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-              7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-              4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-            outline: none;
 
-            &:after {
+            .alcohol_img {
+              height: 225px;
+              margin-top: 20px;
               position: absolute;
-              content: ' ';
-              z-index: -1;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: #1fd1f9;
-              background-image: linear-gradient(
-                315deg,
-                #1fd1f9 0%,
-                #d221fe 74%
-              );
+              left: 50%;
+              transform: translate(-50%, 0);
+              background-size: cover;
+            }
+
+            .add_cart {
+              opacity: 0;
+              width: 120px;
+              height: 35px;
+              position: absolute;
+              top: 60%;
+
+              transform: translate(-50%, -55%);
+              border-radius: 3px;
+              background: none;
+              color: #333;
+
+              border: none;
+              transition: all 1s ease;
+              overflow: hidden;
+              border-radius: 5px;
+              padding: 10px 25px;
+              font-weight: 500;
+              background: transparent;
+              cursor: pointer;
               transition: all 0.3s ease;
+              box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+                4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+              outline: none;
+
+              &:after {
+                position: absolute;
+                content: ' ';
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #1fd1f9;
+                background-image: linear-gradient(
+                  315deg,
+                  #1fd1f9 0%,
+                  #d221fe 74%
+                );
+                transition: all 0.3s ease;
+              }
+
+              &:hover {
+                background: transparent;
+                box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+                  -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+                  inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+                  inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+                color: #fff;
+              }
+
+              &:hover:after {
+                -webkit-transform: scale(2) rotate(180deg);
+                transform: scale(2) rotate(180deg);
+                box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+                  -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+                  inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+                  inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+              }
             }
 
             &:hover {
-              background: transparent;
-              box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-                inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
-                inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-              color: #fff;
-            }
-
-            &:hover:after {
-              -webkit-transform: scale(2) rotate(180deg);
-              transform: scale(2) rotate(180deg);
-              box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-                inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
-                inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-            }
-          }
-
-          &:hover {
-            .add_cart {
-              display: inline;
-              opacity: 1;
-              top: 45%;
-            }
-          }
-
-          .like_btn {
-            display: none;
-            position: absolute;
-            top: 27px;
-            right: 10px;
-            font-size: 18px;
-
-            .fill_heart {
-              color: red;
-              cursor: pointer;
-
-              &.hide {
-                display: none;
+              .add_cart {
+                display: inline;
+                opacity: 1;
+                top: 45%;
               }
             }
 
-            .empty_heart {
-              cursor: pointer;
-
-              &.hide {
-                display: none;
-              }
-            }
-          }
-
-          &:hover {
             .like_btn {
-              display: block;
+              display: none;
+              position: absolute;
+              top: 27px;
+              right: 10px;
+              font-size: 18px;
+
+              .fill_heart {
+                color: red;
+                cursor: pointer;
+
+                &.hide {
+                  display: none;
+                }
+              }
+
+              .empty_heart {
+                cursor: pointer;
+
+                &.hide {
+                  display: none;
+                }
+              }
+            }
+
+            &:hover {
+              .like_btn {
+                display: block;
+              }
+            }
+
+            .text {
+              width: 100%;
+              position: absolute;
+              top: 250px;
+              text-align: center;
+              color: #333;
+
+              .title {
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 18px;
+                white-space: nowrap;
+              }
+
+              .price {
+                display: block;
+              }
+
+              .detail {
+                text-decoration: underline;
+              }
             }
           }
 
-          .text {
-            width: 100%;
-            position: absolute;
-            top: 250px;
-            text-align: center;
-            color: #333;
+          .back {
+            width: 200px;
+            height: 350px;
+            margin: 40px;
+            cursor: pointer;
+            backface-visibility: hidden;
+            transform: rotateY(-180deg);
+            transition: 2s;
+            background-image: url('../src/img/mak_card.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
 
-            .title {
-              display: inline-block;
-              margin-top: 10px;
-              margin-bottom: 10px;
-              font-size: 18px;
-              white-space: nowrap;
+            .description {
+              width: 150px;
+              position: absolute;
+              top: 130px;
+              left: 30px;
+              font-size: 17px;
+              line-height: 2;
             }
 
-            .price {
-              display: block;
+            .cancel {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+
+              &:hover {
+                color: red;
+              }
             }
           }
         }
@@ -277,16 +332,5 @@
         bottom: -100%;
       }
     }
-
-    /* .alcohol__description {
-          position: fixed;
-          top: 0;
-          right: 0;
-          width: 60%;
-          height: 100%;
-          background-color: white;
-          opacity: 0.5;
-          z-index: 5;
-        } */
   }
 }

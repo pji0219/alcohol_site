@@ -23,9 +23,15 @@ header.addEventListener('mouseout', function () {
 // 처음 페이지 로드후 4초 후부터 스크롤 되게끔 하는 것
 const wrap = document.querySelector('.wrap');
 
+// 장바구니 나타나기
+const heartHeader = document.querySelector('.heart');
+const cartHeader = document.querySelector('.cart');
+
 window.onload = () => {
   setTimeout(() => {
     wrap.style.overflow = 'visible';
+    heartHeader.style.display = 'inline';
+    cartHeader.style.display = 'inline';
   }, 4000);
 };
 
@@ -91,4 +97,26 @@ for (let i = 0; i < fillHearts.length; i++) {
       }
     });
   }
+}
+
+// 상세 보기
+const detailBtn = document.querySelectorAll('.detail');
+const cancelBtn = document.querySelectorAll('.cancel');
+const front = document.querySelectorAll('.front');
+const back = document.querySelectorAll('.back');
+
+// 뒷면 상세 보기로
+for (let i = 0; i < detailBtn.length; i++) {
+  detailBtn[i].addEventListener('click', () => {
+    front[i].style.transform = 'rotateY(180deg)';
+    back[i].style.transform = 'rotateY(0deg)';
+  });
+}
+
+// 처음 앞면으로
+for (let i = 0; i < cancelBtn.length; i++) {
+  cancelBtn[i].addEventListener('click', () => {
+    front[i].style.transform = 'rotateY(0deg)';
+    back[i].style.transform = 'rotateY(-180deg)';
+  });
 }

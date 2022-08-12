@@ -1,7 +1,3 @@
-//변수설정
-
-//포문을 써볼까??
-
 .explain {
 	width: 100%;
 	> ul {
@@ -12,7 +8,6 @@
 			opacity: 0;
 			transition: 2s;
 			bottom: 30%;
-
 			right: 5%;
 			// 10%로 가면 적당한 것 같소이다.
 			&.on {

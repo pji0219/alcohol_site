@@ -1,0 +1,175 @@
+&.bg3 {
+	background: linear-gradient(180deg, black, #ddd);
+	opacity: 0.8;
+	text-align: right;
+
+	.bg3__slogan {
+		// z-index: 1;
+		position: absolute;
+		color: white;
+		right: 10%;
+		top: 120px;
+		font-size: 15vw;
+		line-height: 1.5;
+		// background-color: aliceblue;
+		// animation: textAni linear 7s infinite;
+	}
+
+	ul {
+		> li {
+			> img.float_item {
+				position: absolute;
+				transition: 5s;
+				width: auto;
+				height: 200px;
+
+				&.img1 {
+					top: 12%;
+					left: 0%;
+					animation: float01 linear 3s infinite;
+					&.on {
+						top: 60%;
+						left: 10%;
+					}
+				}
+				&.img2 {
+					top: 7%;
+					left: 73%;
+					animation: float01 linear 5s infinite;
+					&.on {
+						top: 60%;
+						left: 20%;
+					}
+				}
+				&.img3 {
+					top: 70%;
+					left: 73%;
+					animation: float01 ease-in-out 6s infinite;
+					&.on {
+						top: 60%;
+						left: 30%;
+					}
+				}
+				&.img4 {
+					left: 48%;
+					top: 1%;
+					animation: float02 linear 1s infinite;
+					&.on {
+						top: 60%;
+						left: 40%;
+					}
+				}
+				&.img5 {
+					top: 65%;
+					left: 13%;
+					animation: float03 linear 3s infinite;
+					&.on {
+						top: 60%;
+						left: 50%;
+					}
+				}
+				&.img6 {
+					top: 40%;
+					left: 45%;
+					animation: float02 linear 3s infinite;
+					&.on {
+						top: 60%;
+						left: 60%;
+					}
+				}
+				&.img7 {
+					left: 25%;
+					top: 30%;
+					&.on {
+						top: 60%;
+						left: 70%;
+					}
+
+					width: 80px;
+					animation: float03 linear 5s infinite;
+				}
+				&.img8 {
+					top: 75%;
+					left: 40%;
+					animation: float03 linear 2s infinite;
+					&.on {
+						top: 60%;
+						left: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes float01 {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: translate(10px, 15px);
+	}
+	40% {
+		transform: translate(20px, 8px);
+	}
+	60% {
+		transform: translate(8px, -3px);
+	}
+	80% {
+		transform: translate(-5px, -5px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes float02 {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	20% {
+		transform: translate(-10px, 5px) rotate(10deg);
+	}
+	40% {
+		transform: translate(-20px, 8px) rotate(5deg);
+	}
+	60% {
+		transform: translate(-5px, -3px) rotate(0deg);
+	}
+	80% {
+		transform: translate(-9px, -9px) rotate(-8deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+}
+
+@keyframes float03 {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: translate(-10px, 5px);
+	}
+	40% {
+		transform: translate(-20px, 8px);
+	}
+	60% {
+		transform: translate(-5px, -3px);
+	}
+	80% {
+		transform: translate(-9px, -9px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes textAni {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 100%;
+	}
+}

@@ -4,17 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<title>주막, 이 세상 모든 술</title>
-		<!-- CDN -->
-		<!-- gsap cdn -->
+
+		<!-- GSAP 라이브러리 추가 -->
+		<!-- GSAP -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
 			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
-		<!-- gsap scroll -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
 			integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
@@ -66,29 +65,39 @@
 		<figure>
 			<!-- video 넣기 -->
 			<!-- 구조참고해서 화면전환 효과 넣기 -->
-			<div class="bg bg0">
+			<div class="bg bg0 viewOn makgoli">
 				<video src="./src/video/video2.mp4" autoplay muted loop></video>
-				<!-- <article class="bg__content">
+				<article class="bg__content">
 					<h1>주막의 막걸리를 만나보세요</h1>
-				</article> -->
-			</div>
-			<div class="bg bg1">
-				<img src="./src/img/home_bg-beer01.jpg" alt="다시넣을 이미지?" />
-			</div>
-			<div class="bg bg2">
-				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
-			</div>
-			<div class="bg bg3">
-				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
+				</article>
 			</div>
 
-			<ul class="order_num">
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-			</ul>
+			<div class="bg bg1">
+				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
+			</div>
+			<div class="bg bg2">
+				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
+			</div>
+			<div class="bg bg3" id="animation_bg">
+				<div class="bg3__slogan">
+					<span id="quote"
+						>Monthly <br />
+						dkfzhf?
+					</span>
+					<img src="./src/img/click1.png" alt="" />
+				</div>
+				<ul>
+					<li><img src="./src/img/mak1.png" alt="떠다니는 이미지" class="float_item img1" /></li>
+					<li><img src="./src/img/mak10.png" alt="떠다니는 이미지" class="float_item img2" /></li>
+					<li><img src="./src/img/mak15.png" alt="떠다니는 이미지" class="float_item img3" /></li>
+					<li><img src="./src/img/mak5.png" alt="떠다니는 이미지" class="float_item img4" /></li>
+					<li><img src="./src/img/mak15.png" alt="떠다니는 이미지" class="float_item img5" /></li>
+					<li><img src="./src/img/mak2.png" alt="떠다니는 이미지" class="float_item img6" /></li>
+					<li><img src="./src/img/mak9.jpg" alt="떠다니는 이미지" class="float_item img7" /></li>
+					<li><img src="./src/img/mak12.png" alt="떠다니는 이미지" class="float_item img8" /></li>
+				</ul>
+			</div>
+
 			<!-- 메뉴 구성 ㅣ 처음 에는 숨겨져 있도록-->
 			<div class="wrap menuOn">
 				<!-- 돌아가는 원형메뉴 -->

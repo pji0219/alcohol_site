@@ -8,7 +8,7 @@ for (let i = 0; i < list.length; i++) {
 
 const next = document.querySelector(".btnNext");
 const prev = document.querySelector(".btnPrev");
-
+const bg = document.querySelectorAll(".bg");
 let num = 0; //몇번 돌리는지 저장하는 변수
 let active = 0;
 // div 붙이는거 active 0~3 에 따라서 다르게 붙이면 될 듯.
@@ -24,13 +24,12 @@ prev.addEventListener("click", function () {
 	}
 
 	for (let el of list) {
-		el.classList.remove("on"); //일단 다 지움
+		el.classList.remove("on");
 	}
 	list[active].classList.add("on");
 
 	for (let el of sulExplainList) {
 		el.classList.remove("on");
-		// sulExplainList[0].classList.add("on");
 	}
 	sulExplainList[active].classList.add("on");
 });
@@ -39,10 +38,8 @@ next.addEventListener("click", function () {
 	frame.style.transform = `rotate(${90 * --num}deg)`;
 
 	if (active === 3) {
-		// frame.style.transform = "rotate(-60*numdeg)";
 		active = 0;
 	} else {
-		// frame.style.transform = `rotate(${-60 * ++num}deg)`;
 		active = active + 1;
 	}
 	for (let el of list) {
@@ -83,7 +80,7 @@ hideUp.addEventListener("click", function () {
 });
 
 //GSAP
-gsap.registerPlugin(ScrollTrigger);
+/* gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
 
 const tl = gsap.timeline();
@@ -104,9 +101,8 @@ tl.from(".bg.bg1", { yPercent: -100, delay: 2 })
 	.from(".bg.bg2", { yPercent: -100, delay: 2 })
 	.to(".bg.bg1", { yPercent: 100, delay: 0 }, "<")
 	.from(".bg.bg3", { yPercent: -100, delay: 2 })
-	.to(".bg.bg2", { yPercent: 100, delay: 0 }, "<");
+	.to(".bg.bg2", { yPercent: 100, delay: 0 }, "<"); */
 
-/* 
 //wheel 이용-첫번째 페이지와 마지막 페이지에서의 예외처리와 휠 한 칸씩만 되는 문제를 해결하지 못함..
 const figure = document.querySelector("figure");
 let page = 0;
@@ -152,4 +148,41 @@ window.addEventListener("wheel", function (e) {
 		page--;
 	}
 });
- */
+
+/* bg3 클릭시 정렬시키기 */
+const bg3 = document.querySelector(".bg3");
+const floatItem = document.querySelectorAll(".float_item");
+bg3.addEventListener("click", function () {
+	for (let i = 0; i < floatItem.length; i++) {
+		floatItem[i].classList.add("on");
+	}
+	bg3.style.opacity = "1";
+
+	console.log("클릭되는중");
+	console.log(floatItem);
+});
+
+gsap.registerPlugin(SplitText);
+
+var tl = gsap.timeline(),
+	mySplitText = new SplitText("#quote", { type: "words,chars" }),
+	chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+gsap.set("#quote", { perspective: 400 });
+
+console.log(chars);
+
+tl.from(chars, {
+	duration: 0.8,
+	opacity: 0,
+	scale: 0,
+	y: 80,
+	rotationX: 180,
+	transformOrigin: "0% 50% -50",
+	ease: "back",
+	stagger: 0.01,
+});
+
+document.getElementById("animation_bg").onclick = function () {
+	tl.restart();
+};

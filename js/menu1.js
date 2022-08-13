@@ -30,9 +30,10 @@ const cartHeader = document.querySelector('.cart');
 window.onload = () => {
   setTimeout(() => {
     wrap.style.overflow = 'visible';
+
     heartHeader.style.display = 'inline';
     cartHeader.style.display = 'inline';
-  }, 4000);
+  }, 1000);
 };
 
 // 처음 페이지 로딩시 영상효과
@@ -48,16 +49,22 @@ gsap.from('.alcohols', {
 });
 
 // 페이지 스크롤할 때 영상 효과
+const video2 = document.querySelector('.video2');
 
 window.addEventListener('scroll', () => {
   const scrollYpos = window.scrollY;
-  console.log(scrollYpos);
 
   if (scrollYpos > 1000) {
     gsap.to('.video2', {
-      xPercent: 100,
-      duration: 1,
+      xPercent: 400,
+      duration: 5,
     });
+
+    setTimeout(() => {
+      video2.style.opacity = '0.3';
+      video2.style.transitionProperty = 'opacity';
+      video2.style.transitionTimingFunction = 'ease-in-out';
+    }, 800);
   }
 
   if (scrollYpos > 1400) {

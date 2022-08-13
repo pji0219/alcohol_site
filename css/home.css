@@ -140,6 +140,23 @@ body figure .bg.bg3 {
   background: linear-gradient(180deg, black, #ddd);
   opacity: 0.8;
   text-align: right;
+  cursor: none;
+}
+body figure .bg.bg3 .cursor {
+  background-image: url("../src/img/click.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  animation: cursorAni linear 2s infinite;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+body figure .bg.bg3 .cursor-grow {
+  transform: scale(0.5);
 }
 body figure .bg.bg3 .bg3__slogan {
   position: absolute;
@@ -294,6 +311,14 @@ body figure .bg.bg3 ul > li > img.float_item.img8.on {
   }
   100% {
     right: 100%;
+  }
+}
+@keyframes cursorAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 body figure .bg.viewOn {

@@ -162,27 +162,39 @@ bg3.addEventListener("click", function () {
 	console.log(floatItem);
 });
 
-gsap.registerPlugin(SplitText);
+// gsap.registerPlugin(SplitText);
 
-var tl = gsap.timeline(),
-	mySplitText = new SplitText("#quote", { type: "words,chars" }),
-	chars = mySplitText.chars; //an array of all the divs that wrap each character
+// var tl = gsap.timeline(),
+// 	mySplitText = new SplitText("#quote", { type: "words,chars" }),
+// 	chars = mySplitText.chars; //an array of all the divs that wrap each character
 
-gsap.set("#quote", { perspective: 400 });
+// gsap.set("#quote", { perspective: 400 });
 
-console.log(chars);
+// console.log(chars);
 
-tl.from(chars, {
-	duration: 0.8,
-	opacity: 0,
-	scale: 0,
-	y: 80,
-	rotationX: 180,
-	transformOrigin: "0% 50% -50",
-	ease: "back",
-	stagger: 0.01,
+// tl.from(chars, {
+// 	duration: 0.8,
+// 	opacity: 0,
+// 	scale: 0,
+// 	y: 80,
+// 	rotationX: 180,
+// 	transformOrigin: "0% 50% -50",
+// 	ease: "back",
+// 	stagger: 0.01,
+// });
+
+// document.getElementById("animation_bg").onclick = function () {
+// 	tl.restart();
+// };
+
+/* bg3 커서 */
+let mouseCursor = document.querySelector(".cursor");
+
+bg3.addEventListener("mouseover", function (e) {
+	mouseCursor.style.left = e.pageX + "px";
+	mouseCursor.style.top = e.pageY + "px";
 });
-
-document.getElementById("animation_bg").onclick = function () {
-	tl.restart();
-};
+let header = document.querySelector(".header");
+header.addEventListener("mouseover", function (e) {
+	mouseCursor.style.display = "none";
+});

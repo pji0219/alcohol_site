@@ -24,6 +24,7 @@ a {
   position: relative;
   /* LOGO */
   /* HEADER */
+  /* TITLE */
   /* CART */
   /* ALCOHOL LIST */
   /* VIDEO */
@@ -70,6 +71,11 @@ a {
   position: absolute;
   right: 30px;
   cursor: pointer;
+}
+.wrap .inner .site_title {
+  position: absolute;
+  top: 30px;
+  right: 750px;
 }
 .wrap .inner .cart {
   display: none;

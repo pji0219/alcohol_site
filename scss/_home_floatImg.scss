@@ -1,9 +1,8 @@
 &.bg3 {
 	background: linear-gradient(180deg, black, #ddd);
 	opacity: 0.8;
-	text-align: right;
-	// 커서 이미지로 바꾸기
-	// cursor: url("../src/img/click.png"), auto;
+	text-align: center;
+
 	cursor: none;
 
 	.cursor {
@@ -20,19 +19,17 @@
 		pointer-events: none;
 		transition: all 0.3s ease;
 	}
-	.cursor-grow {
-		transform: scale(0.5);
-	}
-	.bg3__slogan {
+
+	.slo.bg3--slogan {
 		// z-index: 1;
-		position: absolute;
+
 		color: white;
 		right: 10%;
 		top: 120px;
 		font-size: 15vw;
 		line-height: 1.5;
-		// background-color: aliceblue;
-		// animation: textAni linear 7s infinite;
+
+		animation: textAni linear 7s infinite;
 	}
 
 	ul {

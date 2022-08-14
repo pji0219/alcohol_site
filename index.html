@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>주막,이 세상 모든 술</title>
+		<title>주막, 이 세상 모든 술</title>
+
+		<!-- GSAP 라이브러리 추가 -->
+		<!-- GSAP -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+			integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
 		<!-- HOME CSS -->
 		<link rel="stylesheet" href="./css/home.css" />
 		<!-- HOME JAVA SCRIPT -->
@@ -33,37 +49,71 @@
 					<a href="#"><img src="./src/img/facebook.png" alt="페이스북 로고 사진" /></a>
 				</li>
 				<li>
-					<a href="#"><img src="./src/img/insta.png" alt="인스타 로고 사진" /></a>
+					<a href="https://www.instagram.com/j_jiinyo/" target="_blank"><img src="./src/img/insta.png" alt="인스타 로고 사진" /></a>
 				</li>
 			</ul>
 
 			<!-- login -->
 			<ul class="register">
-				<li><a href="./qna.html" class="register__qna">Q&A</a></li>
-				<li>|</li>
 				<li><a href="#login" class="register__login">LOG IN</a></li>
 				<li>|</li>
-				<li><a href="./register.html" class="register__singIn">SIGN IN</a></li>
+				<li><a href="./home_register.html" class="register__signin">SIGN IN</a></li>
 			</ul>
 		</header>
 		<figure>
 			<!-- video 넣기 -->
 			<!-- 구조참고해서 화면전환 효과 넣기 -->
-			<div class="bg viewOn makgoli"">
-				<video src="./src/video/video2.mp4"  autoplay muted loop></video>
-			</div>
-			<div class="bg">
-				<video src="./src/video/home_video3.mp4"  autoplay muted loop></video>
-			</div>
-			<div class="bg">
-				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
-			</div>
-			<div class="bg">
-				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
+			<div class="bg bg0 viewOn">
+				<video src="./src/video/video2.mp4" autoplay muted loop></video>
+				<article class="bg0--slogan slo">
+					<span id="quote"
+						>Rice Wine? <br />
+						dkfzhf?
+					</span>
+				</article>
 			</div>
 
-			<!-- 메뉴 구성 -->
+			<div class="bg bg1">
+				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
+				<article class="bg1--slogan slo">
+					<span id="quote"
+						>wine <br />
+						TODAY?
+					</span>
+				</article>
+			</div>
+			<div class="bg bg2">
+				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
+				<article class="bg2--slogan slo">
+					<span id="quote"
+						>dhsmf claor <br />
+						djEody?
+					</span>
+				</article>
+			</div>
+			<div class="bg bg3" id="animation_bg">
+				<div class="cursor"></div>
+				<div class="bg3--slogan slo">
+					<span id="quote"
+						>Monthly <br />
+						dkfzhf?
+					</span>
+				</div>
+				<ul>
+					<li><img src="./src/img/mak1.png" alt="떠다니는 이미지" class="float_item img1" /></li>
+					<li><img src="./src/img/mak10.png" alt="떠다니는 이미지" class="float_item img2" /></li>
+					<li><img src="./src/img/mak15.png" alt="떠다니는 이미지" class="float_item img3" /></li>
+					<li><img src="./src/img/mak5.png" alt="떠다니는 이미지" class="float_item img4" /></li>
+					<li><img src="./src/img/mak15.png" alt="떠다니는 이미지" class="float_item img5" /></li>
+					<li><img src="./src/img/mak2.png" alt="떠다니는 이미지" class="float_item img6" /></li>
+					<li><img src="./src/img/mak9.jpg" alt="떠다니는 이미지" class="float_item img7" /></li>
+					<li><img src="./src/img/mak12.png" alt="떠다니는 이미지" class="float_item img8" /></li>
+				</ul>
+			</div>
+
+			<!-- 메뉴 구성 ㅣ 처음 에는 숨겨져 있도록-->
 			<div class="wrap menuOn">
+				<!-- 돌아가는 원형메뉴 -->
 				<section class="rotate_menu">
 					<article class="on">
 						<div class="inner">
@@ -94,6 +144,7 @@
 					</article>
 				</section>
 
+				<!-- 왼쪽 선형메뉴 : 한 번에 볼 수 있도록 -->
 				<section class="linear_menu">
 					<ul class="menu_list">
 						<li><a href="./menu1_beer.html">맥주</a></li>
@@ -103,6 +154,7 @@
 					</ul>
 				</section>
 
+				<!-- 원형메뉴에 따른 각 메뉴 설명 -->
 				<sectioin class="explain">
 					<ul>
 						<li>
@@ -139,6 +191,7 @@
 				<i class="fa-solid fa-angles-up"></i>
 			</div>
 
+			<!-- 로그인창 -->
 			<section class="login hide">
 				<a href="#" class="login--close"><i class="fa-solid fa-xmark"></i></a>
 				<img src="./src/img/logo2.png" alt="페이지 로고 사진" />
@@ -150,7 +203,7 @@
 				</div>
 				<a href="#" class="login__btn kr" onclick="noInfo();">로그인</a>
 				<ul class="login__register kr">
-					<li><a href="./register.html">회원가입</a></li>
+					<li><a href="./home_register.html">회원가입</a></li>
 					<li>/</li>
 					<li><a href="#find_password" onclick="findPW();">비밀번호 찾기</a></li>
 				</ul>

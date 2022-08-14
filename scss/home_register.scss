@@ -1,0 +1,155 @@
+@import "reset";
+
+/* hide_message COMMON */
+.hide_message {
+	&.hide {
+		display: none;
+	}
+
+	position: relative;
+
+	/* 여기부터는 디자인 */
+	box-sizing: content-box;
+	width: 320px;
+	height: 40px;
+	line-height: 40px;
+	padding: 5px;
+	background-color: rgba(255, 228, 196, 0.616);
+	border-radius: 10px;
+	margin-left: 30px;
+	color: white;
+	font-size: 5px/40px bold "arial";
+
+	&.id_issame {
+		background-color: aquamarine;
+
+		top: 0px;
+	}
+	&.id_isno {
+		top: 0px;
+	}
+	&.id_form {
+		top: 0px;
+	}
+}
+
+$regiColor: burlywood;
+$innerBgColor: whitesmoke;
+
+main {
+	height: 1200px;
+	width: 100%;
+	overflow-x: hidden;
+	.inner {
+		height: 100%;
+		width: 850px;
+		background-color: $innerBgColor;
+		margin: 0 auto;
+		position: relative;
+
+		> h1 {
+			text-align: center;
+			position: relative;
+			top: 300px;
+			color: $regiColor;
+		}
+
+		.logo {
+			position: absolute;
+			top: 100px;
+			width: 200px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		.input_box {
+			margin-top: 40px;
+			position: absolute;
+
+			width: 80%;
+			top: 300px;
+			left: 27%;
+			.test {
+				border: 0;
+				border-bottom: 2px solid $regiColor;
+				height: 50px;
+				width: 350px;
+				background-color: rgba(210, 210, 210, 0.18);
+				font-size: 16px;
+				padding: 10px;
+				margin: 20px;
+				&:focus {
+					outline-color: $innerBgColor;
+					border-bottom: 2px solid rgb(164, 132, 90);
+				}
+			}
+
+			.same__btn {
+				width: 60px;
+				height: 30px;
+				border: none;
+				background-color: $regiColor;
+				color: white;
+				cursor: pointer;
+				border-radius: 10px;
+
+				&:active {
+					background-color: rgb(164, 132, 90);
+				}
+			}
+		}
+		.register__btn {
+			width: 350px;
+			height: 50px;
+			background-color: darkcyan;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			letter-spacing: 5px;
+			position: absolute;
+			top: 860px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			cursor: pointer;
+			&:active {
+				background-color: mediumaquamarine;
+			}
+		}
+
+		.sns_box {
+			position: relative;
+
+			top: 935px;
+			display: flex;
+			justify-content: center;
+			img {
+				height: 30px;
+			}
+			span {
+				vertical-align: bottom;
+				line-height: 30px;
+			}
+
+			.sns_box__common {
+				// position: absolute;
+
+				display: inline-block;
+				cursor: pointer;
+				border-radius: 10px;
+				margin: 0 20px;
+				padding: 5px;
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+// for alert Library
+.swal-button {
+	background-color: #ffb2d9;
+	font-size: 15px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}

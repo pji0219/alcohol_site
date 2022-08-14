@@ -7,7 +7,6 @@
     <title>우리들의 추천</title>
     <!-- MENU2.CSS -->
     <link rel="stylesheet" href="./css/menu2.css" />
-
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/82579c42bb.js"
@@ -16,15 +15,153 @@
     <!-- JS -->
     <script defer src="./js/menu2.js"></script>
 
+    <!-- jQuery document -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js" integrity="sha512-kSI9CgGh60rJbNVeMJvfNX0UTKAq8LEOea/yKJQbFpIroxT7bf9/zUFXbnfsQP5F6xlOOHtCfBPgsE1ceiHnRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <body>
+    <div class = "start-screen">
+      <h1>우리들의 추천</h1>
+      
+      <!-- 눈 내리는 효과 -->
+      <div class="snow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+		    <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
+			   <g id="snow-bottom-layer">
+				  <ellipse cx="6" cy="1009.5" rx="6" ry="5.5"/>
+				  <ellipse cx="138" cy="1110.5" rx="6" ry="5.5"/>
+				  <ellipse cx="398" cy="1055.5" rx="6" ry="5.5"/>
+				  <ellipse cx="719" cy="1284.5" rx="6" ry="5.5"/>
+				  <ellipse cx="760" cy="1155.5" rx="6" ry="5.5"/>
+				  <ellipse cx="635" cy="1459.5" rx="6" ry="5.5"/>
+				  <ellipse cx="478" cy="1335.5" rx="6" ry="5.5"/>
+				  <ellipse cx="322" cy="1414.5" rx="6" ry="5.5"/>
+				  <ellipse cx="247" cy="1234.5" rx="6" ry="5.5"/>
+				  <ellipse cx="154" cy="1425.5" rx="6" ry="5.5"/>
+				  <ellipse cx="731" cy="773.5" rx="6" ry="5.5"/>
+				  <ellipse cx="599" cy="874.5" rx="6" ry="5.5"/>
+				  <ellipse cx="339" cy="819.5" rx="6" ry="5.5"/>
+				  <ellipse cx="239" cy="1004.5" rx="6" ry="5.5"/>
+				  <ellipse cx="113" cy="863.5" rx="6" ry="5.5"/>
+				  <ellipse cx="102" cy="1223.5" rx="6" ry="5.5"/>
+				  <ellipse cx="395" cy="1155.5" rx="6" ry="5.5"/>
+				  <ellipse cx="826" cy="943.5" rx="6" ry="5.5"/>
+				  <ellipse cx="626" cy="1054.5" rx="6" ry="5.5"/>
+				  <ellipse cx="887" cy="1366.5" rx="6" ry="5.5"/>
+				  <ellipse cx="6" cy="241.5" rx="6" ry="5.5"/>
+				  <ellipse cx="138" cy="342.5" rx="6" ry="5.5"/>
+				  <ellipse cx="398" cy="287.5" rx="6" ry="5.5"/>
+				  <ellipse cx="719" cy="516.5" rx="6" ry="5.5"/>
+				  <ellipse cx="760" cy="387.5" rx="6" ry="5.5"/>
+				  <ellipse cx="635" cy="691.5" rx="6" ry="5.5"/>
+				  <ellipse cx="478" cy="567.5" rx="6" ry="5.5"/>
+				  <ellipse cx="322" cy="646.5" rx="6" ry="5.5"/>
+				  <ellipse cx="247" cy="466.5" rx="6" ry="5.5"/>
+				  <ellipse cx="154" cy="657.5" rx="6" ry="5.5"/>
+				  <ellipse cx="731" cy="5.5" rx="6" ry="5.5"/>
+				  <ellipse cx="599" cy="106.5" rx="6" ry="5.5"/>
+				  <ellipse cx="339" cy="51.5" rx="6" ry="5.5"/>
+				  <ellipse cx="239" cy="236.5" rx="6" ry="5.5"/>
+				  <ellipse cx="113" cy="95.5" rx="6" ry="5.5"/>
+				  <ellipse cx="102" cy="455.5" rx="6" ry="5.5"/>
+				  <ellipse cx="395" cy="387.5" rx="6" ry="5.5"/>
+				  <ellipse cx="826" cy="175.5" rx="6" ry="5.5"/>
+				  <ellipse cx="626" cy="286.5" rx="6" ry="5.5"/>
+				  <ellipse cx="887" cy="598.5" rx="6" ry="5.5"/>
+			   </g>
+		    </g>
+		    <g fill="#FFF" fill-opacity=".3" transform="translate(65 63)">
+			   <g id="snow-top-layer">
+				  <circle cx="8" cy="776" r="8"/>
+				  <circle cx="189" cy="925" r="8"/>
+				  <circle cx="548" cy="844" r="8"/>
+				  <circle cx="685" cy="1115" r="8"/>
+				  <circle cx="858" cy="909" r="8"/>
+				  <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)"/>
+				  <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)"/>
+				  <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)"/>
+				  <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)"/>
+				  <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)"/>
+				  <circle cx="8" cy="8" r="8"/>
+				  <circle cx="189" cy="157" r="8"/>
+				  <circle cx="548" cy="76" r="8"/>
+				  <circle cx="685" cy="347" r="8"/>
+				  <circle cx="858" cy="141" r="8"/>
+				  <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)"/>
+				  <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)"/>
+				  <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)"/>
+				  <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)"/>
+				  <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)"/>
+			   </g>
+		    </g>
+		</svg>
+    </div>
+    <!-- 눈 내리는 효과 종료 -->
+    </div>
+
+    <div class = "main-content-1">
+      <div class = "sticky">
+        <div class="sticky-background">
+          PICK YOUR TASTE
+        </div>
+        <div class="bird-container bird-container--one">
+          <div class="bird bird--one"></div>
+        </div>
+        
+        <div class="bird-container bird-container--two">
+          <div class="bird bird--two"></div>
+        </div>
+        
+        <div class="bird-container bird-container--three">
+          <div class="bird bird--three"></div>
+        </div>
+        
+        <div class="bird-container bird-container--four">
+          <div class="bird bird--four"></div>
+        </div>
+        
+        <div class="card-frame">
+          <div class="card">
+            <div class="front home"><a href = "#">HOME</a></div>
+            <div class="back"></div>
+          </div>
+
+          <div class="card">
+            <div class="front xmas"><a href = "#">XMAS<br />HOMEPARTY</a></div>
+            <div class="back"></div>
+          </div>
+
+          <div class="card">
+            <div class="front propose"><a href = "#">PROPOSE<br />EVENT</a></div>
+            <div class="back"></div>
+          </div>
+
+          <div class="card">
+            <div class="front birth">BIRTH<br />CELEBRATION</div>
+            <div class="back"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+<!-- <div class="end-screen">FINISH</div> -->
+
+
     <div class="wrap">
       <div class="container">
         <a href="./index.html" class="logo">
           <img src="./src/img/logo3.png" alt="logo" />
+          
         </a>
-        <header>
+        <div class="badges">
+          <div class="badge"><a href="#"><img src="./src/img/badges_1.jpg" alt="오프라인 매장"></a></div>
+          <div class="badge"><a href="https://www.korea.kr/news/visualNewsView.do?newsId=148882368"><img src="./src/img/badges_2.jpg" alt="주류 관련 뉴스"></a></div>
+          
+        </div>
+        <header class="nav-down">
           <ul class="menu">
             <li><a href="#">맥주</a></li>
             <li><a href="#">와인</a></li>
@@ -34,63 +171,163 @@
           <a href="#" class="menu_bar">
             <i class="fa-solid fa-bars"></i>
           </a>
-        </header>
 
+        </header>
+        
         <!--         XMAS, PROPOSE, BIRTH SECTION         -->
         <section class="xmas">
           <article>
+<!--             <img src ="src/img/xmas_img2.png" alt = "연말파티 중간 트리 이미지" class = "xmas_back"> -->
             <div class="xmas_left">
               <video
-                src="./src/video/xmas_video.mp4"
-                loop="loop"
+              src="./src/video/xmas_video.mp4"
+              loop="loop"
                 muted="muted"
                 autoplay="autoplay"
               ></video>
             </div>
             <div class="xmas_right">
               <img
-                src="./src/img/xmas_img.JPG"
-                alt="연말파티(크리스마스) 추천 주류 소개 글"
-                class="xmas_info"
-              />
+              src="./src/img/xmas_img.PNG" alt="연말파티(크리스마스) 추천 주류 소개 글"
+              class="xmas_info">
               <div class="textBox">
-                <h1>연말 홈파티에 즐길 수 있는 주류</h1>
-                <span>당신을 취향저격할 연말 홈파티 주류 소개</span>
-                <p>주류들 소개</p>
+                <span>주막 추천 12월의 술</span>
+                <h1>함께하는 소중한 시간</h1>
+                <h2>연말 홈파티</h2>
+                <a href = "#"><h3>1. 비냐 빅(VINAVIK A)</h3> </a>
+                <p>칠레 전통 와인 best1</p>
+                <a href = "#"><h3 class = "right_h3_text">2. 걍 즐겨</h3></a>
+                <p class = "right_p_text">석류,히비스커스 기반의 탁주</p>
+                <a href = "#"><h3>3. Brown brothers</h3></a>
+                <p>모스카토 로제 스파클링 와인</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 추사 블루베리 </h3></a>
+                <p class = "right_p_text2">전통주 와인</p>
               </div>
             </div>
           </article>
         </section>
 
+        <div class = "cover1">
+          <p class = "first-parallel"></p>
+        </div>
+
         <section class="propose">
           <article>
             <div class="propose_left">
               <img
-                src="./src/img/propose_left.JPG"
+                src="./src/img/propose_img.PNG"
                 alt="프로포즈 추천 주류 소개 글"
                 class="propose_info"
               />
+
+              <div class="textBox2">
+                <span>주막 추천 프로포즈에 걸맞는 술</span><hr>
+                <h1>오직 둘이서만</h1>
+                <h2>빛나는 행복한 시간</h2>
+                <a href = "#"><h3>1. 오롯이</h3> </a>
+                <p>전통주로 만나는 복숭아 과실주</p>
+                <a href = "#"><h3 class = "right_h3_text">2. ISCAY(이스카이)</h3></a>
+                <p class = "right_p_text">두 사람이 힘을 더하게 되는 와인</p>
+                <a href = "#"><h3>3. 고도리</h3></a>
+                <p>뭐야? 주스가 아니라 술이였어?</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 수아그나 로제 </h3></a>
+                <p class = "right_p_text2">장미 꽃잎을 닮은 연인처럼 옅은 분홍색을 띠는 와인</p>
+              </div>
             </div>
-            <div class="propose_right"></div>
+            <div class="propose_right">
+              <video
+              src="./src/video/propose_video.mp4"
+              loop="loop"
+                muted="muted"
+                autoplay="autoplay"
+              ></video>
+            </div>
           </article>
         </section>
+
+        <div class = "cover2">
+          <p class = "second-parallel"></p>
+        </div>
 
         <section class="birth">
           <article>
-            <div class="birth_left"></div>
+            <div class="birth_left">
+              <video
+              src="./src/video/birth_video.mp4"
+              loop="loop"
+                muted="muted"
+                autoplay="autoplay"
+              ></video>
+            </div>
             <div class="birth_right">
               <img
-                src="./src/img/birth_img.JPG"
+                src="./src/img/birth_img.PNG"
                 alt="생일 추천 주류 소개 글"
                 class="birth_info"
               />
+              <div class="textBox2">
+                <span>주막 추천 탄생일 기념 주류</span><hr>
+                <h1>너의 탄생을 축하하며</h1>
+                <h2>소중한 사람들과 함께</h2>
+                <a href = "#"><h3>1. 붉은 원숭이</h3> </a>
+                <p>홍국 쌀로 만든 우리 막걸리</p>
+                <a href = "#"><h3 class = "right_h3_text">2.곰표 맥주</h3></a>
+                <p class = "right_p_text">부드러운 에일 맥주</p>
+                <a href = "#"><h3>3. 스타로프라멘</h3></a>
+                <p>코를 감도는 진한 홉의 향과 부드러운 거품이 완벽하게 어우러진 체코 맥주</p>
+                <a href = "#"><h3 class = "right_h3_text">4. 원소주 </h3></a>
+                <p class = "right_p_text2">국내산 쌀 100%로 만든 대한민국 전통주</p>
+              </div>
             </div>
           </article>
         </section>
 
-        <footer>
-          <article></article>
-        </footer>
+        <section class="foot">
+          
+        <section id="bubble-wrapper">
+        </section>
+
+
+        <footer id="footer">
+          <div id="footer-content">
+            <div class="footer-section">
+              <h3 class="footer-section-title">Team</h3>
+              <div class="footer-section-links">
+                <a href="./member_info1.htmll" target="_blank">Park Jong Ik</a>
+                <a href="./member_info1.html2" target="_blank">U Jin Hyoung</a>
+                <a href="./member_info1.html3" target="_blank">Lim Da Young</a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-section-title">Site Map</h3>
+              <div class="footer-section-links">
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">Twitter</a>
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">CodePen</a>
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">YouTube</a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-section-title">오프라인 매장</h3>
+              <div class="footer-section-links">
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">Privacy</a>
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">Terms</a>
+                <a href="https://www.youtube.com/c/Hyperplexed" target="_blank">Cookies</a>
+              </div>
+            </div>
+          </div>
+          </footer>
+        
+        </section>
+
+        <a id="yt-link" class="meta-link" href="menu1_tradition.html" target="_blank">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>&nbsp&nbsp&nbsp제품 구경가기</span>
+        </a>
+<!--         Direct-top-btn -->
+        <div id="goto-top">
+          <div class="material-icons"><i class="fa-solid fa-arrow-up"></i></div>
+        </div>
+<!--      -->
       </div>
     </div>
   </body>

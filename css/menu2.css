@@ -14,12 +14,437 @@ a {
   text-decoration: none;
 }
 
+/* menu2.html 적용 font */
+/* h1 */
 @font-face {
   font-family: "양진체";
   src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.start-screen {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*   font-size: 5vw; */
+  text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
+  /*   .pulse {
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 30rem;
+
+      circle {
+        fill: #ff5154;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: 50% 50%;
+        animation: pulse 2s cubic-bezier(.5,.5,0,1);
+
+        &:nth-child(2) {
+          fill: #7fc6a4;
+          animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1);
+        }
+
+        &:nth-child(3) {
+          fill: #e5f77d;
+          animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1);
+        }
+      }
+    }
+
+    @keyframes pulse {
+      25% {
+        opacity: 0.4;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    } */
+}
+.start-screen h1 {
+  line-height: normal;
+  font-family: "양진체";
+  font-size: 4rem;
+  background: linear-gradient(to right top, #861657, #ffa69e);
+  color: transparent;
+  -webkit-background-clip: text;
+  z-index: 1;
+}
+.start-screen .snow {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.start-screen .snow .svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.start-screen #snow-top-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 22.5s infinite linear;
+}
+.start-screen #snow-bottom-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 45s infinite linear;
+}
+@keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main-content-1 {
+  width: 100%;
+  height: 500vh;
+  /*   margin: 100vh 0; 
+    border: 1px solid red;*/
+}
+.main-content-1 .sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /*     Bird-Flying-Effection */
+}
+.main-content-1 .sticky .sticky-background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9vw;
+  font-family: "양진체";
+}
+.main-content-1 .sticky .bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+.main-content-1 .sticky .bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+.main-content-1 .sticky .bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
+.main-content-1 .sticky .bird--three {
+  animation-duration: 1.25s;
+  animation-delay: -0.25s;
+}
+.main-content-1 .sticky .bird--four {
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+.main-content-1 .sticky .bird-container {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.main-content-1 .sticky .bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+.main-content-1 .sticky .bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+.main-content-1 .sticky .bird-container--three {
+  animation-duration: 14.6s;
+  animation-delay: 9.5s;
+}
+.main-content-1 .sticky .bird-container--four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+@keyframes fly-right-two {
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
+.main-content-1 .sticky .card-frame {
+  position: absolute;
+  width: 95vw;
+  height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content-1 .sticky .card-frame .card {
+  width: 24%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: perspective(100vw) translateX(100vw) rotateY(180deg);
+}
+.main-content-1 .sticky .card-frame .card .front, .main-content-1 .sticky .card-frame .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+.main-content-1 .sticky .card-frame .card .front {
+  background-color: coral;
+  font-size: 1.4rem;
+  font-family: "양진체";
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.main-content-1 .sticky .card-frame .card .front.home {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 1000px;
+}
+.main-content-1 .sticky .card-frame .card .front.home a {
+  text-decoration: none;
+  color: white;
+}
+.main-content-1 .sticky .card-frame .card .front.home:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #c1c161 0%, #c1c161 0%, #d4d4b1 100%);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+  transition: all 0.3s ease;
+}
+.main-content-1 .sticky .card-frame .card .front.home:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: double;
+}
+.main-content-1 .sticky .card-frame .card .front.home:hover:after {
+  top: 0;
+  height: 100%;
+}
+.main-content-1 .sticky .card-frame .card .front.home:active {
+  top: 2px;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas {
+  /*           background-image: url("../src/img/xmas_img.PNG"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 10%, #FF1361 63%, #FFF800 100%);
+  border: none;
+  box-shadow: none;
+  line-height: 42px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas a {
+  text-decoration: none;
+  color: white;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+  transition: all 0.3s ease;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas:hover:after {
+  top: 0;
+  height: 100%;
+}
+.main-content-1 .sticky .card-frame .card .front.xmas:active {
+  top: 2px;
+}
+.main-content-1 .sticky .card-frame .card .front.propose {
+  /*           background-image: url("../src/img/propose_img.PNG"); */
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 1000px;
+}
+.main-content-1 .sticky .card-frame .card .front.propose a {
+  text-decoration: none;
+  color: white;
+}
+.main-content-1 .sticky .card-frame .card .front.propose:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+  transition: all 0.3s ease;
+}
+.main-content-1 .sticky .card-frame .card .front.propose:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.main-content-1 .sticky .card-frame .card .front.propose:hover:after {
+  top: 0;
+  height: 100%;
+}
+.main-content-1 .sticky .card-frame .card .front.propose:active {
+  top: 2px;
+}
+.main-content-1 .sticky .card-frame .card .front.birth {
+  /*           background-image: url("../src/img/birth_img.PNG"); */
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 1000px;
+}
+.main-content-1 .sticky .card-frame .card .front.birth a {
+  text-decoration: none;
+  color: white;
+}
+.main-content-1 .sticky .card-frame .card .front.birth:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+  transition: all 0.3s ease;
+}
+.main-content-1 .sticky .card-frame .card .front.birth:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.main-content-1 .sticky .card-frame .card .front.birth:hover:after {
+  top: 0;
+  height: 100%;
+}
+.main-content-1 .sticky .card-frame .card .front.birth:active {
+  top: 2px;
+}
+.main-content-1 .sticky .card-frame .card .back {
+  transform: rotateY(180deg);
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-blend-mode: screen;
+  opacity: 0.6;
+}
+
 .wrap,
 html {
   width: 100%;
@@ -28,129 +453,236 @@ html {
 html .container {
   position: relative;
   width: 100%;
-  /* HEADER */
-  /*     XMAS-SECTION  */
-  /*     PROPOSE-SECTION  */
-  /*     BIRTH-SECTION  */
 }
 .wrap .container .logo,
 html .container .logo {
-  position: absolute;
-  width: 100px;
-  height: 50px;
-  top: 35px;
+  position: fixed;
+  top: 25px;
   left: 30px;
   z-index: 4;
 }
 .wrap .container .logo img,
 html .container .logo img {
-  width: 130px;
+  width: 150px;
   height: 60px;
 }
-.wrap .container header,
-html .container header {
-  display: none;
-  position: absolute;
+.wrap .container .badges,
+html .container .badges {
+  position: fixed;
+  width: 90px;
+  top: 150px;
+  right: 40px;
+  z-index: 1;
+}
+.wrap .container .badges img,
+html .container .badges img {
+  width: 100%;
+  border-radius: 5px;
+}
+.wrap .container .cover1,
+html .container .cover1 {
+  width: 100vw;
+  display: flex;
+  background-color: #fcb69f;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+.wrap .container .cover1 p,
+html .container .cover1 p {
+  transform: rotate(-2deg);
+  font-size: 1.1rem;
+  font-family: "양진체";
+}
+.wrap .container .cover2,
+html .container .cover2 {
+  width: 100vw;
+  display: flex;
+  background-color: #ace0f9;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+.wrap .container .cover2 p,
+html .container .cover2 p {
+  transform: rotate(-2deg);
+  font-size: 1.1rem;
+  font-family: "양진체";
+}
+
+header {
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 120px;
-  background-color: pink;
-  z-index: 3;
-  transition: 1s;
+  /*       background-image: url("../src/img/wood.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: top 0.2s ease-in-out;
+  z-index: 1;
 }
-.wrap .container header .menu,
-html .container header .menu {
-  margin: 0 auto;
+header .menu {
+  height: 120px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10%;
+  margin-left: 70px;
+  font-size: 1.25rem;
+  font-family: "Cafe24SsurroundAir";
+  z-index: 1;
 }
-.wrap .container header .menu li,
-html .container header .menu li {
-  padding-right: 50px;
-  padding-top: 50px;
+header .menu li {
+  margin-right: 50px;
 }
-.wrap .container header .menu > .menu_bar,
-html .container header .menu > .menu_bar {
+header .menu li a:visited {
+  color: rgb(255, 255, 255);
+}
+header .menu_bar {
   position: absolute;
-  right: 0;
+  right: 30px;
+  cursor: pointer;
 }
-.wrap .container .xmas,
-html .container .xmas {
+
+.nav-up {
+  top: -120px;
+}
+
+/*     HEADER 
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 120px;
+      background-color: pink;
+      z-index: 3;
+      transition: 1s;
+
+      .menu {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        li {
+          padding-right: 50px;
+          padding-top: 50px;
+        }
+
+        > .menu_bar {
+          position: absolute;
+          right: 0;
+        }
+      }
+    } */
+/*     XMAS-SECTION  */
+.xmas {
   width: 100%;
   height: 450px;
 }
-.wrap .container .xmas > article,
-html .container .xmas > article {
+.xmas > article {
   position: relative;
   height: 100%;
   width: 100%;
+  /* .xmas_back{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    width: 400px;
+  }  */
 }
-.wrap .container .xmas > article .xmas_left,
-html .container .xmas > article .xmas_left {
+.xmas > article .xmas_left {
   position: absolute;
   width: 45%;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(44, 105, 109, 0.402);
 }
-.wrap .container .xmas > article .xmas_left video,
-html .container .xmas > article .xmas_left video {
+.xmas > article .xmas_left video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 50;
 }
-.wrap .container .xmas > article .xmas_right,
-html .container .xmas > article .xmas_right {
+.xmas > article .xmas_right {
   position: absolute;
   width: 55%;
   top: 0;
   right: 0;
   bottom: 0;
 }
-.wrap .container .xmas > article .xmas_right .xmas_info,
-html .container .xmas > article .xmas_right .xmas_info {
+.xmas > article .xmas_right .xmas_info {
   width: 100%;
   height: 100%;
+  opacity: 0.8;
+  z-index: 99;
 }
-.wrap .container .xmas > article .xmas_right .textBox,
-html .container .xmas > article .xmas_right .textBox {
+.xmas > article .xmas_right .textBox {
   position: absolute;
-  top: 70px;
-  right: 75px;
-  width: 300px;
+  top: 4.375rem;
+  right: 6.875rem;
+  width: 24.375rem;
   z-index: 1;
 }
-.wrap .container .xmas > article .xmas_right .textBox h1,
-html .container .xmas > article .xmas_right .textBox h1 {
+.xmas > article .xmas_right .textBox span {
+  color: rgb(0, 0, 0);
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 1rem;
+}
+.xmas > article .xmas_right .textBox h1 {
+  margin-top: 0.3125rem;
   display: block;
   font-family: "양진체";
-  font: 600 16px/1;
-  color: white;
-  letter-spacing: 1px;
+  font: 600 1rem/1;
+  letter-spacing: 0.0625rem;
+  color: rgba(31, 107, 31, 0.868);
 }
-.wrap .container .xmas > article .xmas_right .textBox span,
-html .container .xmas > article .xmas_right .textBox span {
+.xmas > article .xmas_right .textBox h2 {
   font-family: "양진체";
-  font-size: 16px;
+  color: rgba(169, 63, 63, 0.984);
+  margin-bottom: 1.875rem;
 }
-.wrap .container .xmas > article .xmas_right .textBox p,
-html .container .xmas > article .xmas_right .textBox p {
+.xmas > article .xmas_right .textBox h3 {
   font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
 }
-.wrap .container .propose,
-html .container .propose {
+.xmas > article .xmas_right .textBox h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(241, 153, 65, 0.724);
+}
+.xmas > article .xmas_right .textBox .right_h3_text {
+  margin-left: 14.375rem;
+}
+.xmas > article .xmas_right .textBox .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(241, 153, 65, 0.724);
+}
+.xmas > article .xmas_right .textBox .right_p_text {
+  margin-left: 16.875rem;
+  margin-bottom: 1.875rem;
+}
+.xmas > article .xmas_right .textBox .right_p_text2 {
+  margin-left: 17.1875rem;
+}
+.xmas > article .xmas_right .textBox p {
+  font: 600 1rem/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
+}
+
+/*     PROPOSE-SECTION  */
+.propose {
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
-.wrap .container .propose > article,
-html .container .propose > article {
+.propose > article {
   position: relative;
   height: 100%;
   width: 100%;
 }
-.wrap .container .propose > article .propose_left,
-html .container .propose > article .propose_left {
+.propose > article .propose_left {
   position: absolute;
   width: 55%;
   height: 100%;
@@ -158,28 +690,99 @@ html .container .propose > article .propose_left {
   left: 0;
   bottom: 0;
 }
-.wrap .container .propose > article .propose_left .propose_info,
-html .container .propose > article .propose_left .propose_info {
+.propose > article .propose_left .propose_info {
   width: 100%;
   height: 100%;
+  opacity: 0.9;
+  z-index: 99;
 }
-.wrap .container .propose > article .propose_right,
-html .container .propose > article .propose_right {
+.propose > article .propose_left .textBox2 {
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  width: 400px;
+  z-index: 1;
+}
+.propose > article .propose_left .textBox2 span {
+  color: white;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 16px;
+}
+.propose > article .propose_left .textBox2 h1 {
+  margin-top: 5px;
+  display: block;
+  font-family: "양진체";
+  font: 600 16px/1;
+  letter-spacing: 1px;
+  color: rgba(41, 119, 152, 0.868);
+  display: flex;
+}
+.propose > article .propose_left .textBox2 h2 {
+  font-family: "양진체";
+  color: rgba(235, 32, 126, 0.984);
+  margin-bottom: 30px;
+  display: flex;
+}
+.propose > article .propose_left .textBox2 h3 {
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
+}
+.propose > article .propose_left .textBox2 h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.propose > article .propose_left .textBox2 .right_h3_text {
+  margin-left: 230px;
+}
+.propose > article .propose_left .textBox2 .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.propose > article .propose_left .textBox2 .right_p_text {
+  display: flex;
+  margin-left: 110px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+}
+.propose > article .propose_left .textBox2 .right_p_text2 {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 275px;
+}
+.propose > article .propose_left .textBox2 p {
+  display: flex;
+  flex-wrap: nowrap;
+  font: 600 16px/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
+}
+.propose > article .propose_right {
   position: absolute;
   width: 45%;
   height: inherit;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: darkkhaki;
 }
-.wrap .container .birth article,
-html .container .birth article {
+.propose > article .propose_right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/*     BIRTH-SECTION  */
+.birth article {
   position: relative;
-  height: 400px;
+  height: 500px;
 }
-.wrap .container .birth article .birth_left,
-html .container .birth article .birth_left {
+.birth article .birth_left {
   position: absolute;
   width: 35%;
   top: 0;
@@ -187,29 +790,262 @@ html .container .birth article .birth_left {
   bottom: 0;
   background-color: rgba(44, 105, 109, 0.402);
 }
-.wrap .container .birth article .birth_right,
-html .container .birth article .birth_right {
+.birth article .birth_left video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 50;
+}
+.birth article .birth_right {
   position: absolute;
   width: 65%;
   right: 0;
   top: 0;
   bottom: 0;
 }
-.wrap .container .birth article .birth_right .birth_info,
-html .container .birth article .birth_right .birth_info {
+.birth article .birth_right .birth_info {
   width: 100%;
   height: 100%;
+  z-index: 99;
 }
-.wrap .container footer,
-html .container footer {
-  width: 100%;
+.birth article .birth_right .textBox2 {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  width: 390px;
+  z-index: 1;
 }
-.wrap .container footer article,
-html .container footer article {
-  position: relative;
+.birth article .birth_right .textBox2 span {
+  color: white;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 16px;
+}
+.birth article .birth_right .textBox2 h1 {
+  margin-top: 5px;
+  display: block;
+  font-family: "양진체";
+  font: 600 16px/1;
+  letter-spacing: 1px;
+  color: rgba(41, 119, 152, 0.868);
+}
+.birth article .birth_right .textBox2 h2 {
+  font-family: "양진체";
+  color: rgba(235, 32, 126, 0.984);
+  margin-bottom: 30px;
+}
+.birth article .birth_right .textBox2 h3 {
+  font-family: "양진체";
+  display: block;
+  color: rgba(26, 26, 183, 0.772);
+}
+.birth article .birth_right .textBox2 h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.birth article .birth_right .textBox2 .right_h3_text {
+  margin-left: 230px;
+}
+.birth article .birth_right .textBox2 .right_h3_text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(50, 149, 225, 0.678);
+}
+.birth article .birth_right .textBox2 .right_p_text {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+.birth article .birth_right .textBox2 .right_p_text2 {
+  margin-left: 275px;
+}
+.birth article .birth_right .textBox2 p {
+  font: 600 16px/1;
+  color: rgb(0, 0, 0);
+  font-family: "Cafe24SsurroundAir";
+  margin-bottom: 10px;
+}
+
+.foot {
   width: 100%;
   height: 400px;
-  background-color: rgb(58, 12, 79);
+  background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02) 61%, rgba(0, 0, 0, 0.02) 73%), linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-blend-mode: normal, color-burn;
+  /*     FLOW-FOOTER */
+  /* -- Footer styles -- */
+}
+@keyframes wave {
+  from, to {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -20%);
+  }
+}
+.foot #bubble-wrapper {
+  width: 100%;
+  height: 300px;
+  bottom: 0px;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+.foot .bubble {
+  height: max(500px, 30vw);
+  width: max(300px, 30vw);
+  background-color: rgba(26, 93, 148, 0.616);
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  animation: wave 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion) {
+  .foot .bubble {
+    animation: none;
+    display: none;
+  }
+}
+.foot h3, .foot a {
+  font-family: "양진체";
+  font-weight: 400;
+  margin: 0px;
+  color: #56a8eb;
+}
+.foot #footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+}
+.foot #footer #footer-content {
+  padding: 8rem 16rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.foot #footer #footer-content .footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.foot #footer #footer-content .footer-section .footer-section-title {
+  color: rgb(250, 250, 250);
+  font-size: 1.5rem;
+}
+.foot #footer #footer-content .footer-section .footer-section-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 160px;
+}
+.foot #footer #footer-content .footer-section .footer-section-links a {
+  color: white;
+  text-decoration: none;
+}
+.foot #footer #footer-content .footer-section .footer-section-links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .foot #footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem;
+  }
+  .foot #footer-content .footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .foot #footer-content .footer-section .footer-section-title {
+    flex-shrink: 0;
+    width: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .foot #footer {
+    position: relative;
+    margin-top: 90vh;
+  }
+  .foot #footer #footer-content {
+    padding: 2rem;
+  }
+  .foot #footer #footer-content .footer-section-title {
+    font-size: 1rem;
+  }
+  .foot #footer #footer-content .footer-section-title .footer-section-links > a {
+    font-size: 0.8rem;
+  }
+}
+
+/* -- YouTube Link Styles -- */
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+#source-link i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.meta-link i, .meta-link span {
+  height: 20px;
+  line-height: 20px;
+}
+.meta-link span {
+  color: white;
+  font-family: "양진체";
+  font-weight: 500;
+}
+
+/*     Scroll-Up */
+#goto-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#goto-top .material-icons > i {
+  font-size: 15px;
+  color: white;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=menu2.css.map */

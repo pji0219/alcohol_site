@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>주막 - 회원가입</title>
+		<!--icon  -->
+		<link rel="icon" href="./src/img/logo2.png" />
+		<!-- css -->
+		<link rel="stylesheet" href="./css/home_register.css" />
+		<!-- js -->
+		<script defer src="./js/home_register.js"></script>
+
+		<!-- sweet alert cdn -->
+		<script src="sweetalert2.min.js"></script>
+		<link rel="stylesheet" href="sweetalert2.min.css" />
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<main>
+			<figure class="inner">
+				<a href="./index.html"><img src="./src/img/logo2.png" alt="주막 로고" class="logo" /> </a>
+				<h1>회원가입</h1>
+				<div class="input_box">
+					<input type="text" placeholder="이름" class="test" />
+					<br />
+					<input type="text" placeholder="핸드폰 번호" class="test" />
+					<br />
+
+					<input type="text" placeholder="아이디 입력 (이메일형식)" class="test id" />
+
+					<input type="button" value="중복확인" class="same__btn" />
+					<br />
+
+					<div class="hide id_issame hide_message">중복된 아이디 입니다!</div>
+					<div class="hide id_isno hide_message">아이디를 입력해주세요!</div>
+					<div class="hide id_form hide_message">아이디 형식이 올바르지 않습니다!</div>
+
+					<input type="password" placeholder="비밀번호 입력" class="test pw" />
+					<br />
+					<input type="password" placeholder="비밀번호 확인" class="test pw_check" />
+
+					<div class="hide hide_message pw_issame">비밀번호가 일치하지 않습니다!</div>
+				</div>
+				<div class="register__btn" onclick="noRegister()">회원가입</div>
+
+				<div class="sns_box">
+					<div class="sns_box__common kakao_box" onclick="noReady();">
+						<img src="./src/img/kakao.png" alt="카카오 logo" />
+						<span> &nbsp;카카오 아이디로 회원가입하기</span>
+					</div>
+					<div class="sns_box__common naver_box" onclick="noReady();">
+						<img src="./src/img/naver.png" alt="카카오 logo" />
+						<span> &nbsp;네이버 아이디로 회원가입하기</span>
+					</div>
+				</div>
+			</figure>
+		</main>
+	</body>
+</html>

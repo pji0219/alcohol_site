@@ -5,18 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>와인</title>
-    <link rel="stylesheet" href="./css/menu1_beer.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/menu1_common.css" />
+
+    <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/82579c42bb.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- GREEN SAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JS -->
+    <script defer src="./js/menu1.js"></script>
   </head>
   <body>
     <div class="wrap">
       <div class="inner">
         <!-- LOGO -->
         <a href="./index.html" class="logo">
-          <img src="./src/img/propose1.png" alt="logo" />
+          <img src="./src/img/logo3.png" alt="logo" />
         </a>
 
         <!-- HEADER -->
@@ -27,180 +47,517 @@
             <li><a href="#">전통주</a></li>
             <li><a href="#">우리들의 추천</a></li>
           </ul>
-
-          <div href="#" class="menu_bar">
-            <i class="fa-solid fa-bars"></i>
-          </div>
         </header>
 
-        <!-- TRADITION ALCHOL IMAGE -->
-        <section class="alcohol_movie">
-          <!-- <div></div> 추후에 이미지 태그나 video태그로 바꿀 예정 -->
-        </section>
+        <!-- TITLE -->
+        <h1 class="site_title">와인</h1>
 
+        <!-- ICONS -->
+        <a href="#" class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="#" class="heart">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+
+        <!-- ALCOHOL LIST -->
         <section class="alcohols">
           <ul class="alcohol__list">
-            <li>
-              <div class="alcohol_img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine1.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">화몽</h3>
+
+                  <span class="price">14,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 13%<br />
+                  용량: 750ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine2.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">미</h3>
+                  <span class="price">23,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 13%<br />
+                  용량: 750ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine3.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">비원</h3>
+                  <span class="price">18,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 13%<br />
+                  용량: 750ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine4.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">라라</h3>
+                  <span class="price">25,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine5.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">아로 퓨어</h3>
+                  <span class="price">25,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 13%<br />
+                  용량: 750ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine6.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">어미실 와인 스위트</h3>
+                  <span class="price">27,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 10.5%<br />
+                  용량: 500ml<br />
+                  제조사: 마미영농조합법인
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine7.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">눈어치 와인 스위트</h3>
+                  <span class="price">18,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 마미영농조합법인
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine8.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">초련</h3>
+                  <span class="price">39,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 20%<br />
+                  용량: 500ml<br />
+                  제조사: 산막 와이너리
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/wine9.png" class="alcohol_img" alt="와인" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">꽃잠 에덴와인 화이트</h3>
+                  <span class="price">26,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 375ml<br />
+                  제조사: 에덴농장
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine10.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">꽃잠 에덴와인 스위트</h3>
+                  <span class="price">26,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 에덴농장
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine11.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">포엠 화이트</h3>
+                  <span class="price">26,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 갈기산포도농원
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine12.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">꽃잠 스위트</h3>
+                  <span class="price">32,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 에덴농장
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine13.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">포엠 드라이</h3>
+                  <span class="price">19,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 500ml/750ml<br />
+                  제조사: 갈기산포도농원
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine14.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">포엠 로제</h3>
+                  <span class="price">26,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 500ml/750ml<br />
+                  제조사: 갈기산포도농원
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine15.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">꽃잠 드라이 12도</h3>
+                  <span class="price">31,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 에덴농장
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine16.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">포엠 스위트 12도</h3>
+                  <span class="price">23,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 갈기산포도농원
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine17.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">꽃잠 에덴와인 드라이</h3>
+                  <span class="price">26,000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 750ml<br />
+                  제조사: 갈기산포도농원
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/wine17.png"
+                  class="alcohol_img"
+                  alt="와인"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">어미실 로제 스위트</h3>
+                  <span class="price">22,500원</span>
+                  <span class="detail">상세정보</span>
+                </div>
               </div>
-            </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
-              </div>
-            </li>
-            <li>
-              <div class="img"></div>
-              <div class="text">
-                <h3 class="title">제목</h3>
-                <span class="price">가격</span>
-                <p class="description">설명</p>
+              <div class="back">
+                <p class="description">
+                  주종: 과실주<br />
+                  도수: 12%<br />
+                  용량: 500ml<br />
+                  제조사: 마미영농조합법인
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
               </div>
             </li>
           </ul>
+        </section>
+
+        <!-- ALCOHOL VIDEO -->
+        <section class="alcohol_video">
+          <video
+            src="./src/video/mak_video3.mp4"
+            loop
+            autoplay
+            muted
+            class="full_video"
+          ></video>
+          <video
+            src="./src/video/mak_movie2.mp4"
+            class="video2"
+            loop
+            muted
+            autoplay
+          ></video>
+          <video
+            src="./src/video/mak_movie4.mp4"
+            class="video3"
+            loop
+            muted
+            autoplay
+          ></video>
         </section>
       </div>
     </div>

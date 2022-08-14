@@ -79,7 +79,7 @@ window.addEventListener('scroll', () => {
 const emptyHearts = document.querySelectorAll('.empty_heart');
 const fillHearts = document.querySelectorAll('.fill_heart');
 
-// 채워진 하트로 변경, 이렇게 하는것을 권장
+// 채워진 하트로 변경
 for (let i = 0; i < emptyHearts.length; i++) {
   //
   emptyHearts[i].addEventListener('click', () => {
@@ -91,19 +91,16 @@ for (let i = 0; i < emptyHearts.length; i++) {
   });
 }
 
-// 빈 하트로 변경 ( for문 중첩 ver ), 이렇게 하는건 비추
-for (let i = 0; i < fillHearts.length; i++) {
+// 빈 하트로 변경
+for (let i = 0; i < emptyHearts.length; i++) {
   //
-  for (let j = 0; j < emptyHearts.length; j++) {
+  fillHearts[i].addEventListener('click', () => {
     //
-    fillHearts[i].addEventListener('click', () => {
-      //
-      if (emptyHearts[j].classList.contains('hide')) {
-        emptyHearts[j].classList.remove('hide');
-        fillHearts[i].classList.add('hide');
-      }
-    });
-  }
+    if (emptyHearts[i].classList.contains('hide')) {
+      emptyHearts[i].classList.remove('hide');
+      fillHearts[i].classList.add('hide');
+    }
+  });
 }
 
 // 상세 보기

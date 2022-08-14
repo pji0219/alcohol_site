@@ -115,11 +115,6 @@ body {
 			transition: 1.2s;
 			position: absolute;
 
-			&.makgoli {
-				> video {
-					height: 110%;
-				}
-			}
 			> video {
 				position: absolute;
 				width: 100%;
@@ -134,7 +129,39 @@ body {
 				height: 100%;
 			}
 
-			@import "home_floatImg";
+			.slo {
+				position: absolute;
+				// z-index: 6;
+				// color: wheat;
+				top: 0;
+			}
+			&.bg0 {
+				font-size: 9vw;
+				color: #ddd;
+				.slo.bg0--slogan {
+					top: 50%;
+					left: 50%;
+				}
+			}
+			&.bg1 {
+				font-size: 9vw;
+				color: rgba(237, 139, 34, 0.699);
+				.slo.bg1--slogan {
+					top: 17%;
+					left: 05%;
+				}
+			}
+			&.bg2 {
+				font-size: 9vw;
+				color: rgba(255, 255, 0, 0.79);
+				.slo.bg2--slogan {
+					text-align: right;
+					top: 07%;
+					left: 45%;
+				}
+			}
+
+			@import "home_floatImg"; //bg3
 
 			&.viewOn {
 				top: 0;
@@ -143,7 +170,7 @@ body {
 			//  view 에서 위로 나갈때to up이용
 			//아래로 내리는 동작
 			&.viewOutToUp {
-				top: -110%;
+				top: -100%;
 			}
 
 			// view에서 아래로 나갈 떼 to Down 이용

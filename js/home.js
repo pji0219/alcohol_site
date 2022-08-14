@@ -114,38 +114,39 @@ window.addEventListener("wheel", function (e) {
 	if (e.deltaY > 0) {
 		//아래로 내리는 동작
 		console.log("아래로wheel 되는 중");
-		for (let el = 0; el < bgContentLength; el++) {
-			if (bgContent[page].classList.contains("viewOn") && page !== lastPage) {
-				bgContent[page].classList.remove("viewOn");
-				console.log(bgContent[page + 1]);
-				bgContent[page].classList.add("viewOutToUp");
-				bgContent[page + 1].classList.add("viewOn");
-				console.log(page);
-			} else {
-				console.log(page);
+		if (page !== lastPage) {
+			for (let el = 0; el < bgContentLength; el++) {
+				if (bgContent[page].classList.contains("viewOn")) {
+					bgContent[page].classList.remove("viewOn");
+					console.log(bgContent[page + 1]);
+					bgContent[page].classList.add("viewOutToUp");
+					bgContent[page + 1].classList.add("viewOn");
+					console.log(page);
+				}
 			}
+			page++;
+		} else if (page === lastPage) {
+			page = lastPage;
 		}
-		++page;
 	} else if (e.deltaY < 0) {
 		//위로 올리기
 		console.log("위로wheel 되는 중");
-		for (let el = 0; el < bgContentLength; el++) {
-			console.log(page);
-			if (bgContent[page].classList.contains("viewOn") && page !== 0) {
-				// if (video[page] === 0) return;
-				bgContent[page].classList.remove("viewOn");
-				console.log("page:" + page);
-				console.log(bgContent[page - 1]);
-
-				// bgContent[page].classList.add("viewOutToDown");
-				bgContent[page - 1].classList.remove("viewOutToUp");
-				bgContent[page - 1].classList.add("viewOn");
-				console.log(bgContent[page - 1]);
-			} else {
-				console.log("예외처리 어떻게 하지ㅜ?");
+		if (page !== 0) {
+			for (let el = 0; el < bgContentLength; el++) {
+				if (bgContent[page].classList.contains("viewOn")) {
+					bgContent[page].classList.remove("viewOn");
+					console.log("page:" + page);
+					console.log(bgContent[page - 1]);
+					bgContent[page - 1].classList.remove("viewOutToUp");
+					bgContent[page - 1].classList.add("viewOn");
+					console.log(bgContent[page - 1]);
+				}
 			}
+			page--;
+		} else if (page === 0) {
+			console.log("(조금 비효율적인..)예외처리 완!!");
+			return;
 		}
-		page--;
 	}
 });
 
@@ -162,27 +163,39 @@ bg3.addEventListener("click", function () {
 	console.log(floatItem);
 });
 
-gsap.registerPlugin(SplitText);
+/* bg3 커서 */
+let mouseCursor = document.querySelector(".cursor");
 
-var tl = gsap.timeline(),
-	mySplitText = new SplitText("#quote", { type: "words,chars" }),
-	chars = mySplitText.chars; //an array of all the divs that wrap each character
-
-gsap.set("#quote", { perspective: 400 });
-
-console.log(chars);
-
-tl.from(chars, {
-	duration: 0.8,
-	opacity: 0,
-	scale: 0,
-	y: 80,
-	rotationX: 180,
-	transformOrigin: "0% 50% -50",
-	ease: "back",
-	stagger: 0.01,
+bg3.addEventListener("mouseover", function (e) {
+	mouseCursor.style.left = e.pageX + "px";
+	mouseCursor.style.top = e.pageY + "px";
+});
+let header = document.querySelector(".header");
+header.addEventListener("mouseover", function (e) {
+	mouseCursor.style.display = "none";
 });
 
-document.getElementById("animation_bg").onclick = function () {
-	tl.restart();
-};
+// gsap.registerPlugin(SplitText);
+
+// var tl = gsap.timeline(),
+// 	mySplitText = new SplitText("#quote", { type: "words,chars" }),
+// 	chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+// gsap.set("#quote", { perspective: 400 });
+
+// console.log(chars);
+
+// tl.from(chars, {
+// 	duration: 0.8,
+// 	opacity: 0,
+// 	scale: 0,
+// 	y: 80,
+// 	rotationX: 180,
+// 	transformOrigin: "0% 50% -50",
+// 	ease: "back",
+// 	stagger: 0.01,
+// });
+
+// document.getElementById("animation_bg").onclick = function () {
+// 	tl.restart();
+// };

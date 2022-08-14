@@ -1,26 +1,33 @@
 // 나중에 반응형도 추가하기
-// const hideUp = document.querySelector(".hide_up");
+
 const loginWindow = document.querySelector(".login");
 const loginString = document.querySelector(".register__login");
 const loginWindowClose = loginWindow.querySelector(".login--close");
 
 //로그인 시 영상흐리게
 // 근데 비디오 여러개 들어가면 안 될 듯!!->selectorAll?
-const video = document.querySelector("video");
+const bgSrc = document.querySelectorAll(".bg");
+const bgSlogan = document.querySelector;
 loginString.addEventListener("click", function () {
 	console.log("!!");
 	if (loginWindow.classList.contains("hide")) {
 		loginWindow.classList.remove("hide");
-		video.style.filter = "grayscale(100%)";
+
 		hideUp.classList.add("on");
 		wrap.classList.add("on");
 		document.querySelector(".logo").classList.add("on");
+		for (let i = 0; i < bgSrc.length; i++) {
+			// 몇번 bg인지 알필요 없이 모두 grayscale 줘도 됨
+			bgSrc[i].style.filter = "grayscale(100%)";
+		}
 	} else {
 		loginWindow.classList.add("hide");
-		video.style.filter = "grayscale(0%)";
 		hideUp.classList.remove("on");
 		wrap.classList.remove("on");
 		document.querySelector(".logo").classList.remove("on");
+		for (let i = 0; i < bgSrc.length; i++) {
+			bgSrc[i].style.filter = "grayscale(0%)";
+		}
 	}
 
 	//영상 흐리게
@@ -28,10 +35,12 @@ loginString.addEventListener("click", function () {
 
 loginWindowClose.addEventListener("click", function () {
 	loginWindow.classList.add("hide");
-	video.style.filter = "grayscale(0%)";
 	hideUp.classList.remove("on");
 	wrap.classList.remove("on");
 	document.querySelector(".logo").classList.remove("on");
+	for (let i = 0; i < bgSrc.length; i++) {
+		bgSrc[i].style.filter = "grayscale(0%)";
+	}
 });
 
 //로그인 메소드

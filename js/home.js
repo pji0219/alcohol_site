@@ -140,6 +140,11 @@ window.addEventListener("wheel", function (e) {
 const bg3 = document.querySelector(".bg3");
 const floatItem = document.querySelectorAll(".float_item");
 bg3.addEventListener("click", function () {
+	const bg3AniSlogan = bg3.querySelector(".bg3--slogan");
+	const bg3HideSlogan = bg3.querySelector(".bg3--slogan--hide");
+	bg3AniSlogan.style.opacity = "0";
+	bg3HideSlogan.style.opacity = "1";
+
 	for (let i = 0; i < floatItem.length; i++) {
 		floatItem[i].classList.add("on");
 	}
@@ -195,8 +200,5 @@ bgSrc2.addEventListener("mouseover", function () {
 	bg2Slogan0.classList.add("on");
 	bg2Slogan1.classList.add("on");
 });
-// bgSrc2.addEventListener("mouseover", addOnFunction());
-
-//class on추가하는 함수 선언 addOnFunction(E)
 
 //src3은 클릭시 슬로건에 이벤트 줄거라서 위에서 한 번에 처리할 것

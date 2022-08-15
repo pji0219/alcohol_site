@@ -30,17 +30,30 @@
 
 	.slo.bg3--slogan {
 		// z-index: 1;
-
+		// position absolute는 전체 .slo에서 줘서 안줘도 댐
 		color: white;
 		right: 10%;
 		top: 120px;
 		font-size: 15vw;
 		line-height: 1.5;
-
 		animation: textAni linear 7s infinite;
-		.quote {
-			&.on {
-			}
+	}
+	.slo.bg3--slogan--hide {
+		display: inline-block;
+
+		transition: 2s;
+		color: white;
+
+		top: 17%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: 15vw;
+		line-height: 1.5;
+		color: pink;
+		opacity: 0;
+		// animation: textAni linear 7s infinite;
+		&on {
+			// animation: ;
 		}
 	}
 
@@ -195,6 +208,14 @@
 }
 
 @keyframes textAni {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 100%;
+	}
+}
+@keyframes textAni2 {
 	0% {
 		right: -100%;
 	}

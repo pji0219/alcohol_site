@@ -1,58 +1,19 @@
 @import "reset";
+@import "font";
 /*common*/
 // 변수 설정
 $registerColor: #fff;
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-/*font-family: 'Bebas Neue', cursive;*/
-
-@font-face {
-	font-family: "ChusaLove";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chosunilbo_myungjo";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "CookieRun-Regular";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "ulsanjunggu";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-}
-/*
-font-family: 'MaruBuriExtraLight';
-font-family: 'MaruBuriLight';
-font-family: 'MaruBuri';
-font-family: 'MaruBuriBold';
-font-family: 'MaruBuriSemiBold';
-*/
 .hide {
 	opacity: 0;
 	transform: scale(0.4) translateX(700%);
 }
 body {
-	font-family: "MaruBuriBold";
+	font-family: "Cafe24SsurroundAir";
 	header {
 		position: relative;
 		z-index: 1;
 		.logo {
-			&.on {
-				// filter: grayscale(100%);
-				//question 그레이 스케일 주는데 왜 로고가 이동하지?
-				pointer-events: none;
-			}
 			> img {
 				width: 180px;
 
@@ -131,14 +92,14 @@ body {
 			}
 
 			.slo {
+				font-family: "Shadows Into Light";
+				font-weight: bold;
 				position: absolute;
-				// z-index: 6;
-				// color: wheat;
 				top: 0;
 			}
 			&.bg0 {
 				font-size: 9vw;
-				color: rgb(201, 20, 20);
+				color: rgba(225, 86, 86, 0.6);
 				.slo.bg0--slogan {
 					top: 50%;
 					left: 50%;
@@ -158,11 +119,10 @@ body {
 				.slo.bg1--slogan {
 					top: 17%;
 					left: 05%;
-					// opacity: 0;
 					.quote0 {
 						position: relative;
 						left: -1000%;
-						transition: 2.5s;
+						transition: 1.5s;
 						opacity: 0;
 
 						&.on {
@@ -173,7 +133,7 @@ body {
 					.quote1 {
 						position: relative;
 						left: -1000%;
-						transition: 5s;
+						transition: 3.5s;
 						opacity: 0;
 
 						&.on {
@@ -185,12 +145,12 @@ body {
 			}
 			&.bg2 {
 				font-size: 9vw;
-				color: rgba(255, 255, 0, 0.79);
+				color: rgba(255, 255, 0, 0.5);
 				.slo.bg2--slogan {
 					text-align: right;
 					top: 07%;
 					left: 45%;
-					// opacity: 1;
+
 					.quote0 {
 						position: relative;
 						left: 100%;
@@ -226,7 +186,7 @@ body {
 				top: -100%;
 			}
 
-			// view에서 아래로 나갈 떼 to Down 이용
+			// view에서 아래로 나갈 때 to Down 이용
 			//위로 올리는 동작
 			&.viewOutToDown {
 				top: 0%;
@@ -238,7 +198,7 @@ body {
 			height: 100%;
 			transition: 0.5s;
 			position: absolute;
-			top: 0; // display: none;
+			top: 0;
 			opacity: 1;
 			&.on {
 				filter: grayscale(100%);
@@ -306,7 +266,6 @@ body {
 				}
 			}
 		}
-		// transform-style: preserve-3d;
 
 		/*SECTION - login*/
 		@import "home_login";

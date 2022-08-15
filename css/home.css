@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,53 +15,41 @@ a {
   text-decoration: none;
 }
 
+/* menu2.html 적용 font */
+/* h1 */
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Shadows Into Light', cursive; */
 /*common*/
-/*font-family: 'Bebas Neue', cursive;*/
-@font-face {
-  font-family: "ChusaLove";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Chosunilbo_myungjo";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CookieRun-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "ulsanjunggu";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-/*
-font-family: 'MaruBuriExtraLight';
-font-family: 'MaruBuriLight';
-font-family: 'MaruBuri';
-font-family: 'MaruBuriBold';
-font-family: 'MaruBuriSemiBold';
-*/
 .hide {
   opacity: 0;
   transform: scale(0.4) translateX(700%);
 }
 
 body {
-  font-family: "MaruBuriBold";
+  font-family: "Cafe24SsurroundAir";
 }
 body header {
   position: relative;
   z-index: 1;
-}
-body header .logo.on {
-  pointer-events: none;
 }
 body header .logo > img {
   width: 180px;
@@ -135,12 +123,14 @@ body figure .bg > img {
   height: 100%;
 }
 body figure .bg .slo {
+  font-family: "Shadows Into Light";
+  font-weight: bold;
   position: absolute;
   top: 0;
 }
 body figure .bg.bg0 {
   font-size: 9vw;
-  color: rgb(201, 20, 20);
+  color: rgba(225, 86, 86, 0.6);
 }
 body figure .bg.bg0 .slo.bg0--slogan {
   top: 50%;
@@ -165,7 +155,7 @@ body figure .bg.bg1 .slo.bg1--slogan {
 body figure .bg.bg1 .slo.bg1--slogan .quote0 {
   position: relative;
   left: -1000%;
-  transition: 2.5s;
+  transition: 1.5s;
   opacity: 0;
 }
 body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
@@ -175,7 +165,7 @@ body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
 body figure .bg.bg1 .slo.bg1--slogan .quote1 {
   position: relative;
   left: -1000%;
-  transition: 5s;
+  transition: 3.5s;
   opacity: 0;
 }
 body figure .bg.bg1 .slo.bg1--slogan .quote1.on {
@@ -184,7 +174,7 @@ body figure .bg.bg1 .slo.bg1--slogan .quote1.on {
 }
 body figure .bg.bg2 {
   font-size: 9vw;
-  color: rgba(255, 255, 0, 0.79);
+  color: rgba(255, 255, 0, 0.5);
 }
 body figure .bg.bg2 .slo.bg2--slogan {
   text-align: right;
@@ -244,6 +234,18 @@ body figure .bg.bg3 .slo.bg3--slogan {
   font-size: 15vw;
   line-height: 1.5;
   animation: textAni linear 7s infinite;
+}
+body figure .bg.bg3 .slo.bg3--slogan--hide {
+  display: inline-block;
+  transition: 2s;
+  color: white;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 15vw;
+  line-height: 1.5;
+  color: pink;
+  opacity: 0;
 }
 body figure .bg.bg3 ul > li > img.float_item {
   position: absolute;
@@ -385,6 +387,14 @@ body figure .bg.bg3 ul > li > img.float_item.img8.on {
   }
 }
 @keyframes textAni {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes textAni2 {
   0% {
     right: -100%;
   }
@@ -657,6 +667,7 @@ body figure .hide_up:hover span {
   animation: none;
 }
 body figure .login {
+  font-family: "Cafe24SsurroundAir";
   width: 400px;
   height: 500px;
   position: absolute;

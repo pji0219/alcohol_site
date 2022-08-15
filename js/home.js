@@ -202,3 +202,24 @@ bgSrc2.addEventListener("mouseover", function () {
 });
 
 //src3은 클릭시 슬로건에 이벤트 줄거라서 위에서 한 번에 처리할 것
+
+/* 돋보기 */
+let glass = document.querySelector(".glass");
+let searchWindow = document.querySelector("#search_window");
+glass.addEventListener("click", function () {
+	searchWindow.classList.add("searchOn");
+	for (let el of bg) {
+		el.style.opacity = "0.1";
+		el.style.backgroundColor = "#fff";
+	}
+});
+
+for (let el of bg) {
+	el.addEventListener("click", function () {
+		console.log("눌리는 중인감?");
+		searchWindow.classList.remove("searchOn");
+		for (let el of bg) {
+			el.style.opacity = "1";
+		}
+	});
+}

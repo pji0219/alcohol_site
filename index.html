@@ -6,21 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>주막, 이 세상 모든 술</title>
 
-		<!-- GSAP 라이브러리 추가 -->
-		<!-- GSAP -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
-			integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-
 		<!-- HOME CSS -->
 		<link rel="stylesheet" href="./css/home.css" />
 		<!-- HOME JAVA SCRIPT -->
@@ -40,10 +25,15 @@
 			<!-- logo -->
 			<a href="./index.html" class="logo"><img src="./src/img/logo.png" alt="로고 이미지" /></a>
 
+			<li class="search">
+				<i class="fa-solid fa-magnifying-glass glass"></i>
+				<input type="text" id="search_window" placeholder="검색어를 입력해주세요." />
+			</li>
+
 			<!-- sns 창과 검색버튼 -->
 			<ul class="searchNsns">
 				<!-- 검색 버튼 a태그 안걸고 css로 cursor pointer걸기 -->
-				<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>
+
 				<!--sns -->
 				<li>
 					<a href="#"><img src="./src/img/facebook.png" alt="페이스북 로고 사진" /></a>

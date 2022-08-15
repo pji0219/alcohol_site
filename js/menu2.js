@@ -138,8 +138,8 @@ window.addEventListener('scroll', ()=>{
 window.addEventListener('resize', ()=>{
     cardFlipOnScroll.init()
 })
-
-/* Flow word */
+/* 
+/* Flow word 
 const pTag1 = document.querySelector('.first-parallel')
 const pTag2 = document.querySelector('.second-parallel')
 
@@ -149,7 +149,7 @@ const textArr2 = 'Love Yummy Food Tasty Powerful Adorable'.split(' ')
 function initTexts(element, textArray){
     textArray.push(...textArray)
     for(let i = 0; i < textArray.length; i++){
-        element.innerText += `${textArray[i]}\u00A0\u00A0\u00A0\u00A0\u00A0`
+        element.innerText += `${textArray[i]}\u00A0\u00A0\u00A0\u00A0`
     }
 }
 initTexts(pTag1, textArr1)
@@ -176,11 +176,52 @@ function animate(){
 
     window.requestAnimationFrame(animate)
 }
-/* 함수 사용 */
-animate() 
+/* 함수 사용 
+animate()  */
 
 /* window.addEventListener('scroll', ()=> {
     count1 += 15
     count2 += 15
 }) */
+
+/* FLOW-FOOTER */
+const wrapper = document.getElementById("bubble-wrapper");
+let index = 0;
+
+const Color = {
+  Red: "239, 83, 80",
+  Orange: "255, 160, 0",
+  Yellow: "253, 216, 53",
+  Green: "42, 252, 152",
+  Blue: "41, 121, 255",
+  Indigo: "57, 73, 171",
+  Violet: "103, 58, 183"
+}
+
+const colors = [
+  Color.Red, 
+  Color.Orange, 
+  Color.Yellow, 
+  Color.Green, 
+  Color.Blue, 
+  Color.Indigo, 
+  Color.Violet
+];
+
+const animateBubble = x => {  
+  const bubble = document.createElement("div");
+  
+  bubble.className = "bubble";
+  
+  bubble.style.left = `${x}px`;
+  
+  // Uncomment this for rainbow effect
+  // bubble.style.backgroundColor = `rgb(${colors[index++ % 7]})`;
+  
+  wrapper.appendChild(bubble);
+  
+  setTimeout(() => wrapper.removeChild(bubble), 2000);
+}
+/* 마우스 좌표 찾아주는 기능 */
+window.onmousemove = e => animateBubble(e.clientX);
 

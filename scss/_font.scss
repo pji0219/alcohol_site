@@ -1,25 +1,43 @@
 /* menu2.html 적용 font */
 /* h1 */
 @font-face {
+
 	font-family: "양진체";
 	src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
-/* span */
-@font-face {
-	font-family: "LeferiPoint-WhiteObliqueA";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-/* p */
-@font-face {
-	font-family: "Cafe24SsurroundAir";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 /* font-family: 'Shadows Into Light', cursive; */
+
+  /* span */
+  @font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* p */
+  @font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* flow-word */
+@font-face {
+  font-family: 'InkLipquid';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* inside-page__btn */
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

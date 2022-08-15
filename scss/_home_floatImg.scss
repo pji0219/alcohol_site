@@ -37,6 +37,10 @@
 		font-size: 15vw;
 		line-height: 1.5;
 		animation: textAni linear 7s infinite;
+		.quote {
+			&.on {
+			}
+		}
 	}
 	.slo.bg3--slogan--hide {
 		display: inline-block;

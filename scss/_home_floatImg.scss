@@ -1,9 +1,17 @@
 &.bg3 {
 	background: linear-gradient(180deg, black, #ddd);
-	opacity: 0.8;
+	opacity: 1;
 	text-align: center;
 
 	cursor: none;
+	video {
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// transform: rotate(90deg);
+		opacity: 0.4;
+	}
 
 	.cursor {
 		background-image: url("../src/img/click.png");
@@ -30,6 +38,10 @@
 		line-height: 1.5;
 
 		animation: textAni linear 7s infinite;
+		.quote {
+			&.on {
+			}
+		}
 	}
 
 	ul {

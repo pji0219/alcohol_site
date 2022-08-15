@@ -3,19 +3,19 @@ const header = document.querySelector("header");
 
 // 로고, 헤더 이벤트
 logo.addEventListener("mouseover", function () {
-	header.style.transform = "translate(0px, 0px)";
+  header.style.transform = "translate(0px, 0px)";
 });
 
 header.addEventListener("mouseover", function () {
-	header.style.transform = "translate(0px, 0px)";
+  header.style.transform = "translate(0px, 0px)";
 });
 
 logo.addEventListener("mouseout", function () {
-	header.style.transform = "translate(0px, -100px)";
+  header.style.transform = "translate(0px, -100px)";
 });
 
 header.addEventListener("mouseout", function () {
-	header.style.transform = "translate(0px, -100px)";
+  header.style.transform = "translate(0px, -100px)";
 });
 
 // 영상 효과
@@ -28,24 +28,24 @@ const heartHeader = document.querySelector(".heart");
 const cartHeader = document.querySelector(".cart");
 
 window.onload = () => {
-	setTimeout(() => {
-		wrap.style.overflow = "visible";
+  setTimeout(() => {
+    wrap.style.overflow = "visible";
 
-		heartHeader.style.display = "inline";
-		cartHeader.style.display = "inline";
-	}, 1000);
+    heartHeader.style.display = "inline";
+    cartHeader.style.display = "inline";
+  }, 1000);
 };
 
 // 처음 페이지 로딩시 영상효과
 gsap.to(".full_video", {
-	xPercent: -60,
-	duration: 1,
-	delay: 4,
+  xPercent: -60,
+  duration: 1,
+  delay: 4,
 });
 gsap.from(".alcohols", {
-	delay: 4.5,
-	duration: 1,
-	opacity: 0,
+  delay: 4.5,
+  duration: 1,
+  opacity: 0,
 });
 
 // 페이지 스크롤할 때 영상 효과

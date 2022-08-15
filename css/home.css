@@ -74,6 +74,7 @@ body header .searchNsns {
   position: absolute;
   right: 10%;
   top: 40px;
+  cursor: pointer;
 }
 body header .searchNsns > li {
   color: #fff;
@@ -139,11 +140,19 @@ body figure .bg .slo {
 }
 body figure .bg.bg0 {
   font-size: 9vw;
-  color: #ddd;
+  color: rgb(201, 20, 20);
 }
 body figure .bg.bg0 .slo.bg0--slogan {
   top: 50%;
   left: 50%;
+}
+body figure .bg.bg0 .slo.bg0--slogan .quote0 {
+  transition: 4s;
+  opacity: 0;
+}
+body figure .bg.bg0 .slo.bg0--slogan .quote1 {
+  transition: 8s;
+  opacity: 0;
 }
 body figure .bg.bg1 {
   font-size: 9vw;
@@ -152,6 +161,26 @@ body figure .bg.bg1 {
 body figure .bg.bg1 .slo.bg1--slogan {
   top: 17%;
   left: 5%;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote0 {
+  position: relative;
+  left: -1000%;
+  transition: 2.5s;
+  opacity: 0;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
+  left: 0;
+  opacity: 1;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote1 {
+  position: relative;
+  left: -1000%;
+  transition: 5s;
+  opacity: 0;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote1.on {
+  left: 0;
+  opacity: 1;
 }
 body figure .bg.bg2 {
   font-size: 9vw;
@@ -162,11 +191,38 @@ body figure .bg.bg2 .slo.bg2--slogan {
   top: 7%;
   left: 45%;
 }
+body figure .bg.bg2 .slo.bg2--slogan .quote0 {
+  position: relative;
+  left: 100%;
+  transition: 3s;
+  opacity: 0;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote0.on {
+  left: 0%;
+  opacity: 1;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote1 {
+  position: relative;
+  left: 100%;
+  transition: 5s;
+  opacity: 0;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote1.on {
+  left: 0;
+  opacity: 1;
+}
 body figure .bg.bg3 {
   background: linear-gradient(180deg, black, #ddd);
-  opacity: 0.8;
+  opacity: 1;
   text-align: center;
   cursor: none;
+}
+body figure .bg.bg3 video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
 }
 body figure .bg.bg3 .cursor {
   background-image: url("../src/img/click.png");

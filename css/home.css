@@ -170,6 +170,7 @@ body header .searchNsns {
   display: flex;
   position: absolute;
   right: 10%;
+
   top: 50px;
   cursor: pointer;
 }
@@ -235,7 +236,10 @@ body figure .bg .slo {
 }
 body figure .bg.bg0 {
   font-size: 9vw;
+
   color: rgba(225, 86, 86, 0.6);
+
+
 }
 body figure .bg.bg0 .slo.bg0--slogan {
   top: 40%;
@@ -260,7 +264,9 @@ body figure .bg.bg1 .slo.bg1--slogan {
 body figure .bg.bg1 .slo.bg1--slogan .quote0 {
   position: relative;
   left: -1000%;
+
   transition: 1.5s;
+
   opacity: 0;
 }
 body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
@@ -270,7 +276,10 @@ body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
 body figure .bg.bg1 .slo.bg1--slogan .quote1 {
   position: relative;
   left: -1000%;
+
   transition: 3.5s;
+
+
   opacity: 0;
 }
 body figure .bg.bg1 .slo.bg1--slogan .quote1.on {

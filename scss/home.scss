@@ -27,10 +27,11 @@ body {
 			transition: 1.4s;
 			font-size: 20px;
 			position: relative;
+
 			// color: red;
 			> i {
 				position: absolute;
-				left: 50%;
+				left: 85%;
 				top: 51px;
 				z-index: 5;
 				transition: 0.8s;
@@ -38,7 +39,8 @@ body {
 				cursor: pointer;
 
 				&.searchOn {
-					transform: translate(-50%, 0);
+					left: 50%;
+					transform: translate(-130px, 0);
 					color: #000;
 				}
 			}
@@ -49,7 +51,7 @@ body {
 				transition: 0.8s;
 
 				z-index: 1;
-				opacity: 0.1;
+				opacity: 0;
 				box-sizing: content-box;
 				border-radius: 30px;
 				font-size: 20px;
@@ -58,6 +60,7 @@ body {
 				font-family: "Cafe24SsurroundAir";
 				left: 50%;
 				top: 40px;
+				transform: translate(50%, 0);
 				pointer-events: none;
 
 				&.searchOn {
@@ -66,19 +69,45 @@ body {
 					pointer-events: auto;
 				}
 			}
+			.btn--search {
+				position: absolute;
+				left: 72%;
+				// translate: transform(-50%, 0);
+				top: 46px;
+				transition: 0.8s;
+				width: 50px;
+				height: 30px;
+				border: 2px solid orangered;
+				color: white;
+				background-color: orange;
+				line-height: 30px;
+				border-radius: 5px;
+				text-align: center;
+				pointer-events: none;
+				opacity: 0;
+
+				&.searchOn {
+					left: 50%;
+					transform: translateX(150px);
+
+					opacity: 1;
+					pointer-events: auto;
+					cursor: pointer;
+				}
+			}
 		}
 
 		.searchNsns {
 			display: flex;
 			position: absolute;
 			right: 10%;
+
 			top: 50px;
+
 			cursor: pointer;
 
 			> li {
-				// color: $registerColor;
 				padding-left: 10px;
-				background-color: skyblue;
 
 				img {
 					width: 20px;
@@ -143,9 +172,11 @@ body {
 			}
 			&.bg0 {
 				font-size: 9vw;
+
 				color: rgba(225, 86, 86, 0.6);
+
 				.slo.bg0--slogan {
-					top: 50%;
+					top: 40%;
 					left: 50%;
 					.quote0 {
 						transition: 4s;
@@ -163,10 +194,12 @@ body {
 				.slo.bg1--slogan {
 					top: 17%;
 					left: 05%;
+
 					.quote0 {
 						position: relative;
 						left: -1000%;
 						transition: 1.5s;
+
 						opacity: 0;
 
 						&.on {
@@ -177,7 +210,9 @@ body {
 					.quote1 {
 						position: relative;
 						left: -1000%;
+
 						transition: 3.5s;
+
 						opacity: 0;
 
 						&.on {

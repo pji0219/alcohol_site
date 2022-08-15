@@ -205,9 +205,12 @@ bgSrc2.addEventListener("mouseover", function () {
 
 /* 돋보기 */
 let glass = document.querySelector(".glass");
+let searchBtn = document.querySelector(".btn--search");
 let searchWindow = document.querySelector("#search_window");
 glass.addEventListener("click", function () {
 	searchWindow.classList.add("searchOn");
+	searchBtn.classList.add("searchOn");
+	glass.classList.add("searchOn");
 	for (let el of bg) {
 		el.style.opacity = "0.1";
 		el.style.backgroundColor = "#fff";
@@ -218,6 +221,9 @@ for (let el of bg) {
 	el.addEventListener("click", function () {
 		console.log("눌리는 중인감?");
 		searchWindow.classList.remove("searchOn");
+		searchBtn.classList.remove("searchOn");
+		glass.classList.remove("searchOn");
+
 		for (let el of bg) {
 			el.style.opacity = "1";
 		}

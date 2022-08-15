@@ -60,50 +60,35 @@ const hideUpArrow = hideUp.querySelector("i");
 
 let clickNum = 0;
 hideUp.addEventListener("click", function () {
+	const slo = document.querySelectorAll(".slo");
 	sulExplainList[active].classList.add("on");
 	if (clickNum % 2 == 0) {
-		// wrap.style.top = "0";
-		// wrap.style.opacity = "1";
 		wrap.classList.remove("menuOn");
 		hideUpArrow.style.transform = "rotate(180deg)";
 		clickNum++;
+		for (let el of slo) {
+			el.style.display = "none";
+		}
+		for (let el of bg) {
+			el.style.opacity = "0.3";
+		}
 	} else {
-		// wrap.style.top = "300px";
-		// wrap.style.opacity = "0";
 		wrap.classList.add("menuOn");
 		hideUpArrow.style.transform = "rotate(360deg)";
 		clickNum++;
 		for (let el of sulExplainList) {
 			el.classList.remove("on");
 		}
+		for (let el of slo) {
+			el.style.display = "block";
+		}
+		for (let el of bg) {
+			el.style.opacity = "1";
+		}
 	}
 });
 
-//GSAP
-/* gsap.registerPlugin(ScrollTrigger);
-gsap.defaults({ ease: "none", duration: 2 });
-
-const tl = gsap.timeline();
-
-// 전체 애니메이션을 스크롤에 기반해서 움직이게 해야하므로 ScrollTrigger 의 create 메서드로 트리거 생성
-ScrollTrigger.create({
-	animation: tl,
-	trigger: "figure",
-	start: "top top",
-	end: "+=4000", //scroll이 4000px 동안 일어남
-	markers: true,
-	scrub: true,
-	pin: true,
-});
-
-tl.from(".bg.bg1", { yPercent: -100, delay: 2 })
-	.to(".bg.bg0", { yPercent: 100, delay: 0 }, "<")
-	.from(".bg.bg2", { yPercent: -100, delay: 2 })
-	.to(".bg.bg1", { yPercent: 100, delay: 0 }, "<")
-	.from(".bg.bg3", { yPercent: -100, delay: 2 })
-	.to(".bg.bg2", { yPercent: 100, delay: 0 }, "<"); */
-
-//wheel 이용-첫번째 페이지와 마지막 페이지에서의 예외처리와 휠 한 칸씩만 되는 문제를 해결하지 못함..
+//wheel 이용- 휠 한 칸씩만 되는 문제를 해결하지 못함..
 const figure = document.querySelector("figure");
 let page = 0;
 window.addEventListener("wheel", function (e) {
@@ -150,7 +135,8 @@ window.addEventListener("wheel", function (e) {
 	}
 });
 
-/* bg3 클릭시 정렬시키기 */
+/* bg3 클릭시 정렬시키기 */ //글씨 효과 추가
+
 const bg3 = document.querySelector(".bg3");
 const floatItem = document.querySelectorAll(".float_item");
 bg3.addEventListener("click", function () {
@@ -170,32 +156,47 @@ bg3.addEventListener("mouseover", function (e) {
 	mouseCursor.style.left = e.pageX + "px";
 	mouseCursor.style.top = e.pageY + "px";
 });
-let header = document.querySelector(".header");
+//header쪽으로 가면 마우스 이미지 없애고 커서 pointer로 바뀌도록
+let header = document.querySelector("header");
 header.addEventListener("mouseover", function (e) {
 	mouseCursor.style.display = "none";
 });
+header.addEventListener("mouseout", function (e) {
+	mouseCursor.style.display = "block";
+});
 
-// gsap.registerPlugin(SplitText);
+//첫 화면 bg0 는 window.onload 이용해서 걸어주기!
+const bg0Slogan0 = document.querySelector(".bg0 .quote0");
+const bg0Slogan1 = document.querySelector(".bg0 .quote1");
 
-// var tl = gsap.timeline(),
-// 	mySplitText = new SplitText("#quote", { type: "words,chars" }),
-// 	chars = mySplitText.chars; //an array of all the divs that wrap each character
+const bg1Slogan0 = document.querySelector(".bg1 .quote0");
+const bg1Slogan1 = document.querySelector(".bg1 .quote1");
+const bg2Slogan0 = document.querySelector(".bg2 .quote0");
+const bg2Slogan1 = document.querySelector(".bg2 .quote1");
+const bg3Slogan = document.querySelector(".bg3 .quote");
 
-// gsap.set("#quote", { perspective: 400 });
+// mouseover될 변수 선언- 각 페이지별 사진이나 영상에 mouseover될 것
+//bg0는 onload로 처리하니까 필요엄슴
+const bgSrc1 = document.querySelector(".bg1 .bg_src");
+const bgSrc2 = document.querySelector(".bg2 .bg_src");
+const bgSrc3 = document.querySelector(".bg3 .bg_src");
 
-// console.log(chars);
+window.onload = () => {
+	bg0Slogan0.style.opacity = "1";
+	bg0Slogan1.style.opacity = "1";
+};
 
-// tl.from(chars, {
-// 	duration: 0.8,
-// 	opacity: 0,
-// 	scale: 0,
-// 	y: 80,
-// 	rotationX: 180,
-// 	transformOrigin: "0% 50% -50",
-// 	ease: "back",
-// 	stagger: 0.01,
-// });
+// mouseover로 처리하기
+bgSrc1.addEventListener("mouseover", function () {
+	bg1Slogan0.classList.add("on");
+	bg1Slogan1.classList.add("on");
+});
+bgSrc2.addEventListener("mouseover", function () {
+	bg2Slogan0.classList.add("on");
+	bg2Slogan1.classList.add("on");
+});
+// bgSrc2.addEventListener("mouseover", addOnFunction());
 
-// document.getElementById("animation_bg").onclick = function () {
-// 	tl.restart();
-// };
+//class on추가하는 함수 선언 addOnFunction(E)
+
+//src3은 클릭시 슬로건에 이벤트 줄거라서 위에서 한 번에 처리할 것

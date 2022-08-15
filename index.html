@@ -32,7 +32,7 @@
 		<!-- 글꼴 -->
 		<link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet" />
 		<!--icon  -->
-		<link rel="icon" href="./src/img/logo2.png" />
+		<link rel="icon" href="./src/img/favicon.ico" />
 	</head>
 
 	<body>
@@ -64,40 +64,34 @@
 			<!-- video 넣기 -->
 			<!-- 구조참고해서 화면전환 효과 넣기 -->
 			<div class="bg bg0 viewOn">
-				<video src="./src/video/video2.mp4" autoplay muted loop></video>
+				<video src="./src/video/video2.mp4" autoplay muted loop class="bg_src"></video>
 				<article class="bg0--slogan slo">
-					<span id="quote"
-						>Rice Wine? <br />
-						dkfzhf?
-					</span>
+					<!-- <div class="shield"></div> -->
+					<span class="quote0">Rice Wine?</span> <br />
+					<span class="quote1">dkfzhf? </span>
 				</article>
 			</div>
 
 			<div class="bg bg1">
-				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" />
+				<img src="./src/img/home_bgimg_wine01.jpg" alt="와인 배경이미지" class="bg_src" />
 				<article class="bg1--slogan slo">
-					<span id="quote"
-						>wine <br />
-						TODAY?
-					</span>
+					<span class="quote0">wine </span><br />
+					<span class="quote1">TODAY? </span>
 				</article>
 			</div>
 			<div class="bg bg2">
-				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" />
+				<img src="./src/img/home_bg-beer01.jpg" alt="맥주 배경이미지" class="bg_src" />
 				<article class="bg2--slogan slo">
-					<span id="quote"
-						>dhsmf claor <br />
-						djEody?
-					</span>
+					<span class="quote0">dhsmf claor </span><br />
+					<span class="quote1">djEody? </span>
 				</article>
 			</div>
-			<div class="bg bg3" id="animation_bg">
+			<div class="bg bg3 bg_src" id="animation_bg">
+				<video src="./src/video/bg3.mp4" autoplay muted loop class="bg_src"></video>
 				<div class="cursor"></div>
 				<div class="bg3--slogan slo">
-					<span id="quote"
-						>Monthly <br />
-						dkfzhf?
-					</span>
+					<span class="quote0">Monthly</span> <br />
+					<span class="quote1">dkfzhf? </span>
 				</div>
 				<ul>
 					<li><img src="./src/img/mak1.png" alt="떠다니는 이미지" class="float_item img1" /></li>

@@ -67,6 +67,7 @@ body {
 			position: absolute;
 			right: 10%;
 			top: 40px;
+			cursor: pointer;
 
 			> li {
 				color: $registerColor;
@@ -137,10 +138,18 @@ body {
 			}
 			&.bg0 {
 				font-size: 9vw;
-				color: #ddd;
+				color: rgb(201, 20, 20);
 				.slo.bg0--slogan {
 					top: 50%;
 					left: 50%;
+					.quote0 {
+						transition: 4s;
+						opacity: 0;
+					}
+					.quote1 {
+						transition: 8s;
+						opacity: 0;
+					}
 				}
 			}
 			&.bg1 {
@@ -149,6 +158,29 @@ body {
 				.slo.bg1--slogan {
 					top: 17%;
 					left: 05%;
+					// opacity: 0;
+					.quote0 {
+						position: relative;
+						left: -1000%;
+						transition: 2.5s;
+						opacity: 0;
+
+						&.on {
+							left: 0;
+							opacity: 1;
+						}
+					}
+					.quote1 {
+						position: relative;
+						left: -1000%;
+						transition: 5s;
+						opacity: 0;
+
+						&.on {
+							left: 0;
+							opacity: 1;
+						}
+					}
 				}
 			}
 			&.bg2 {
@@ -158,6 +190,27 @@ body {
 					text-align: right;
 					top: 07%;
 					left: 45%;
+					// opacity: 1;
+					.quote0 {
+						position: relative;
+						left: 100%;
+						transition: 3s;
+						opacity: 0;
+						&.on {
+							left: 0%;
+							opacity: 1;
+						}
+					}
+					.quote1 {
+						position: relative;
+						left: 100%;
+						transition: 5s;
+						opacity: 0;
+						&.on {
+							left: 0;
+							opacity: 1;
+						}
+					}
 				}
 			}
 

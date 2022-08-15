@@ -1,11 +1,17 @@
-/* menu2.html 적용 font */ 
+/* menu2.html 적용 font */
 /* h1 */
 @font-face {
-    font-family: '양진체';
-    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+
+	font-family: "양진체";
+	src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/* font-family: 'Shadows Into Light', cursive; */
+
   /* span */
   @font-face {
     font-family: 'LeferiPoint-WhiteObliqueA';
@@ -34,3 +40,4 @@
   font-weight: normal;
   font-style: normal;
 }
+

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +24,7 @@ a {
   font-weight: normal;
   font-style: normal;
 }
+/* font-family: 'Shadows Into Light', cursive; */
 /* span */
 @font-face {
   font-family: "LeferiPoint-WhiteObliqueA";
@@ -37,7 +39,49 @@ a {
   font-weight: normal;
   font-style: normal;
 }
+/* flow-word */
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* inside-page__btn */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* font-family: 'Shadows Into Light', cursive; */
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* flow-word */
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* inside-page__btn */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*common*/
 .hide {
   opacity: 0;
@@ -64,7 +108,7 @@ body header .search {
 }
 body header .search > i {
   position: absolute;
-  left: 50%;
+  left: 85%;
   top: 51px;
   z-index: 5;
   transition: 0.8s;
@@ -72,7 +116,8 @@ body header .search > i {
   cursor: pointer;
 }
 body header .search > i.searchOn {
-  transform: translate(-50%, 0);
+  left: 50%;
+  transform: translate(-130px, 0);
   color: #000;
 }
 body header .search #search_window {
@@ -81,7 +126,7 @@ body header .search #search_window {
   height: 20px;
   transition: 0.8s;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0;
   box-sizing: content-box;
   border-radius: 30px;
   font-size: 20px;
@@ -90,12 +135,36 @@ body header .search #search_window {
   font-family: "Cafe24SsurroundAir";
   left: 50%;
   top: 40px;
+  transform: translate(50%, 0);
   pointer-events: none;
 }
 body header .search #search_window.searchOn {
   transform: translate(-50%, 0);
   opacity: 1;
   pointer-events: auto;
+}
+body header .search .btn--search {
+  position: absolute;
+  left: 72%;
+  top: 46px;
+  transition: 0.8s;
+  width: 50px;
+  height: 30px;
+  border: 2px solid orangered;
+  color: white;
+  background-color: orange;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+}
+body header .search .btn--search.searchOn {
+  left: 50%;
+  transform: translateX(150px);
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
 body header .searchNsns {
   display: flex;
@@ -107,7 +176,6 @@ body header .searchNsns {
 }
 body header .searchNsns > li {
   padding-left: 10px;
-  background-color: skyblue;
 }
 body header .searchNsns > li img {
   width: 20px;
@@ -174,7 +242,7 @@ body figure .bg.bg0 {
 
 }
 body figure .bg.bg0 .slo.bg0--slogan {
-  top: 50%;
+  top: 40%;
   left: 50%;
 }
 body figure .bg.bg0 .slo.bg0--slogan .quote0 {

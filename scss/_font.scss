@@ -12,6 +12,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 /* font-family: 'Shadows Into Light', cursive; */
 
+
+
   /* span */
   @font-face {
     font-family: 'LeferiPoint-WhiteObliqueA';
@@ -26,18 +28,19 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
 /* flow-word */
 @font-face {
-  font-family: 'InkLipquid';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: "InkLipquid";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 /* inside-page__btn */
 @font-face {
-  font-family: 'ChosunGu';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: "ChosunGu";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
-

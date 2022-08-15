@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,29 @@ a {
   text-decoration: none;
 }
 
+/* menu2.html 적용 font */
+/* h1 */
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Shadows Into Light', cursive; */
 /* hide_message COMMON */
 .hide_message {
   position: relative;
@@ -23,25 +47,33 @@ a {
   height: 40px;
   line-height: 40px;
   padding: 5px;
-  background-color: rgba(255, 228, 196, 0.616);
   border-radius: 10px;
   margin-left: 30px;
   color: white;
   font-size: 5px/40px bold "arial";
+  text-align: center;
 }
 .hide_message.hide {
   display: none;
 }
 .hide_message.id_issame {
-  background-color: aquamarine;
+  background-color: rgba(40, 247, 178, 0.34);
+  color: rgb(95, 77, 56);
   top: 0px;
 }
 .hide_message.id_isno {
+  background-color: rgba(255, 163, 209, 0.4274509804);
   top: 0px;
 }
 .hide_message.id_form {
+  background-color: rgba(228, 119, 41, 0.425);
   top: 0px;
 }
+.hide_message.pw_issame {
+  background-color: rgba(95, 77, 56, 0.4078431373);
+  color: #fff;
+}
+
 main {
   height: 1200px;
   width: 100%;
@@ -54,11 +86,12 @@ main .inner {
   margin: 0 auto;
   position: relative;
 }
-main .inner h1 {
+main .inner > h1.title {
   text-align: center;
   position: relative;
   top: 300px;
   color: burlywood;
+  font-family: "Cafe24SsurroundAir";
 }
 main .inner .logo {
   position: absolute;
@@ -141,8 +174,9 @@ main .inner .sns_box .sns_box__common {
   padding: 5px;
   font-size: 10px;
 }
+
 .swal-button {
-  background-color: #ffb2d9;
+  background-color: rgba(126, 102, 66, 0.9333333333);
   font-size: 15px;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }

@@ -52,27 +52,27 @@ gsap.from(".alcohols", {
 const video2 = document.querySelector(".video2");
 
 window.addEventListener("scroll", () => {
-  const scrollYpos = window.scrollY;
+	const scrollYpos = window.scrollY;
 
-  if (scrollYpos > 1000) {
-    gsap.to(".video2", {
-      xPercent: 400,
-      duration: 5,
-    });
+	if (scrollYpos > 1000) {
+		gsap.to(".video2", {
+			xPercent: 400,
+			duration: 5,
+		});
 
-    setTimeout(() => {
-      video2.style.opacity = "0.3";
-      video2.style.transitionProperty = "opacity";
-      video2.style.transitionTimingFunction = "ease-in-out";
-    }, 800);
-  }
+		setTimeout(() => {
+			video2.style.opacity = "0.3";
+			video2.style.transitionProperty = "opacity";
+			video2.style.transitionTimingFunction = "ease-in-out";
+		}, 800);
+	}
 
-  if (scrollYpos > 1400) {
-    gsap.to(".video3", {
-      yPercent: -100,
-      duration: 1,
-    });
-  }
+	if (scrollYpos > 1400) {
+		gsap.to(".video3", {
+			yPercent: -100,
+			duration: 1,
+		});
+	}
 });
 
 // 좋아요 하트 모양 변경
@@ -81,27 +81,27 @@ const fillHearts = document.querySelectorAll(".fill_heart");
 
 // 채워진 하트로 변경
 for (let i = 0; i < emptyHearts.length; i++) {
-  //
-  emptyHearts[i].addEventListener("click", () => {
-    //
-    if (fillHearts[i].classList.contains("hide")) {
-      fillHearts[i].classList.remove("hide");
-      emptyHearts[i].classList.add("hide");
-    }
-  });
+	//
+	emptyHearts[i].addEventListener("click", () => {
+		//
+		if (fillHearts[i].classList.contains("hide")) {
+			fillHearts[i].classList.remove("hide");
+			emptyHearts[i].classList.add("hide");
+		}
+	});
 }
 
 
 
 for (let j = 0; j < emptyHearts.length; j++) {
-  //
-  fillHearts[j].addEventListener("click", () => {
-    //
-    if (emptyHearts[j].classList.contains("hide")) {
-      emptyHearts[j].classList.remove("hide");
-      fillHearts[j].classList.add("hide");
-    }
-  });
+	//
+	fillHearts[j].addEventListener("click", () => {
+		//
+		if (emptyHearts[j].classList.contains("hide")) {
+			emptyHearts[j].classList.remove("hide");
+			fillHearts[j].classList.add("hide");
+		}
+	});
 }
 
 // 상세 보기
@@ -112,16 +112,16 @@ const back = document.querySelectorAll(".back");
 
 // 뒷면 상세 보기로
 for (let i = 0; i < detailBtn.length; i++) {
-  detailBtn[i].addEventListener("click", () => {
-    front[i].style.transform = "rotateY(180deg)";
-    back[i].style.transform = "rotateY(0deg)";
-  });
+	detailBtn[i].addEventListener("click", () => {
+		front[i].style.transform = "rotateY(180deg)";
+		back[i].style.transform = "rotateY(0deg)";
+	});
 }
 
 // 처음 앞면으로
 for (let i = 0; i < cancelBtn.length; i++) {
-  cancelBtn[i].addEventListener("click", () => {
-    front[i].style.transform = "rotateY(0deg)";
-    back[i].style.transform = "rotateY(-180deg)";
-  });
+	cancelBtn[i].addEventListener("click", () => {
+		front[i].style.transform = "rotateY(0deg)";
+		back[i].style.transform = "rotateY(-180deg)";
+	});
 }

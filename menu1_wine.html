@@ -53,12 +53,24 @@
         <h1 class="site_title">와인</h1>
 
         <!-- ICONS -->
-        <a href="#" class="cart">
+        <a href="#" class="cart-icon">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
         <a href="#" class="heart">
           <i class="fa-solid fa-heart"></i>
         </a>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">내 장바구니</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">￦0</div>
+          </div>
+          <button type="button" class="btn-buy">Buy now</button>
+          <i class="far fa-window-close" id="close-cart"></i>
+        </div>
 
         <!-- ALCOHOL LIST -->
         <section class="alcohols">
@@ -74,7 +86,7 @@
                 <div class="text">
                   <h3 class="title">화몽</h3>
 
-                  <span class="price">14,000원</span>
+                  <span class="price">￦14000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -98,7 +110,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">미</h3>
-                  <span class="price">23,000원</span>
+                  <span class="price">￦23000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -122,7 +134,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">비원</h3>
-                  <span class="price">18,000원</span>
+                  <span class="price">￦18000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -146,7 +158,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">라라</h3>
-                  <span class="price">25,000원</span>
+                  <span class="price">￦25000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -170,7 +182,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">아로 퓨어</h3>
-                  <span class="price">25,000원</span>
+                  <span class="price">￦25000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -194,7 +206,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">어미실 와인 스위트</h3>
-                  <span class="price">27,000원</span>
+                  <span class="price">￦27000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -218,7 +230,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">눈어치 와인 스위트</h3>
-                  <span class="price">18,000원</span>
+                  <span class="price">￦18000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -242,7 +254,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">초련</h3>
-                  <span class="price">39,000원</span>
+                  <span class="price">￦39000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -266,7 +278,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">꽃잠 에덴와인 화이트</h3>
-                  <span class="price">26,000원</span>
+                  <span class="price">￦26000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -294,7 +306,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">꽃잠 에덴와인 스위트</h3>
-                  <span class="price">26,000원</span>
+                  <span class="price">￦26000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -322,7 +334,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">포엠 화이트</h3>
-                  <span class="price">26,000원</span>
+                  <span class="price">￦26000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -350,7 +362,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">꽃잠 스위트</h3>
-                  <span class="price">32,000원</span>
+                  <span class="price">￦32000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -378,7 +390,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">포엠 드라이</h3>
-                  <span class="price">19,000원</span>
+                  <span class="price">￦19000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -406,7 +418,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">포엠 로제</h3>
-                  <span class="price">26,000원</span>
+                  <span class="price">￦26000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -434,7 +446,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">꽃잠 드라이 12도</h3>
-                  <span class="price">31,000원</span>
+                  <span class="price">￦31000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -462,7 +474,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">포엠 스위트 12도</h3>
-                  <span class="price">23,000원</span>
+                  <span class="price">￦23000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -490,7 +502,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">꽃잠 에덴와인 드라이</h3>
-                  <span class="price">26,000원</span>
+                  <span class="price">￦26000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -518,7 +530,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">어미실 로제 스위트</h3>
-                  <span class="price">22,500원</span>
+                  <span class="price">￦22500원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>

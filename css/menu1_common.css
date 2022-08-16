@@ -25,6 +25,7 @@ a {
   /* LOGO */
   /* HEADER */
   /* TITLE */
+  /* CART & LIKE BTN */
   /* CART */
   /* ALCOHOL LIST */
   /* VIDEO */
@@ -77,7 +78,7 @@ a {
   top: 30px;
   right: 750px;
 }
-.wrap .inner .cart {
+.wrap .inner .cart-icon {
   display: none;
   position: fixed;
   top: 20px;
@@ -95,6 +96,100 @@ a {
   color: red;
   cursor: pointer;
   z-index: 6;
+}
+.wrap .inner .cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
+  z-index: 200;
+  transition: 0.5s;
+  font-family: "Cafe24SsurroundAir";
+}
+.wrap .inner .cart.active {
+  right: 0;
+}
+.wrap .inner .cart .cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.wrap .inner .cart .cart-content .cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.wrap .inner .cart .cart-content .cart-box .cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-price {
+  font-weight: 500;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-quantity {
+  border: 1px solid rgb(0, 0, 0);
+  outline-color: yellow;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.wrap .inner .cart .cart-content .cart-box .cart-remove {
+  font-size: 24px;
+  color: rgb(96, 95, 95);
+  cursor: pointer;
+}
+.wrap .inner .cart .total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+}
+.wrap .inner .cart .total .total-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wrap .inner .cart .total .total-price {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+.wrap .inner .cart .btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.wrap .inner .cart .btn-buy:hover {
+  background-color: rgb(19, 19, 19);
+}
+.wrap .inner .cart #close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 .wrap .inner .alcohols {
   width: 60%;

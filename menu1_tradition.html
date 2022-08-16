@@ -53,12 +53,24 @@
         <h1 class="site_title">전통주</h1>
 
         <!-- ICONS -->
-        <a href="#" class="cart">
+        <a href="#" class="cart-icon">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
         <a href="#" class="heart">
           <i class="fa-solid fa-heart"></i>
         </a>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">내 장바구니</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">￦0</div>
+          </div>
+          <button type="button" class="btn-buy">Buy now</button>
+          <i class="far fa-window-close" id="close-cart"></i>
+        </div>
 
         <!-- ALCOHOL LIST -->
         <section class="alcohols">
@@ -78,7 +90,7 @@
                 <div class="text">
                   <h3 class="title">1000억 유산균 막걸리</h3>
 
-                  <span class="price">3,500원</span>
+                  <span class="price">￦3500원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -106,7 +118,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">2017년 햅쌀로 빚은 첫술</h3>
-                  <span class="price">4,200원</span>
+                  <span class="price">￦4200원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -134,7 +146,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">1932 새싹땅콩+햅쌀/흑미</h3>
-                  <span class="price">4,900원</span>
+                  <span class="price">￦4900원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -162,7 +174,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">고향인삼막걸리</h3>
-                  <span class="price">3,200원</span>
+                  <span class="price">￦3200원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -190,7 +202,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">고향생막걸리</h3>
-                  <span class="price">3,600원</span>
+                  <span class="price">￦3600원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -218,7 +230,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">가평 잣 생막걸리</h3>
-                  <span class="price">4,100원</span>
+                  <span class="price">￦4100원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -246,7 +258,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">가야 프리미엄 막걸리</h3>
-                  <span class="price">5,000원</span>
+                  <span class="price">￦5000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -274,7 +286,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">G12 골디락스</h3>
-                  <span class="price">3,800원</span>
+                  <span class="price">￦3800원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -303,7 +315,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">DOK막걸리</h3>
-                  <span class="price">4,800원</span>
+                  <span class="price">￦4800원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -332,7 +344,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">벗이랑 조릿대</h3>
-                  <span class="price">12,200원</span>
+                  <span class="price">￦12200원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -360,7 +372,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">냥이탁주9</h3>
-                  <span class="price">9,500원</span>
+                  <span class="price">￦9500원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -388,7 +400,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">종천 생막걸리</h3>
-                  <span class="price">2,500원</span>
+                  <span class="price">￦2500원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -416,7 +428,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">벗이랑 버찌</h3>
-                  <span class="price">12,200원</span>
+                  <span class="price">￦12200원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -444,7 +456,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">벗이랑 강황</h3>
-                  <span class="price">12,200원</span>
+                  <span class="price">￦12200원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -472,7 +484,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">냥이탁주 fresh</h3>
-                  <span class="price">6,000원</span>
+                  <span class="price">￦6000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -500,7 +512,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">나이스 버디</h3>
-                  <span class="price">10,000원</span>
+                  <span class="price">￦10000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -526,7 +538,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">문삼이공 막걸리</h3>
-                  <span class="price">16,000원</span>
+                  <span class="price">￦16000원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>
@@ -552,7 +564,7 @@
                 </div>
                 <div class="text">
                   <h3 class="title">수리산 막걸리</h3>
-                  <span class="price">9,900원</span>
+                  <span class="price">￦9900원</span>
                   <span class="detail">상세정보</span>
                 </div>
               </div>

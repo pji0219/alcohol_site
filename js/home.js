@@ -201,7 +201,6 @@ bgSrc2.addEventListener("mouseover", function () {
 	bg2Slogan1.classList.add("on");
 });
 
-
 //src3은 클릭시 슬로건에 이벤트 줄거라서 위에서 한 번에 처리할 것
 
 /* 돋보기 */
@@ -230,4 +229,3 @@ for (let el of bg) {
 		}
 	});
 }
-

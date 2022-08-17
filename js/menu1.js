@@ -33,7 +33,7 @@ window.onload = () => {
 
     heartHeader.style.display = 'inline';
     cartHeader.style.display = 'inline';
-  }, 1000);
+  }, 4000);
 };
 
 // 처음 페이지 로딩시 영상효과

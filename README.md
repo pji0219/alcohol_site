@@ -85,16 +85,15 @@ window.addEventListener("wheel", function (e) {
 });
 ```
 
-메인페이지가 총 4페이지로 구성되어 있기 때문에 page가 범위 밖을 벗어나면 return처리를 해서 예외처리를 했고,
-e.delta>0 일 때는 마우스 휠을 아래로 내릴 때, e.delta<0 일 때는 마우스 휠을 위로 올리는 동작을 할 때 입니다.
+- 메인페이지가 총 4페이지로 구성되어 있기 때문에 page가 범위 밖을 벗어나면 return으로 예외처리
+- e.delta>0: 마우스 휠 down, e.delta<0: 마우스 휠 up
+- e.delta>0 일때,
+  첫번째 페이지를 제외하고는 모두 top:100%의 위치에 놓아서 viewport 아래쪽에 위치하도록 했고
+  스크롤 동작시 현재 페이지가 위쪽으로 100% 올라가고 아래쪽에 있는 다음 페이지가 top:100% 위치에서 top:0인 위치로 변해서 뷰포트에 표시되도록
+  클래스제어( classList 사용)를 통해서 구현
 
-e.delta>0 일때,
-첫번째 페이지를 제외하고는 모두 top:100%의 위치에 놓아서 viewport 아래쪽에 위치하도록 했고
-스크롤 동작시 현재 페이지가 위쪽으로 100% 올라가고 아래쪽에 있는 다음 페이지가 top:100% 위치에서 top:0인 위치로 변해서 뷰포트에 표시되도록
-클래스제어( classList 사용)를 통해서 구현하였습니다.
-
-e.delta<0 일 때는 그와 반대로 구현하였습니다.<br>
-<br>
+- e.delta<0 일 때는 그와 반대로 구현<br>
+  <br>
 
 ## (2) 상품 목록 페이지
 
@@ -136,11 +135,9 @@ gsap.from('.alcohols', {
 });
 ```
 
-처음 페이지 로드 후 4초 후 부터 스크롤이 되는 것과 장바구니 및 좋아요 버튼이 나타나게
-setTimeout으로 전체 페이지를 감싼 wrap, heart, cart-icon클래스를
-각각 visible, inline으로 변경하게 구현하였습니다.<br>
-그리고 처음 페이지 로딩 시 화면 전체를 차지하는 영상을 4초 후에 페이지의 왼쪽 40% 영역을
-차지하게끔 이동하는 애니메이션을 gsap 라이브러리를 통해 구현 하였습니다.
+- 처음 페이지 로드 후 4초 후 부터 스크롤이 되는 것과 장바구니 및 좋아요 버튼이 나타나게 setTimeout으로 전체 페이지를 감싼 wrap, heart, cart-icon클래스를
+  각각 visible, inline으로 변경하게 구현<br>
+- 처음 페이지 로딩 시 화면 전체를 차지하는 영상을 4초 후에 페이지의 왼쪽 40% 영역을 차지하게끔 이동하는 애니메이션을 gsap 라이브러리를 통해 구현.
 
 - 화면 스크롤 시 영상 효과
   ![menu1-3](./src/img/menu1-3.PNG)
@@ -174,8 +171,8 @@ window.addEventListener('scroll', () => {
 });
 ```
 
-window객체에 이벤트 리스너를 달아서 스크롤 이벤트가 일어날 때
-특정 y좌표에 따라 gsap 라이브러리를 통해 각기 다른 영상이 나타나는 효과를 구현 하였습니다.
+- 스크롤 이벤트가 일어날 때
+  특정 y좌표에 따라 gsap 라이브러리를 통해 각기 다른 영상이 나타나는 효과를 구현
 
 - 좋아요 표시
   ![menu1-4](./src/img/menu1-4.PNG)
@@ -213,11 +210,12 @@ for (let j = 0; j < emptyHearts.length; j++) {
 ```
 
 _태그에 hide 클래스가 주어지면 display: none이 되도록 함 _<br>
-empty_heart와 fill_heart 클래스를 같은 위치에 둔 다음 기본값은
-fill_heart에 hide클래스를 주어서 빈하트만 화면에 보이도록 한 뒤
-클릭 하면 fill_heart의 hide클래스를 지워주고 empty_heart에는 hide클래스를 추가 시켜서 채워진 하트가 화면에 보이도록 구현 하였습니다.<br>
-한번 더 클릭하면 위와 반대로 되게 하여서 다시 원래의 빈하트가 화면에 보이도록 하였습니다.<br>
-<br>
+
+- empty_heart와 fill_heart 클래스를 같은 위치에 둔 다음 기본값은
+  fill_heart에 hide클래스를 주어서 빈하트만 화면에 보이도록 함
+- 클릭 하면 fill_heart의 hide클래스를 지워주고 empty_heart에는 hide클래스를 추가 시켜서 채워진 하트가 화면에 보이도록 구현.<br>
+- 한번 더 클릭하면 위와 반대로 되게 하여서 다시 원래의 빈하트가 화면에 보이도록 구현.<br>
+  <br>
 
 ## (3) 상품 추천 페이지
 
@@ -691,7 +689,7 @@ function hasScrolled() {
 }
 ```
 
-스크롤 up, down에 따른 동작을 인식하여 반응형으로 헤더가 동작하는 함수를 구현 하였습니다.<br>
+스크롤 up, down에 따른 동작을 인식하여 반응형으로 헤더가 동작하는 함수를 구현<br>
 <br>
 
 - 플립 카드 기능
@@ -759,7 +757,7 @@ window.addEventListener('resize', ()=>{
 })
 ```
 
-CardFlipOnScroll 함수는 뒷 배경에 height 값을 주고 sticky한 속성을 주어 고정시켜두고 위의 떠있는 카드를 순차적으로 스크롤 동작에 따라 반응하도록 구현 하였습니다.<br>
+CardFlipOnScroll 함수는 뒷 배경에 height 값을 주고 sticky한 속성을 주어 고정시켜두고 위의 떠있는 카드를 순차적으로 스크롤 동작에 따라 반응하도록 구현.<br>
 <br>
 
 - 파도 치는 효과
@@ -804,4 +802,4 @@ const animateBubble = x => {
 window.onmousemove = e => animateBubble(e.clientX);
 ```
 
-조건(마우스 오버 된 영역)에 따라 bubble이 표시되는 영역이 달라지도록 setTimeout 함수와 onmousemove 함수를 사용하여 구현 하였습니다.
+조건(마우스 오버 된 영역)에 따라 bubble이 표시되는 영역이 달라지도록 setTimeout 함수와 onmousemove 함수를 사용하여 구현.

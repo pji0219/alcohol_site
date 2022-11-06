@@ -12,7 +12,7 @@ body {
 	font-family: "Cafe24SsurroundAir";
 	header {
 		position: relative;
-		z-index: 1;
+		z-index: 100;
 		.logo {
 			> img {
 				width: 180px;
@@ -27,8 +27,6 @@ body {
 			transition: 1.4s;
 			font-size: 20px;
 			position: relative;
-
-			// color: red;
 			> i {
 				position: absolute;
 				left: 85%;
@@ -72,7 +70,6 @@ body {
 			.btn--search {
 				position: absolute;
 				left: 72%;
-				// translate: transform(-50%, 0);
 				top: 46px;
 				transition: 0.8s;
 				width: 50px;
@@ -141,137 +138,143 @@ body {
 		height: 100vh;
 		overflow: hidden;
 		background-color: #000;
-
-		.bg {
+		.swiper {
 			width: 100%;
 			height: 100%;
-			background-color: #000;
-			top: 100%;
-			transition: 1.2s;
-			position: absolute;
-
-			> video {
-				position: absolute;
+			// background-color: rgba(137, 43, 226, 0.251);
+			.swiper-wrapper {
 				width: 100%;
 				height: 100%;
-				transition: 1.2s;
-				object-fit: cover;
-			}
+				.bg.swiper-slide {
+					width: 100%;
+					height: 100%;
+					// top: 100%;
+					transition: 1.2s;
+					// position: absolute;
 
-			> img {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-			}
-
-			.slo {
-				font-family: "Shadows Into Light";
-				font-weight: bold;
-				position: absolute;
-				top: 0;
-			}
-			&.bg0 {
-				font-size: 9vw;
-
-				color: rgba(225, 86, 86, 0.6);
-
-				.slo.bg0--slogan {
-					top: 40%;
-					left: 50%;
-					.quote0 {
-						transition: 4s;
-						opacity: 0;
+					> video {
+						// position: absolute;
+						width: 100%;
+						height: 100%;
+						transition: 1.2s;
+						object-fit: cover;
 					}
-					.quote1 {
-						transition: 8s;
-						opacity: 0;
+
+					> img {
+						// position: absolute;
+						width: 100%;
+						height: 100%;
 					}
+
+					.slo {
+						font-family: "Shadows Into Light";
+						font-weight: bold;
+						position: absolute;
+						top: 0;
+					}
+					&.bg0 {
+						font-size: 9vw;
+
+						color: rgba(225, 86, 86, 0.6);
+
+						.slo.bg0--slogan {
+							top: 40%;
+							left: 50%;
+							.quote0 {
+								transition: 4s;
+								opacity: 0;
+							}
+							.quote1 {
+								transition: 8s;
+								opacity: 0;
+							}
+						}
+					}
+					&.bg1 {
+						font-size: 9vw;
+						color: rgba(237, 139, 34, 0.699);
+						.slo.bg1--slogan {
+							top: 17%;
+							left: 05%;
+
+							.quote0 {
+								position: relative;
+								left: -1000%;
+								transition: 1.5s;
+
+								opacity: 0;
+
+								&.on {
+									left: 0;
+									opacity: 1;
+								}
+							}
+							.quote1 {
+								position: relative;
+								left: -1000%;
+
+								transition: 3.5s;
+
+								opacity: 0;
+
+								&.on {
+									left: 0;
+									opacity: 1;
+								}
+							}
+						}
+					}
+					&.bg2 {
+						font-size: 9vw;
+						color: rgba(255, 255, 0, 0.5);
+						.slo.bg2--slogan {
+							text-align: right;
+							top: 07%;
+							left: 45%;
+
+							.quote0 {
+								position: relative;
+								left: 100%;
+								transition: 3s;
+								opacity: 0;
+								&.on {
+									left: 0%;
+									opacity: 1;
+								}
+							}
+							.quote1 {
+								position: relative;
+								left: 100%;
+								transition: 5s;
+								opacity: 0;
+								&.on {
+									left: 0;
+									opacity: 1;
+								}
+							}
+						}
+					}
+
+					@import "home_floatImg"; //bg3
+
+					// &.viewOn {
+					// 	top: 0;
+					// }
+
+					// //  view 에서 위로 나갈때to up이용
+					// //아래로 내리는 동작
+					// &.viewOutToUp {
+					// 	top: -100%;
+					// }
+
+					// view에서 아래로 나갈 때 to Down 이용
+					//위로 올리는 동작
+					// &.viewOutToDown {
+					// 	top: 0%;
+					// }
 				}
-			}
-			&.bg1 {
-				font-size: 9vw;
-				color: rgba(237, 139, 34, 0.699);
-				.slo.bg1--slogan {
-					top: 17%;
-					left: 05%;
-
-					.quote0 {
-						position: relative;
-						left: -1000%;
-						transition: 1.5s;
-
-						opacity: 0;
-
-						&.on {
-							left: 0;
-							opacity: 1;
-						}
-					}
-					.quote1 {
-						position: relative;
-						left: -1000%;
-
-						transition: 3.5s;
-
-						opacity: 0;
-
-						&.on {
-							left: 0;
-							opacity: 1;
-						}
-					}
-				}
-			}
-			&.bg2 {
-				font-size: 9vw;
-				color: rgba(255, 255, 0, 0.5);
-				.slo.bg2--slogan {
-					text-align: right;
-					top: 07%;
-					left: 45%;
-
-					.quote0 {
-						position: relative;
-						left: 100%;
-						transition: 3s;
-						opacity: 0;
-						&.on {
-							left: 0%;
-							opacity: 1;
-						}
-					}
-					.quote1 {
-						position: relative;
-						left: 100%;
-						transition: 5s;
-						opacity: 0;
-						&.on {
-							left: 0;
-							opacity: 1;
-						}
-					}
-				}
-			}
-
-			@import "home_floatImg"; //bg3
-
-			&.viewOn {
-				top: 0;
-			}
-
-			//  view 에서 위로 나갈때to up이용
-			//아래로 내리는 동작
-			&.viewOutToUp {
-				top: -100%;
-			}
-
-			// view에서 아래로 나갈 때 to Down 이용
-			//위로 올리는 동작
-			&.viewOutToDown {
-				top: 0%;
 			}
 		}
-
 		.wrap {
 			width: 100%;
 			height: 100%;
@@ -303,6 +306,7 @@ body {
 
 		/*SECTION-menu up*/
 		.hide_up {
+			z-index: 50;
 			width: 30px;
 			position: absolute;
 			bottom: 10px;

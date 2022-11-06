@@ -88,53 +88,6 @@ hideUp.addEventListener("click", function () {
 	}
 });
 
-//wheel 이용- 휠 한 칸씩만 되는 문제를 해결하지 못함..
-const figure = document.querySelector("figure");
-let page = 0;
-window.addEventListener("wheel", function (e) {
-	const bgContent = figure.querySelectorAll(".bg");
-	const bgContentLength = bgContent.length;
-
-	let lastPage = bgContentLength - 1;
-	if (e.deltaY > 0) {
-		//아래로 내리는 동작
-		console.log("아래로wheel 되는 중");
-		if (page !== lastPage) {
-			for (let el = 0; el < bgContentLength; el++) {
-				if (bgContent[page].classList.contains("viewOn")) {
-					bgContent[page].classList.remove("viewOn");
-					console.log(bgContent[page + 1]);
-					bgContent[page].classList.add("viewOutToUp");
-					bgContent[page + 1].classList.add("viewOn");
-					console.log(page);
-				}
-			}
-			page++;
-		} else if (page === lastPage) {
-			page = lastPage;
-		}
-	} else if (e.deltaY < 0) {
-		//위로 올리기
-		console.log("위로wheel 되는 중");
-		if (page !== 0) {
-			for (let el = 0; el < bgContentLength; el++) {
-				if (bgContent[page].classList.contains("viewOn")) {
-					bgContent[page].classList.remove("viewOn");
-					console.log("page:" + page);
-					console.log(bgContent[page - 1]);
-					bgContent[page - 1].classList.remove("viewOutToUp");
-					bgContent[page - 1].classList.add("viewOn");
-					console.log(bgContent[page - 1]);
-				}
-			}
-			page--;
-		} else if (page === 0) {
-			console.log("(조금 비효율적인..)예외처리 완!!");
-			return;
-		}
-	}
-});
-
 /* bg3 클릭시 정렬시키기 */ //글씨 효과 추가
 
 const bg3 = document.querySelector(".bg3");
@@ -219,7 +172,7 @@ glass.addEventListener("click", function () {
 
 for (let el of bg) {
 	el.addEventListener("click", function () {
-		console.log("눌리는 중인감?");
+		// console.log("눌리는 중인감?");
 		searchWindow.classList.remove("searchOn");
 		searchBtn.classList.remove("searchOn");
 		glass.classList.remove("searchOn");

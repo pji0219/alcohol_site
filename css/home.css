@@ -63,7 +63,7 @@ body {
 }
 body header {
   position: relative;
-  z-index: 1;
+  z-index: 100;
 }
 body header .logo > img {
   width: 180px;
@@ -177,119 +177,122 @@ body figure {
   /*SECTION - login*/
   /*login 변수 선언*/
 }
-body figure .bg {
+body figure .swiper {
   width: 100%;
   height: 100%;
-  background-color: #000;
-  top: 100%;
-  transition: 1.2s;
-  position: absolute;
 }
-body figure .bg > video {
-  position: absolute;
+body figure .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+body figure .swiper .swiper-wrapper .bg.swiper-slide {
+  width: 100%;
+  height: 100%;
+  transition: 1.2s;
+}
+body figure .swiper .swiper-wrapper .bg.swiper-slide > video {
   width: 100%;
   height: 100%;
   transition: 1.2s;
   object-fit: cover;
 }
-body figure .bg > img {
-  position: absolute;
+body figure .swiper .swiper-wrapper .bg.swiper-slide > img {
   width: 100%;
   height: 100%;
 }
-body figure .bg .slo {
+body figure .swiper .swiper-wrapper .bg.swiper-slide .slo {
   font-family: "Shadows Into Light";
   font-weight: bold;
   position: absolute;
   top: 0;
 }
-body figure .bg.bg0 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg0 {
   font-size: 9vw;
   color: rgba(225, 86, 86, 0.6);
 }
-body figure .bg.bg0 .slo.bg0--slogan {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg0 .slo.bg0--slogan {
   top: 40%;
   left: 50%;
 }
-body figure .bg.bg0 .slo.bg0--slogan .quote0 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg0 .slo.bg0--slogan .quote0 {
   transition: 4s;
   opacity: 0;
 }
-body figure .bg.bg0 .slo.bg0--slogan .quote1 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg0 .slo.bg0--slogan .quote1 {
   transition: 8s;
   opacity: 0;
 }
-body figure .bg.bg1 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 {
   font-size: 9vw;
   color: rgba(237, 139, 34, 0.699);
 }
-body figure .bg.bg1 .slo.bg1--slogan {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 .slo.bg1--slogan {
   top: 17%;
   left: 5%;
 }
-body figure .bg.bg1 .slo.bg1--slogan .quote0 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 .slo.bg1--slogan .quote0 {
   position: relative;
   left: -1000%;
   transition: 1.5s;
   opacity: 0;
 }
-body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 .slo.bg1--slogan .quote0.on {
   left: 0;
   opacity: 1;
 }
-body figure .bg.bg1 .slo.bg1--slogan .quote1 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 .slo.bg1--slogan .quote1 {
   position: relative;
   left: -1000%;
   transition: 3.5s;
   opacity: 0;
 }
-body figure .bg.bg1 .slo.bg1--slogan .quote1.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg1 .slo.bg1--slogan .quote1.on {
   left: 0;
   opacity: 1;
 }
-body figure .bg.bg2 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 {
   font-size: 9vw;
   color: rgba(255, 255, 0, 0.5);
 }
-body figure .bg.bg2 .slo.bg2--slogan {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 .slo.bg2--slogan {
   text-align: right;
   top: 7%;
   left: 45%;
 }
-body figure .bg.bg2 .slo.bg2--slogan .quote0 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 .slo.bg2--slogan .quote0 {
   position: relative;
   left: 100%;
   transition: 3s;
   opacity: 0;
 }
-body figure .bg.bg2 .slo.bg2--slogan .quote0.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 .slo.bg2--slogan .quote0.on {
   left: 0%;
   opacity: 1;
 }
-body figure .bg.bg2 .slo.bg2--slogan .quote1 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 .slo.bg2--slogan .quote1 {
   position: relative;
   left: 100%;
   transition: 5s;
   opacity: 0;
 }
-body figure .bg.bg2 .slo.bg2--slogan .quote1.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg2 .slo.bg2--slogan .quote1.on {
   left: 0;
   opacity: 1;
 }
-body figure .bg.bg3 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 {
   background: linear-gradient(180deg, black, #ddd);
   opacity: 1;
   text-align: center;
   cursor: none;
 }
-body figure .bg.bg3 video {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 video {
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0.4;
 }
-body figure .bg.bg3 .cursor {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .cursor {
   background-image: url("../src/img/click.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -301,7 +304,7 @@ body figure .bg.bg3 .cursor {
   pointer-events: none;
   transition: all 0.3s;
 }
-body figure .bg.bg3 .slo.bg3--slogan {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .slo.bg3--slogan {
   color: white;
   right: 10%;
   top: 120px;
@@ -309,7 +312,7 @@ body figure .bg.bg3 .slo.bg3--slogan {
   line-height: 1.5;
   animation: textAni linear 7s infinite;
 }
-body figure .bg.bg3 .slo.bg3--slogan--hide {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .slo.bg3--slogan--hide {
   display: inline-block;
   transition: 2s;
   color: white;
@@ -321,81 +324,81 @@ body figure .bg.bg3 .slo.bg3--slogan--hide {
   color: pink;
   opacity: 0;
 }
-body figure .bg.bg3 ul > li > img.float_item {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item {
   position: absolute;
   transition: 5s;
   width: auto;
   height: 200px;
 }
-body figure .bg.bg3 ul > li > img.float_item.img1 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img1 {
   top: 12%;
   left: 0%;
   animation: float01 linear 3s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img1.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img1.on {
   top: 60%;
   left: 10%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img2 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img2 {
   top: 7%;
   left: 73%;
   animation: float01 linear 5s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img2.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img2.on {
   top: 60%;
   left: 20%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img3 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img3 {
   top: 70%;
   left: 73%;
   animation: float01 ease-in-out 6s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img3.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img3.on {
   top: 60%;
   left: 30%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img4 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img4 {
   left: 48%;
   top: 1%;
   animation: float02 linear 1s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img4.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img4.on {
   top: 60%;
   left: 40%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img5 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img5 {
   top: 65%;
   left: 13%;
   animation: float03 linear 3s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img5.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img5.on {
   top: 60%;
   left: 50%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img6 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img6 {
   top: 40%;
   left: 45%;
   animation: float02 linear 3s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img6.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img6.on {
   top: 60%;
   left: 60%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img7 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img7 {
   left: 25%;
   top: 30%;
   animation: float03 linear 5s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img7.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img7.on {
   top: 60%;
   left: 70%;
 }
-body figure .bg.bg3 ul > li > img.float_item.img8 {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img8 {
   top: 75%;
   left: 40%;
   animation: float03 linear 2s infinite;
 }
-body figure .bg.bg3 ul > li > img.float_item.img8.on {
+body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img8.on {
   top: 60%;
   left: 80%;
 }
@@ -482,15 +485,6 @@ body figure .bg.bg3 ul > li > img.float_item.img8.on {
   100% {
     transform: rotate(360deg);
   }
-}
-body figure .bg.viewOn {
-  top: 0;
-}
-body figure .bg.viewOutToUp {
-  top: -100%;
-}
-body figure .bg.viewOutToDown {
-  top: 0%;
 }
 body figure .wrap {
   width: 100%;
@@ -700,6 +694,7 @@ body figure .wrap nav.btnNext:hover .btnNext--opacity::after, body figure .wrap 
   left: 14px;
 }
 body figure .hide_up {
+  z-index: 50;
   width: 30px;
   position: absolute;
   bottom: 10px;

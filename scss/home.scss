@@ -1,367 +1,370 @@
-@import "reset";
-@import "font";
+/** @format */
+
+@import 'reset';
+@import 'font';
 /*common*/
 // 변수 설정
 $registerColor: #fff;
 
 .hide {
-	opacity: 0;
-	transform: scale(0.4) translateX(700%);
+  opacity: 0;
+  transform: scale(0.4) translateX(700%);
 }
 body {
-	font-family: "Cafe24SsurroundAir";
-	header {
-		position: relative;
-		z-index: 100;
-		.logo {
-			> img {
-				width: 180px;
+  font-family: 'Cafe24SsurroundAir';
+  header {
+    position: relative;
+    z-index: 100;
+    .logo {
+      > img {
+        width: 180px;
 
-				position: absolute;
-				top: 20px;
-				left: 4%;
-			}
-		}
+        position: absolute;
+        top: 20px;
+        left: 4%;
+      }
+    }
 
-		.search {
-			transition: 1.4s;
-			font-size: 20px;
-			position: relative;
-			> i {
-				position: absolute;
-				left: 85%;
-				top: 51px;
-				z-index: 5;
-				transition: 0.8s;
-				color: rgba(255, 255, 255, 0.8);
-				cursor: pointer;
+    .search {
+      transition: 1.4s;
+      font-size: 20px;
+      position: relative;
+      > i {
+        position: absolute;
+        left: 85%;
+        top: 51px;
+        z-index: 5;
+        transition: 0.8s;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
 
-				&.searchOn {
-					left: 50%;
-					transform: translate(-130px, 0);
-					color: #000;
-				}
-			}
-			#search_window {
-				position: absolute;
-				width: 240px;
-				height: 20px;
-				transition: 0.8s;
+        &.searchOn {
+          left: 50%;
+          transform: translate(-130px, 0);
+          color: #000;
+        }
+      }
+      #search_window {
+        position: absolute;
+        width: 240px;
+        height: 20px;
+        transition: 0.8s;
 
-				z-index: 1;
-				opacity: 0;
-				box-sizing: content-box;
-				border-radius: 30px;
-				font-size: 20px;
-				padding: 8px;
-				padding-left: 30px;
-				font-family: "Cafe24SsurroundAir";
-				left: 50%;
-				top: 40px;
-				transform: translate(50%, 0);
-				pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        box-sizing: content-box;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 8px;
+        padding-left: 30px;
+        font-family: 'Cafe24SsurroundAir';
+        left: 50%;
+        top: 40px;
+        transform: translate(50%, 0);
+        pointer-events: none;
 
-				&.searchOn {
-					transform: translate(-50%, 0);
-					opacity: 1;
-					pointer-events: auto;
-				}
-			}
-			.btn--search {
-				position: absolute;
-				left: 72%;
-				top: 46px;
-				transition: 0.8s;
-				width: 50px;
-				height: 30px;
-				border: 2px solid orangered;
-				color: white;
-				background-color: orange;
-				line-height: 30px;
-				border-radius: 5px;
-				text-align: center;
-				pointer-events: none;
-				opacity: 0;
+        &.searchOn {
+          transform: translate(-50%, 0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+      .btn--search {
+        position: absolute;
+        left: 72%;
+        top: 46px;
+        transition: 0.8s;
+        width: 50px;
+        height: 30px;
+        border: 2px solid orangered;
+        color: white;
+        background-color: orange;
+        line-height: 30px;
+        border-radius: 5px;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
 
-				&.searchOn {
-					left: 50%;
-					transform: translateX(150px);
+        &.searchOn {
+          left: 50%;
+          transform: translateX(150px);
 
-					opacity: 1;
-					pointer-events: auto;
-					cursor: pointer;
-				}
-			}
-		}
+          opacity: 1;
+          pointer-events: auto;
+          cursor: pointer;
+        }
+      }
+    }
 
-		.searchNsns {
-			display: flex;
-			position: absolute;
-			right: 10%;
+    .searchNsns {
+      display: flex;
+      position: absolute;
+      right: 10%;
 
-			top: 50px;
+      top: 50px;
 
-			cursor: pointer;
+      cursor: pointer;
 
-			> li {
-				padding-left: 10px;
+      > li {
+        padding-left: 10px;
 
-				img {
-					width: 20px;
-				}
-			}
-		}
+        img {
+          width: 20px;
+        }
+      }
+    }
 
-		.register {
-			font-size: 11px;
-			display: flex;
-			position: absolute;
-			right: 4%;
-			top: 10px;
-			> li {
-				color: $registerColor;
-				padding-left: 5px;
-				> a {
-					color: $registerColor;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
+    .register {
+      font-size: 11px;
+      display: flex;
+      position: absolute;
+      right: 4%;
+      top: 10px;
+      > li {
+        color: $registerColor;
+        padding-left: 5px;
+        > a {
+          color: $registerColor;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 
-	figure {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		background-color: #000;
-		.swiper {
-			width: 100%;
-			height: 100%;
-			// background-color: rgba(137, 43, 226, 0.251);
-			.swiper-wrapper {
-				width: 100%;
-				height: 100%;
-				.bg.swiper-slide {
-					width: 100%;
-					height: 100%;
-					// top: 100%;
-					transition: 1.2s;
-					// position: absolute;
+  figure {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    .swiper {
+      width: 100%;
+      height: 100%;
+      // background-color: rgba(137, 43, 226, 0.251);
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        .bg.swiper-slide {
+          width: 100%;
+          height: 100%;
+          // top: 100%;
+          transition: 1.2s;
+          // position: absolute;
 
-					> video {
-						// position: absolute;
-						width: 100%;
-						height: 100%;
-						transition: 1.2s;
-						object-fit: cover;
-					}
+          > video {
+            // position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: 1.2s;
+            object-fit: cover;
+          }
 
-					> img {
-						// position: absolute;
-						width: 100%;
-						height: 100%;
-					}
+          > img {
+            // position: absolute;
+            width: 100%;
+            height: 100%;
+          }
 
-					.slo {
-						font-family: "Shadows Into Light";
-						font-weight: bold;
-						position: absolute;
-						top: 0;
-					}
-					&.bg0 {
-						font-size: 9vw;
+          .slo {
+            font-family: 'Shadows Into Light';
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+          }
+          &.bg0 {
+            font-size: 9vw;
 
-						color: rgba(225, 86, 86, 0.6);
+            color: rgba(225, 86, 86, 0.6);
 
-						.slo.bg0--slogan {
-							top: 40%;
-							left: 50%;
-							.quote0 {
-								transition: 4s;
-								opacity: 0;
-							}
-							.quote1 {
-								transition: 8s;
-								opacity: 0;
-							}
-						}
-					}
-					&.bg1 {
-						font-size: 9vw;
-						color: rgba(237, 139, 34, 0.699);
-						.slo.bg1--slogan {
-							top: 17%;
-							left: 05%;
+            .slo.bg0--slogan {
+              top: 40%;
+              left: 50%;
+              .quote0 {
+                transition: 4s;
+                opacity: 0;
+              }
+              .quote1 {
+                transition: 8s;
+                opacity: 0;
+              }
+            }
+          }
+          &.bg1 {
+            font-size: 9vw;
+            color: rgba(237, 139, 34, 0.699);
+            .slo.bg1--slogan {
+              top: 17%;
+              left: 05%;
 
-							.quote0 {
-								position: relative;
-								left: -1000%;
-								transition: 1.5s;
+              .quote0 {
+                position: relative;
+                left: -1000%;
+                transition: 1.5s;
 
-								opacity: 0;
+                opacity: 0;
 
-								&.on {
-									left: 0;
-									opacity: 1;
-								}
-							}
-							.quote1 {
-								position: relative;
-								left: -1000%;
+                &.on {
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+              .quote1 {
+                position: relative;
+                left: -1000%;
 
-								transition: 3.5s;
+                transition: 3.5s;
 
-								opacity: 0;
+                opacity: 0;
 
-								&.on {
-									left: 0;
-									opacity: 1;
-								}
-							}
-						}
-					}
-					&.bg2 {
-						font-size: 9vw;
-						color: rgba(255, 255, 0, 0.5);
-						.slo.bg2--slogan {
-							text-align: right;
-							top: 07%;
-							left: 45%;
+                &.on {
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          &.bg2 {
+            font-size: 9vw;
+            color: rgba(255, 255, 0, 0.5);
+            .slo.bg2--slogan {
+              text-align: right;
+              top: 07%;
+              left: 45%;
 
-							.quote0 {
-								position: relative;
-								left: 100%;
-								transition: 3s;
-								opacity: 0;
-								&.on {
-									left: 0%;
-									opacity: 1;
-								}
-							}
-							.quote1 {
-								position: relative;
-								left: 100%;
-								transition: 5s;
-								opacity: 0;
-								&.on {
-									left: 0;
-									opacity: 1;
-								}
-							}
-						}
-					}
+              .quote0 {
+                position: relative;
+                left: 100%;
+                transition: 3s;
+                opacity: 0;
+                &.on {
+                  left: 0%;
+                  opacity: 1;
+                }
+              }
+              .quote1 {
+                position: relative;
+                left: 100%;
+                transition: 5s;
+                opacity: 0;
+                &.on {
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+            }
+          }
 
-					@import "home_floatImg"; //bg3
+          @import 'home_floatImg'; //bg3
 
-					// &.viewOn {
-					// 	top: 0;
-					// }
+          // &.viewOn {
+          // 	top: 0;
+          // }
 
-					// //  view 에서 위로 나갈때to up이용
-					// //아래로 내리는 동작
-					// &.viewOutToUp {
-					// 	top: -100%;
-					// }
+          // //  view 에서 위로 나갈때to up이용
+          // //아래로 내리는 동작
+          // &.viewOutToUp {
+          // 	top: -100%;
+          // }
 
-					// view에서 아래로 나갈 때 to Down 이용
-					//위로 올리는 동작
-					// &.viewOutToDown {
-					// 	top: 0%;
-					// }
-				}
-			}
-		}
-		.wrap {
-			width: 100%;
-			height: 100%;
-			transition: 0.5s;
-			position: absolute;
-			top: 0;
-			opacity: 1;
-			&.on {
-				filter: grayscale(100%);
-				pointer-events: none;
-				cursor: default;
-			}
-			&.menuOn {
-				pointer-events: none;
-				cursor: default;
-				opacity: 0;
-				top: 300px;
-			}
+          // view에서 아래로 나갈 때 to Down 이용
+          //위로 올리는 동작
+          // &.viewOutToDown {
+          // 	top: 0%;
+          // }
+        }
+      }
+    }
+    .wrap {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      position: absolute;
+      top: 0;
+      opacity: 1;
+      z-index: 2;
+      &.on {
+        filter: grayscale(100%);
+        pointer-events: none;
+        cursor: default;
+      }
+      &.menuOn {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0;
+        top: 300px;
+      }
 
-			/*SECTION-menu*/
-			@import "home_menu";
+      /*SECTION-menu*/
+      @import 'home_menu';
 
-			/*SECTION*/
-			@import "home_menu_expl";
+      /*SECTION*/
+      @import 'home_menu_expl';
 
-			/*NAV-buttons*/
-			@import "home_btns";
-		}
+      /*NAV-buttons*/
+      @import 'home_btns';
+    }
 
-		/*SECTION-menu up*/
-		.hide_up {
-			z-index: 50;
-			width: 30px;
-			position: absolute;
-			bottom: 10px;
+    /*SECTION-menu up*/
+    .hide_up {
+      z-index: 50;
+      width: 30px;
+      position: absolute;
+      bottom: 10px;
 
-			cursor: pointer;
-			text-align: center;
-			margin: 0 auto;
-			left: 0;
-			right: 0;
-			i {
-				transition: 0.5s;
-			}
-			&.on {
-				pointer-events: none;
-				cursor: default;
-				color: gray;
-				i {
-					animation: none;
-				}
-				span {
-					animation: none;
-				}
-			}
+      cursor: pointer;
+      text-align: center;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      i {
+        transition: 0.5s;
+      }
+      &.on {
+        pointer-events: none;
+        cursor: default;
+        color: gray;
+        i {
+          animation: none;
+        }
+        span {
+          animation: none;
+        }
+      }
 
-			i {
-				animation: blingbling linear 0.2s infinite;
-			}
-			span {
-				font-size: 7px;
-				animation: blingbling linear 0.2s infinite;
-			}
+      i {
+        animation: blingbling linear 0.2s infinite;
+      }
+      span {
+        font-size: 7px;
+        animation: blingbling linear 0.2s infinite;
+      }
 
-			&:hover {
-				color: pink;
-				i {
-					animation: none;
-				}
-				span {
-					animation: none;
-				}
-			}
-		}
+      &:hover {
+        color: pink;
+        i {
+          animation: none;
+        }
+        span {
+          animation: none;
+        }
+      }
+    }
 
-		/*SECTION - login*/
-		@import "home_login";
-	}
+    /*SECTION - login*/
+    @import 'home_login';
+  }
 }
 
 /*Animation*/
 
 @keyframes blingbling {
-	0% {
-		color: white;
-	}
-	100% {
-		color: rgba(255, 105, 180, 0.434);
-	}
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 105, 180, 0.434);
+  }
 }

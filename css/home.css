@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
@@ -194,7 +195,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide > video {
   width: 100%;
   height: 100%;
   transition: 1.2s;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide > img {
   width: 100%;
@@ -286,7 +288,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 {
   cursor: none;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 video {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -298,7 +301,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .cursor {
   background-size: contain;
   width: 100px;
   height: 100px;
-  animation: cursorAni linear 2s infinite;
+  -webkit-animation: cursorAni linear 2s infinite;
+          animation: cursorAni linear 2s infinite;
   position: absolute;
   z-index: 1000;
   pointer-events: none;
@@ -310,7 +314,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .slo.bg3--slogan {
   top: 120px;
   font-size: 15vw;
   line-height: 1.5;
-  animation: textAni linear 7s infinite;
+  -webkit-animation: textAni linear 7s infinite;
+          animation: textAni linear 7s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 .slo.bg3--slogan--hide {
   display: inline-block;
@@ -333,7 +338,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img1 {
   top: 12%;
   left: 0%;
-  animation: float01 linear 3s infinite;
+  -webkit-animation: float01 linear 3s infinite;
+          animation: float01 linear 3s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img1.on {
   top: 60%;
@@ -342,7 +348,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img2 {
   top: 7%;
   left: 73%;
-  animation: float01 linear 5s infinite;
+  -webkit-animation: float01 linear 5s infinite;
+          animation: float01 linear 5s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img2.on {
   top: 60%;
@@ -351,7 +358,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img3 {
   top: 70%;
   left: 73%;
-  animation: float01 ease-in-out 6s infinite;
+  -webkit-animation: float01 ease-in-out 6s infinite;
+          animation: float01 ease-in-out 6s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img3.on {
   top: 60%;
@@ -360,7 +368,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img4 {
   left: 48%;
   top: 1%;
-  animation: float02 linear 1s infinite;
+  -webkit-animation: float02 linear 1s infinite;
+          animation: float02 linear 1s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img4.on {
   top: 60%;
@@ -369,7 +378,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img5 {
   top: 65%;
   left: 13%;
-  animation: float03 linear 3s infinite;
+  -webkit-animation: float03 linear 3s infinite;
+          animation: float03 linear 3s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img5.on {
   top: 60%;
@@ -378,7 +388,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img6 {
   top: 40%;
   left: 45%;
-  animation: float02 linear 3s infinite;
+  -webkit-animation: float02 linear 3s infinite;
+          animation: float02 linear 3s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img6.on {
   top: 60%;
@@ -387,7 +398,8 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img7 {
   left: 25%;
   top: 30%;
-  animation: float03 linear 5s infinite;
+  -webkit-animation: float03 linear 5s infinite;
+          animation: float03 linear 5s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img7.on {
   top: 60%;
@@ -396,11 +408,32 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img8 {
   top: 75%;
   left: 40%;
-  animation: float03 linear 2s infinite;
+  -webkit-animation: float03 linear 2s infinite;
+          animation: float03 linear 2s infinite;
 }
 body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_item.img8.on {
   top: 60%;
   left: 80%;
+}
+@-webkit-keyframes float01 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(10px, 15px);
+  }
+  40% {
+    transform: translate(20px, 8px);
+  }
+  60% {
+    transform: translate(8px, -3px);
+  }
+  80% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 @keyframes float01 {
   0% {
@@ -420,6 +453,26 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes float02 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-10px, 5px) rotate(10deg);
+  }
+  40% {
+    transform: translate(-20px, 8px) rotate(5deg);
+  }
+  60% {
+    transform: translate(-5px, -3px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-9px, -9px) rotate(-8deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
 @keyframes float02 {
@@ -442,6 +495,26 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
     transform: translate(0, 0) rotate(0deg);
   }
 }
+@-webkit-keyframes float03 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, 5px);
+  }
+  40% {
+    transform: translate(-20px, 8px);
+  }
+  60% {
+    transform: translate(-5px, -3px);
+  }
+  80% {
+    transform: translate(-9px, -9px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 @keyframes float03 {
   0% {
     transform: translate(0, 0);
@@ -462,7 +535,23 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
     transform: translate(0, 0);
   }
 }
+@-webkit-keyframes textAni {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
 @keyframes textAni {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@-webkit-keyframes textAni2 {
   0% {
     right: -100%;
   }
@@ -476,6 +565,14 @@ body figure .swiper .swiper-wrapper .bg.swiper-slide.bg3 ul > li > img.float_ite
   }
   100% {
     right: 100%;
+  }
+}
+@-webkit-keyframes cursorAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @keyframes cursorAni {
@@ -493,6 +590,7 @@ body figure .wrap {
   position: absolute;
   top: 0;
   opacity: 1;
+  z-index: 2;
   /*SECTION-menu*/
   /*SECTION*/
   /*NAV-buttons*/
@@ -713,26 +811,32 @@ body figure .hide_up.on {
   color: gray;
 }
 body figure .hide_up.on i {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 body figure .hide_up.on span {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 body figure .hide_up i {
-  animation: blingbling linear 0.2s infinite;
+  -webkit-animation: blingbling linear 0.2s infinite;
+          animation: blingbling linear 0.2s infinite;
 }
 body figure .hide_up span {
   font-size: 7px;
-  animation: blingbling linear 0.2s infinite;
+  -webkit-animation: blingbling linear 0.2s infinite;
+          animation: blingbling linear 0.2s infinite;
 }
 body figure .hide_up:hover {
   color: pink;
 }
 body figure .hide_up:hover i {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 body figure .hide_up:hover span {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 body figure .login {
   font-family: "Cafe24SsurroundAir";
@@ -836,7 +940,7 @@ body figure .login .login__register a:hover {
 }
 
 /*Animation*/
-@keyframes blingbling {
+@-webkit-keyframes blingbling {
   0% {
     color: white;
   }
@@ -844,5 +948,11 @@ body figure .login .login__register a:hover {
     color: rgba(255, 105, 180, 0.434);
   }
 }
-
-/*# sourceMappingURL=home.css.map */
+@keyframes blingbling {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 105, 180, 0.434);
+  }
+}/*# sourceMappingURL=home.css.map */
